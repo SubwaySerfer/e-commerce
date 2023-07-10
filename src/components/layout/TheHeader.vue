@@ -65,6 +65,9 @@ h1 {
   line-height: normal;
   margin: 0;
 }
+nav {
+  padding-left: 26.6rem;
+}
 ul {
   display: flex;
   flex-direction: row;
@@ -85,9 +88,11 @@ a {
   line-height: normal;
 }
 
-/* .icons-list {
-  height: 20px;
-} */
+.icons-list {
+  width: 24.7rem;
+  gap: 4.5rem;
+  padding-left: 14.8rem;
+}
 /* .account-icon {
   background-image: url(../../assets/icons/account-icon.svg);
   width: 20px;
