@@ -33,41 +33,48 @@ export default {
 button,
 a {
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  font: inherit;
-  background-color: #3a0061;
-  border: 1px solid #3a0061;
-  color: white;
+  padding: 2.5rem 7.2rem;
+  /* font: inherit; */
+  background-color: #b88e2f;
+  border: 1px solid #b88e2f;
+  /* color: white; */
   cursor: pointer;
-  border-radius: 30px;
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
   display: inline-block;
+  color: #fff;
+  /* font-family: Poppins; */
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 a:hover,
 a:active,
 button:hover,
 button:active {
-  background-color: #270041;
-  border-color: #270041;
+  background-color: #b88e2f;
+  border-color: #b88e2f;
 }
 
 .flat {
   background-color: transparent;
-  color: #3a0061;
+  color: #b88e2f;
   border: none;
 }
 
 .outline {
   background-color: transparent;
-  border-color: #270041;
-  color: #270041;
+  border-color: #b88e2f;
+  color: #b88e2f;
 }
 
 .flat:hover,
 .flat:active,
 .outline:hover,
 .outline:active {
-  background-color: #edd2ff;
+  background-color: #b88e2f;
 }
 </style>

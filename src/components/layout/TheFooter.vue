@@ -39,8 +39,8 @@
 
 <style scoped>
 h4 {
-  color: #000;
-  font-family: Poppins;
+  /* color: #000; */
+  /* font-family: Poppins; */
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
@@ -69,8 +69,8 @@ section {
   gap: 4.6rem;
 }
 a {
-  color: #000;
-  font-family: Poppins;
+  /* color: #000; */
+  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
@@ -81,7 +81,7 @@ a {
 h6,
 .input-box_label {
   color: #9f9f9f;
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
@@ -91,7 +91,7 @@ h6,
 }
 .adress-info {
   color: #9f9f9f;
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
@@ -108,8 +108,8 @@ ul {
   padding: 0;
 }
 .rights-info {
-  color: #000;
-  font-family: Poppins;
+  /* color: #000; */
+  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
@@ -134,7 +134,7 @@ input {
   border-bottom: 0.1rem solid #000;
   width: 20rem;
   color: #9f9f9f;
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
@@ -146,8 +146,8 @@ input {
   border: 0;
   border-bottom: 0.1rem solid #000000;
   border-radius: 0;
-  color: #000;
-  font-family: Poppins;
+  /* color: #000;
+  font-family: Poppins; */
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;

@@ -1,4 +1,6 @@
-<template>Home <PromoSection></PromoSection></template>
+<template>
+  <PromoSection></PromoSection>
+</template>
 
 <script>
 import PromoSection from "../../components/home/PromoSection.vue";

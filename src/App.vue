@@ -20,13 +20,10 @@ export default {
 };
 </script>
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 10px;
+  color: #000;
 }
 
 body {
@@ -58,4 +55,16 @@ body {
 }
 </style>
 
-<style></style>
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  padding-left: 0;
+}
+</style>

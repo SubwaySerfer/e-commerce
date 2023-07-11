@@ -16,7 +16,7 @@
         <li><a href="">Contact</a></li>
       </ul>
     </nav>
-    <div>
+    <div class="icons-box">
       <ul class="icons-list">
         <li>
           <a href=""><img src="../../assets/icons/account-icon.svg" /></a>
@@ -40,8 +40,9 @@ header {
   height: 10rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: flex-start;
+  padding: 3.35rem 10rem 3.45rem 5.4rem;
+  align-items: center;
 }
 
 .main-logo {
@@ -54,7 +55,10 @@ header {
   align-items: center;
   gap: 0.5rem;
   height: 4.1rem;
-  padding: 3rem 0;
+  padding-right: 26.6rem;
+}
+.icons-box {
+  padding-left: 15.8rem;
 }
 h1 {
   color: #000;
@@ -65,23 +69,17 @@ h1 {
   line-height: normal;
   margin: 0;
 }
-nav {
-  padding-left: 26.6rem;
-}
 ul {
   display: flex;
   flex-direction: row;
   gap: 7.5rem;
   margin: 0;
-  padding: 3.8rem 0;
 }
 li {
   list-style-type: none;
 }
 a {
   text-decoration: none;
-  color: #000;
-  font-family: Poppins;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
@@ -91,11 +89,9 @@ a {
 .icons-list {
   width: 24.7rem;
   gap: 4.5rem;
-  padding-left: 14.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 0 0 5px;
 }
-/* .account-icon {
-  background-image: url(../../assets/icons/account-icon.svg);
-  width: 20px;
-  display: block;
-} */
 </style>
