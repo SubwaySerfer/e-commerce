@@ -80,6 +80,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: #000;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
