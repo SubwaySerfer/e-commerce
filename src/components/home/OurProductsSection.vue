@@ -2,10 +2,16 @@
   <section>
     <h2>Our Products</h2>
     <div class="furnitures-list">
-      <base-card v-for="furniture in furnitureList"
-        >{{ furniture }}
-        <p>{{ furniture }}</p></base-card
+      <base-card
+        v-for="furniture in this.furnitureList"
+        :name="furniture.name"
+        :img="furniture.img"
+        :price="furniture.price"
+        :description="furniture.description"
       >
+        <!-- <p>{{ furniture }}</p> -->
+      </base-card>
+      <!-- <div>{{ furnitureList }}</div> -->
       <!-- <div class="furniture-card">
         <img src="" alt="" />
         <h3></h3>
@@ -18,6 +24,9 @@
 
 <script>
 export default {
+  // data() {
+  //   return { newList: this.furnitureList };
+  // },
   computed: {
     furnitureList() {
       return this.$store.getters["home/furnitureList"];
@@ -38,5 +47,8 @@ h2 {
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+}
+.furniture-list {
+  height: 92.4rem;
 }
 </style>

@@ -69,7 +69,7 @@ section {
   gap: 4.6rem;
 }
 a {
-  /* color: #000; */
+  color: #000;
   /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
@@ -77,6 +77,7 @@ a {
   line-height: normal;
   display: block;
   text-align: start;
+  text-decoration: none;
 }
 h6,
 .input-box_label {

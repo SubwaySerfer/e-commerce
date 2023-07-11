@@ -3,4 +3,6 @@ import getters from "./getters"
 
 export default {namespaced: true, state(){
  return{ furnitureList: []}
-},mutations,getters}
+},
+mutations,
+getters}
