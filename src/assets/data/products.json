@@ -1,0 +1,12 @@
+{
+  "products":[
+    {"id":1,"name":"Syltherine","discount":30,"isNew":false,"price": 2500000,"img":"../.."},
+    {"id":2,"name":"Syltherine","discount":0,"isNew":false,"price": 2500000,"img":"../.."},
+    {"id":3,"name":"Syltherine","discount":50,"isNew":false,"price": 2500000,"img":"../.."},
+    {"id":4,"name":"Syltherine","discount":0,"isNew":true,"price": 2500000,"img":"../.."},
+    {"id":5,"name":"Syltherine","discount":0,"isNew":false,"price": 2500000,"img":"../.."},
+    {"id":6,"name":"Syltherine","discount":0,"isNew":true,"price": 2500000,"img":"../.."},
+    {"id":7,"name":"Syltherine","discount":50,"isNew":false,"price": 2500000,"img":"../.."},
+    {"id":8,"name":"Syltherine","discount":0,"isNew":true,"price": 2500000,"img":"../.."}
+  ]
+}

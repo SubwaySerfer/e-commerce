@@ -17,6 +17,9 @@ export default {
     TheHeader,
     TheFooter,
   },
+  created() {
+    this.$store.commit("home/getFurnitureList");
+  },
 };
 </script>
 <style scoped>
