@@ -33,21 +33,17 @@ export default {
 button,
 a {
   text-decoration: none;
-  padding: 2.5rem 7.2rem;
-  /* font: inherit; */
+  /* padding: 2.5rem 7.2rem; */
   background-color: #b88e2f;
   border: 1px solid #b88e2f;
-  /* color: white; */
   cursor: pointer;
-  /* margin-right: 0.5rem; */
   display: inline-block;
   color: #fff;
-  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   white-space: nowrap;
 }
 

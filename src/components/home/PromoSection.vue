@@ -40,6 +40,7 @@
   height: 7.4rem;
   border-radius: 0;
   margin-left: -3px;
+  text-transform: uppercase;
 }
 .promo-text {
   color: #333;

@@ -18,7 +18,7 @@
         <p>Stylish cafe chair</p>
       </div> -->
     </div>
-    <base-button>Show More</base-button>
+    <base-button class="btn">Show More</base-button>
   </section>
 </template>
 
@@ -38,7 +38,11 @@ export default {
 <style scoped>
 section {
   height: auto;
-  padding: 5.6rem 10.2rem 6.9rem;
+  padding: 0.4rem 10.2rem 6.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 h2 {
   color: #3a3a3a;
@@ -47,8 +51,28 @@ h2 {
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+  text-indent: 5px;
 }
-.furniture-list {
+.furnitures-list {
   height: 92.4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+.btn {
+  width: 24.5rem;
+  height: 4.8rem;
+  margin-top: 1.2rem;
+  padding: auto;
+  color: #b88e2f;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-style: normal;
+  border-radius: 0;
+  font-weight: 600;
+  line-height: 150%;
+  text-indent: 9px;
 }
 </style>
