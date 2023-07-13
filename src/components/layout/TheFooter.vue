@@ -9,14 +9,14 @@
         </p>
       </div>
       <div class="footer-nav">
-        <ul class="footer-nav-items">
+        <ul class="footer-nav-items footer-ul_first">
           <li><h6>Links</h6></li>
           <li><a href="">Home</a></li>
           <li><a href="">Shop</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
         </ul>
-        <ul class="footer-nav-items">
+        <ul class="footer-nav-items footer-ul_sec">
           <li><h6>Help</h6></li>
           <li><a href="">Payment Options</a></li>
           <li><a href="">Returns</a></li>
@@ -39,38 +39,45 @@
 
 <style scoped>
 h4 {
-  /* color: #000; */
-  /* font-family: Poppins; */
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: start;
 }
 section {
   height: 50.5rem;
-  padding: 4.8rem 10rem 3.8rem;
+  padding: 4.7rem 10rem 3.8rem;
   border-top: 0.1rem solid #d9d9d9;
 }
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 13.9rem;
   padding-bottom: 4.8rem;
 }
 .footer-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 7.2rem;
+  justify-content: flex-start;
+  /* gap: 14.6rem; */
+  width: 100%;
+  /* padding-left: 1px; */
 }
 .footer-nav-items {
   display: flex;
   flex-direction: column;
   gap: 4.6rem;
 }
+.footer-ul_first {
+  margin-right: 14.6rem;
+}
+.footer-ul_sec {
+  margin-right: 7.2rem;
+}
 a {
   color: #000;
-  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
@@ -82,23 +89,24 @@ a {
 h6,
 .input-box_label {
   color: #9f9f9f;
-  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-align: start;
   margin: 0;
+  margin-bottom: 0.9rem;
 }
 .adress-info {
   color: #9f9f9f;
-  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-align: start;
   width: 28.5rem;
+  padding-top: 5rem;
+  padding-left: 0.2rem;
 }
 li {
   list-style-type: none;
@@ -109,8 +117,6 @@ ul {
   padding: 0;
 }
 .rights-info {
-  /* color: #000; */
-  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
@@ -118,7 +124,8 @@ ul {
   text-align: start;
   margin: 0;
   border-top: 0.1rem solid #d9d9d9;
-  padding-top: 3.5rem;
+  padding-top: 3.4rem;
+  padding-left: 0.2rem;
 }
 .input-box {
   display: flex;
@@ -135,12 +142,12 @@ input {
   border-bottom: 0.1rem solid #000;
   width: 20rem;
   color: #9f9f9f;
-  /* font-family: Poppins; */
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   padding-bottom: 0.3rem;
+  letter-spacing: 0.03em;
 }
 .button-news {
   background-color: transparent;
