@@ -69,6 +69,7 @@ section {
   line-height: normal;
   border-radius: 1rem;
   background: #f9f1e7;
+  cursor: pointer;
 }
 .slider-active {
   color: #fff;

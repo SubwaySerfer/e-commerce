@@ -1,0 +1,10 @@
+<template>
+  <section>
+    <base-promo
+      img="src/assets/icons/mainLogo.png"
+      title="Contact"
+      startPage="Home"
+      currentPage="Contact"
+    ></base-promo>
+  </section>
+</template>
