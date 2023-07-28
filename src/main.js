@@ -2,6 +2,7 @@ import './style.css'
 import BaseButton from './components/ui/BaseButton.vue'
 import BaseCard from './components/ui/BaseCard.vue'
 import BasePromo from './components/ui/BasePromo.vue'
+import OurAdvantages from './components/layout/OurAdvantages.vue'
 
 // const app = createApp(App)
 
@@ -24,6 +25,7 @@ app.use(store);
 app.component('base-button', BaseButton)
 app.component('base-card', BaseCard)
 app.component('base-promo', BasePromo)
+app.component('our-advantages', OurAdvantages)
 
 
 app.mount('#app');
