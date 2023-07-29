@@ -7,7 +7,7 @@
       currentPage="Contact"
     ></base-promo>
     <contact-form></contact-form>
-    <our-advantages></our-advantages>
+    <our-advantages class="advantages-container"></our-advantages>
   </section>
 </template>
 
@@ -19,3 +19,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.advantages-container {
+  margin-bottom: 3rem;
+}
+</style>

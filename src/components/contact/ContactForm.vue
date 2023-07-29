@@ -10,11 +10,11 @@
     </div>
     <div class="content-wrapper">
       <div class="content-wrapper_info">
-        <div class="info-card">
+        <div class="info-card info-card_local">
           <img
             src="src/assets/icons/contact/local-icon.svg"
             alt="location icon"
-            class="info-card_img"
+            class="info-card_img icon_local"
           />
           <div class="info-card_text">
             <h3>Address</h3>
@@ -27,7 +27,7 @@
           <img
             src="src/assets/icons/contact/phone-icon.svg"
             alt="phone icon"
-            class="info-card_img"
+            class="info-card_img icon_phone"
           />
           <div class="info-card_text">
             <h3>Phone</h3>
@@ -36,16 +36,17 @@
             </p>
           </div>
         </div>
-        <div class="info-card">
+        <div class="info-card info-card_clock">
           <img
             src="src/assets/icons/contact/clock-icon.svg"
             alt="clock icon"
-            class="info-card_img"
+            class="info-card_img icon_clock"
           />
           <div class="info-card_text">
             <h3>Working Time</h3>
             <p class="content-wrapper_paragraph">
-              Monday-Friday: 9:00 - 22:00 Saturday-Sunday: 9:00 - 21:00x
+              Monday-Friday: 9:00 - 22:00<br />
+              Saturday-Sunday: 9:00 - 21:00
             </p>
           </div>
         </div>
@@ -97,17 +98,35 @@ h2 {
 .content-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 5.1rem;
+  /* gap: 5.1rem; */
+  justify-content: flex-start;
   padding-top: 8.2rem;
+}
+.icon_clock {
+  padding-top: 1.8rem;
+}
+.icon_phone {
+  padding-top: 1.3rem;
+}
+.icon_local {
+  padding-top: 1.2rem;
+}
+.icon_phone {
+  padding-left: 2px;
+}
+.info-card_local,
+.info-card_clock {
+  padding-left: 1rem;
 }
 .info-card_img {
   align-self: flex-start;
+  /* width: 23px; */
 }
 .content-wrapper_info {
   display: flex;
   flex-direction: column;
-  padding: 4.6rem 7.5rem 0 5.4rem;
-  gap: 4.2rem;
+  padding: 4.6rem 7.5rem 0 1.5rem;
+  gap: 3.2rem;
 }
 .content-wrapper_paragraph {
   font-size: 1.6rem;
@@ -119,16 +138,22 @@ h2 {
 .info-card {
   display: flex;
   flex-direction: row;
+  gap: 3rem;
 }
 .info-card_text {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1rem;
+  text-align: start;
+  /* padding-left: 0.5rem; */
 }
 h3 {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  /* text-indent: 2.8rem; */
 }
 label {
   font-size: 1.6rem;
@@ -142,7 +167,7 @@ label {
   display: flex;
   flex-direction: column;
   width: 63.5rem;
-  padding: 5.1rem 5.2rem 6.3rem 5.42rem;
+  padding: 5.1rem 2rem 6.3rem 8.4rem;
   justify-content: space-between;
   /* gap: 3.6rem; */
 }
@@ -152,10 +177,28 @@ input {
   border: 1px solid #9f9f9f;
   background: #fff;
   margin-bottom: 3.6rem;
+  padding: 2.6rem;
+  padding-left: 3rem;
+  color: #9f9f9f;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 textarea {
   margin-bottom: 4.8rem;
   height: 12rem;
+  color: #9f9f9f;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2.6rem 2.7rem;
+  border-radius: 1rem;
+  border: 1px solid #9f9f9f;
+  background: #fff;
 }
 .btn {
   width: 23.7rem;
