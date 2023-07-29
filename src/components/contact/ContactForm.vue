@@ -52,18 +52,18 @@
       </div>
       <div class="form-box">
         <label for="">Your name</label>
-        <input type="text" />
+        <input type="text" placeholder="Abc" />
 
         <label for="">Email address</label>
-        <input type="email" />
+        <input type="email" placeholder="Abc@def.com" />
 
         <label for="">Subject</label>
-        <input type="text" />
+        <input type="text" placeholder="This is an optional" />
 
         <label for="">Message</label>
-        <textarea></textarea>
+        <textarea placeholder="Hi! i’d like to ask about"></textarea>
 
-        <base-button>Submit</base-button>
+        <base-button class="btn">Submit</base-button>
       </div>
     </div>
   </section>
@@ -97,7 +97,8 @@ h2 {
 .content-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 5.1rem;
+  padding-top: 8.2rem;
 }
 .info-card_img {
   align-self: flex-start;
@@ -106,6 +107,7 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 4.6rem 7.5rem 0 5.4rem;
+  gap: 4.2rem;
 }
 .content-wrapper_paragraph {
   font-size: 1.6rem;
@@ -128,8 +130,39 @@ h3 {
   font-weight: 500;
   line-height: normal;
 }
+label {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: start;
+  margin-bottom: 2.2rem;
+}
 .form-box {
   display: flex;
   flex-direction: column;
+  width: 63.5rem;
+  padding: 5.1rem 5.2rem 6.3rem 5.42rem;
+  justify-content: space-between;
+  /* gap: 3.6rem; */
+}
+input {
+  height: 7.5rem;
+  border-radius: 1rem;
+  border: 1px solid #9f9f9f;
+  background: #fff;
+  margin-bottom: 3.6rem;
+}
+textarea {
+  margin-bottom: 4.8rem;
+  height: 12rem;
+}
+.btn {
+  width: 23.7rem;
+  height: 5.5rem;
+  margin-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #b88e2f;
+  background: #b88e2f;
 }
 </style>
