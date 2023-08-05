@@ -15,21 +15,47 @@
       <p>{{ description }}</p>
       <h4>Rp {{ price }}</h4>
     </div>
+    <div class="furniture-card_popup">
+      <base-button class="btn">Add to cart</base-button>
+      <div class="popup-content">
+        <div class="popup-content_box">
+          <img
+            src="src/assets/icons/furnitureCards/icon-share.svg"
+            alt="share icon"
+            class="popup-icon"
+          />
+          <h5>Share</h5>
+        </div>
+        <div class="popup-content_box">
+          <img
+            src="src/assets/icons/furnitureCards/icon-compare.svg"
+            alt="compare icon"
+            class="popup-icon"
+          />
+          <h5>Compare</h5>
+        </div>
+        <div class="popup-content_box">
+          <img
+            src="src/assets/icons/furnitureCards/icon-like.svg"
+            alt="like icon"
+            class="popup-icon"
+          />
+          <h5>Like</h5>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+//TODO: сделать наведение на карточку
 export default {
   props: ["name", "price", "img", "description"],
 };
 </script>
 <style scoped>
 .furniture-card {
-  /* border-radius: 12px; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  /* padding: 1rem; */
-  /* margin: 2rem auto; */
-  /* max-width: 48rem; */
   width: 28.5rem;
   color: #000;
   height: 44.5rem;
@@ -38,7 +64,39 @@ export default {
   flex-direction: column;
   display: flex;
   background-color: #f4f5f7;
+  cursor: pointer;
+  position: relative;
 }
+/* .furniture-card:hover {
+  background-color: black;
+} */
+.furniture-card_popup {
+  background-color: #3a3a3a;
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.btn {
+  width: 20.2rem;
+  height: 4.8rem;
+  border-radius: 0;
+  background-color: #ffffff;
+  color: #b88e2f;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  border: none;
+}
+
 img {
   width: 28.5rem;
 }
@@ -71,5 +129,28 @@ h4 {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+}
+.popup-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+h5 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 2.4rem */
+}
+.popup-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  /* align-items: center; */
+}
+.popup-content_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2rem;
 }
 </style>

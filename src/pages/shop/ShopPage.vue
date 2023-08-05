@@ -1,9 +1,11 @@
 <template>
-  <PromoShop></PromoShop>
-  <FiltersShop></FiltersShop>
-  <ShopItems></ShopItems>
-  <!-- <OurAdvantages></OurAdvantages> -->
-  <our-advantages></our-advantages>
+  <section>
+    <PromoShop></PromoShop>
+    <FiltersShop></FiltersShop>
+    <ShopItems></ShopItems>
+    <!-- <OurAdvantages></OurAdvantages> -->
+    <our-advantages></our-advantages>
+  </section>
 </template>
 
 <script>

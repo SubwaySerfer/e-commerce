@@ -1,9 +1,11 @@
 <template>
-  <PromoSection></PromoSection>
-  <RoomsSection></RoomsSection>
-  <OurProductsSection></OurProductsSection>
-  <SearchRoom></SearchRoom>
-  <FuniroFurniture></FuniroFurniture>
+  <section>
+    <PromoSection></PromoSection>
+    <RoomsSection></RoomsSection>
+    <OurProductsSection></OurProductsSection>
+    <SearchRoom></SearchRoom>
+    <FuniroFurniture></FuniroFurniture>
+  </section>
 </template>
 
 <script>
