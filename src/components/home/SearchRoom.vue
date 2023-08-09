@@ -156,9 +156,19 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all ease-in 0.25s;
+}
+
+.info-arrow:hover > .info-icon__itm {
+  transform: scale(1.1);
+}
+.info-arrow:hover {
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.69);
 }
 .info-icon__itm {
   width: 2.4rem;
+  transition: all ease-in-out 0.2s;
 }
 .img-info-line {
   width: 2.7rem;

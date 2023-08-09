@@ -26,7 +26,9 @@
           <h6 class="input-box_label">Newsletter</h6>
           <div class="input-box__content">
             <input type="text" placeholder="Enter Your Email Address" />
-            <button class="button-news">SUBSCRIBE</button>
+            <button class="button-news">
+              <span class="button-news_text">SUBSCRIBE</span>
+            </button>
           </div>
         </div>
       </div>
@@ -154,12 +156,17 @@ input {
   border: 0;
   border-bottom: 0.1rem solid #000000;
   border-radius: 0;
-  /* color: #000;
-  font-family: Poppins; */
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   padding: 0 0 0.3rem 0;
+}
+.button-news_text {
+  transition: all ease-in 0.25s;
+  display: block;
+}
+.button-news:hover > .button-news_text:hover {
+  transform: translateY(-2px);
 }
 </style>

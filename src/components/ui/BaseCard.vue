@@ -72,6 +72,7 @@ export default {
   background-color: #f4f5f7;
   cursor: pointer;
   position: relative;
+  box-shadow: 2px 5px 10px 1px rgba(143, 135, 143, 1);
 }
 /* .furniture-card:hover {
   background-color: black;
