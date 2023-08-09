@@ -2,7 +2,7 @@
   <button v-if="!link" :class="mode">
     <slot></slot>
   </button>
-  <router-link v-else :to="to" :class="mode">
+  <router-link v-else :to="to" :linkName="linkName" :class="mode">
     <slot></slot>
   </router-link>
 </template>
@@ -25,7 +25,17 @@ export default {
       required: false,
       default: "/",
     },
+    linkName: {
+      type: String,
+      required: false,
+      default: "",
+    },
   },
+  // computed: {
+  // createLink() {
+  //   return;
+  // },
+  // },
 };
 </script>
 
@@ -33,7 +43,6 @@ export default {
 button,
 a {
   text-decoration: none;
-  /* padding: 2.5rem 7.2rem; */
   background-color: #b88e2f;
   border: 1px solid #b88e2f;
   cursor: pointer;
@@ -43,7 +52,6 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  /* text-transform: uppercase; */
   white-space: nowrap;
 }
 

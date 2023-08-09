@@ -11,10 +11,10 @@
       <div class="footer-nav">
         <ul class="footer-nav-items footer-ul_first">
           <li><h6>Links</h6></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Shop</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
         <ul class="footer-nav-items footer-ul_sec">
           <li><h6>Help</h6></li>

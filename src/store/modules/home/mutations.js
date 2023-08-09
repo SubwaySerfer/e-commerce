@@ -6,5 +6,5 @@ export default {
     // state.furnitureList = JSON.parse(jsonObj)
     state.furnitureList = jsonObj.products
 
-  }
+  },
 }

@@ -10,7 +10,9 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis.
       </p>
-      <base-button class="btn">BUY Now</base-button>
+      <base-button class="btn">
+        <router-link to="/shop" class="btn-text">BUY Now</router-link>
+      </base-button>
     </div>
   </section>
 </template>
@@ -40,8 +42,18 @@
   height: 7.4rem;
   border-radius: 0;
   margin-left: -3px;
-  text-transform: uppercase;
+  cursor: pointer;
+  transition: ease-in 0.25s;
 }
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-text {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .promo-text {
   color: #333;
   font-size: 1.8rem;

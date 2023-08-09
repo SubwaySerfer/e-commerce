@@ -18,15 +18,20 @@
         <p>Stylish cafe chair</p>
       </div> -->
     </div>
-    <base-button class="btn">Show More</base-button>
+    <base-button class="btn">
+      <router-link to="/shop" class="btn-text">Show More</router-link>
+    </base-button>
+    <!-- <base-button class="btn">
+      <router-link to="/shop" class="btn-text">BUY Now</router-link>
+    </base-button> -->
   </section>
 </template>
+<!--let currentLink = '/' + payload
+  //   return currentLink
+       :to="this.$store.commit('home/creatLinkToButton', shop)" -->
 
 <script>
 export default {
-  // data() {
-  //   return { newList: this.furnitureList };
-  // },
   computed: {
     furnitureList() {
       return this.$store.getters["home/furnitureList"];
@@ -66,7 +71,6 @@ h2 {
   height: 4.8rem;
   margin-top: 1.2rem;
   padding: auto;
-  color: #b88e2f;
   background-color: transparent;
   font-size: 1.6rem;
   font-style: normal;
@@ -74,5 +78,25 @@ h2 {
   font-weight: 600;
   line-height: 150%;
   text-indent: 9px;
+  transition: ease-in 0.25s;
 }
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #b88e2f;
+  color: white;
+}
+.btn:hover > .btn-text {
+  color: white;
+}
+
+.btn-text {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #b88e2f;
+  transition: ease-in 0.25s;
+  /* color: #ffffff; */
+}
+/* .btn-text:hover {
+  color: white;
+} */
 </style>
