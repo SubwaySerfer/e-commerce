@@ -1,5 +1,5 @@
 <template>
-  <div class="furniture-card">
+  <div class="furniture-card" @mouseover="hover = true">
     <!-- <slot>{{ (name, price, img) }} </slot> -->
     <!-- <slot name="img">
       <img src="" alt="" />
@@ -15,7 +15,7 @@
       <p>{{ description }}</p>
       <h4>Rp {{ price }}</h4>
     </div>
-    <div class="furniture-card_popup">
+    <div class="furniture-card_popup" @mouseleave="hover = false" v-if="hover">
       <base-button class="btn">Add to cart</base-button>
       <div class="popup-content">
         <div class="popup-content_box">
@@ -51,6 +51,11 @@
 //TODO: сделать наведение на карточку
 export default {
   props: ["name", "price", "img", "description"],
+  data() {
+    return {
+      hover: false,
+    };
+  },
 };
 </script>
 <style scoped>
