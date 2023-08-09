@@ -94,6 +94,7 @@ h2 {
   text-decoration: none;
   color: #b88e2f;
   transition: ease-in 0.25s;
+
   /* color: #ffffff; */
 }
 /* .btn-text:hover {

@@ -21,6 +21,19 @@ html {
   font-family: 'Poppins', sans-serif;
 
 }
+.btn-root{
+  transition: transform ease-in .25s;
+  }
+.btn-root:hover{
+    /* transform: translateY(-3px); */
+    transform: scale(1.2)
+  }
+.btn-root_vertical{
+  transition: transform ease-in-out .25s;
+}
+.btn-root_vertical:hover{
+  transform: translateY(-3px);
+}
 /* a {
   font-weight: 500;
   color: #646cff;

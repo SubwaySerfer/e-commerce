@@ -11,16 +11,16 @@
       <div class="footer-nav">
         <ul class="footer-nav-items footer-ul_first">
           <li><h6>Links</h6></li>
-          <li><a href="/">Home</a></li>
-          <li><a href="/shop">Shop</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li class="btn-root_vertical"><a href="/">Home</a></li>
+          <li class="btn-root_vertical"><a href="/shop">Shop</a></li>
+          <li class="btn-root_vertical"><a href="/about">About</a></li>
+          <li class="btn-root_vertical"><a href="/contact">Contact</a></li>
         </ul>
         <ul class="footer-nav-items footer-ul_sec">
           <li><h6>Help</h6></li>
-          <li><a href="">Payment Options</a></li>
-          <li><a href="">Returns</a></li>
-          <li><a href="">Privacy Policies</a></li>
+          <li class="btn-root_vertical"><a href="">Payment Options</a></li>
+          <li class="btn-root_vertical"><a href="">Returns</a></li>
+          <li class="btn-root_vertical"><a href="">Privacy Policies</a></li>
         </ul>
         <div class="input-box">
           <h6 class="input-box_label">Newsletter</h6>

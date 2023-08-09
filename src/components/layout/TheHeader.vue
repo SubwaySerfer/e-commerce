@@ -10,24 +10,26 @@
     </div>
     <nav>
       <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/shop">Shop</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
+        <li class="btn-root"><router-link to="/">Home</router-link></li>
+        <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
+        <li class="btn-root"><router-link to="/about">About</router-link></li>
+        <li class="btn-root">
+          <router-link to="/contact">Contact</router-link>
+        </li>
       </ul>
     </nav>
     <div class="icons-box">
       <ul class="icons-list">
-        <li>
+        <li class="btn-root">
           <a href=""><img src="../../assets/icons/account-icon.svg" /></a>
         </li>
-        <li>
+        <li class="btn-root">
           <a href=""><img src="../../assets/icons/search-icon.svg" /></a>
         </li>
-        <li>
+        <li class="btn-root">
           <a href=""><img src="../../assets/icons/heart-icon.svg" /></a>
         </li>
-        <li>
+        <li class="btn-root">
           <a href=""><img src="../../assets/icons/basket-icon.svg" /></a>
         </li>
       </ul>

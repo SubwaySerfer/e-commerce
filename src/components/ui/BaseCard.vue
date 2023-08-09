@@ -15,6 +15,7 @@
       <p>{{ description }}</p>
       <h4>Rp {{ price }}</h4>
     </div>
+
     <div class="furniture-card_popup" @mouseleave="hover = false" v-if="hover">
       <base-button class="btn">Add to cart</base-button>
       <div class="popup-content">
@@ -100,6 +101,11 @@ export default {
   font-weight: 600;
   line-height: 150%;
   border: none;
+  transition: all ease-in 0.2s;
+}
+.btn:hover {
+  background-color: #b88e2f;
+  color: #fff;
 }
 
 img {
@@ -139,6 +145,11 @@ h4 {
   width: 1.6rem;
   height: 1.6rem;
 }
+
+.popup-content_box:hover {
+  transform: translateY(-3px);
+}
+
 h5 {
   color: #fff;
   font-size: 1.6rem;
@@ -157,5 +168,6 @@ h5 {
   flex-direction: row;
   align-items: center;
   gap: 0.2rem;
+  transition: transform ease-in 0.2s;
 }
 </style>

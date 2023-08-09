@@ -124,6 +124,12 @@ p {
   width: 17.6rem;
   height: 4.8rem;
   border-radius: 0;
+  transition: all ease-in 0.2s;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #b88e2f;
+  transform: scale(1.1);
 }
 .main-img__box {
   position: relative;
