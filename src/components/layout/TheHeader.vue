@@ -12,7 +12,7 @@
       <ul>
         <li class="btn-root"><router-link to="/">Home</router-link></li>
         <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
-        <li class="btn-root"><router-link to="/about">About</router-link></li>
+        <li class="btn-root"><router-link to="/blog">Blog</router-link></li>
         <li class="btn-root">
           <router-link to="/contact">Contact</router-link>
         </li>

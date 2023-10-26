@@ -1,8 +1,8 @@
 <template>
   <section>
-    <PromoShop></PromoShop>
-    <FiltersShop></FiltersShop>
-    <ShopItems></ShopItems>
+    <promo-shop></promo-shop>
+    <filters-shop></filters-shop>
+    <shop-items></shop-items>
     <!-- <OurAdvantages></OurAdvantages> -->
     <our-advantages></our-advantages>
   </section>
