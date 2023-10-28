@@ -20,7 +20,7 @@
 <style scoped>
 .promo-section {
   height: 71.7rem;
-  background-image: url("../../assets/image/home/promo-homePage.png");
+  background-image: url("../../../static/assets/image/home/promo-homePage.png");
   display: flex;
   justify-content: flex-end;
   align-items: start;
