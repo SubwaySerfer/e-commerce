@@ -52,6 +52,7 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 10rem 5.3rem;
+  width: 100%;
 }
 .adv-card {
   display: flex;
