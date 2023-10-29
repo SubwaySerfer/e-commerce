@@ -82,6 +82,7 @@ export default {
   font-style: normal;
   display: flex;
   flex-direction: column;
+  padding-bottom: 5.4rem;
 }
 .post_info-block {
   display: flex;
