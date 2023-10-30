@@ -82,7 +82,7 @@ export default {
   font-style: normal;
   display: flex;
   flex-direction: column;
-  padding-bottom: 5.4rem;
+  /* padding-bottom: 4.6rem; */
 }
 .post_info-block {
   display: flex;
@@ -101,7 +101,7 @@ export default {
   line-height: normal;
   align-self: flex-start;
   padding: 0;
-  padding-top: 3rem;
+  padding-top: 2.9rem;
 }
 .post__button:after {
   content: "";
@@ -124,11 +124,20 @@ export default {
   text-align: start;
 }
 .post__description {
-  color: #9f9f9f;
+  /* color: #9f9f9f;
   text-align: justify;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 150%;
+   */
+  padding-top: 1.2rem;
+  color: #9f9f9f;
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
 }
 .info-block__elem {
   text-decoration: none;

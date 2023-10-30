@@ -1,12 +1,16 @@
 <template>
   <div class="blog-wrapper">
-    <base-promo></base-promo>
+    <base-promo
+      imgLink="src/assets/icons/mainLogo.png"
+      title="Blog"
+      startPage="Home"
+      currentPage="Blog"
+    ></base-promo>
     <section class="blog-wrapper__blog-content">
-      <h2>Blog Page</h2>
       <div class="blog-content">
         <posts-section></posts-section>
         <div class="blog-content__aside">
-          <h2>Search</h2>
+          <search-section></search-section>
           <recent-posts></recent-posts>
         </div>
       </div>
@@ -21,12 +25,14 @@
 import ButtonsField from "../../components/ui/ButtonsField.vue";
 import PostsSection from "../../components/blog/PostsSection.vue";
 import RecentPosts from "../../components/blog/RecentPosts.vue";
+import SearchSection from "../../components/blog/SearchSection.vue";
 
 export default {
   components: {
     ButtonsField,
     PostsSection,
     RecentPosts,
+    SearchSection,
   },
 };
 </script>

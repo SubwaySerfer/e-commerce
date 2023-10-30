@@ -1,6 +1,11 @@
 <template>
   <section>
-    <img :src="img" alt="logo image" v-if="img" class="promo-logo" />
+    <img
+      :src="`${imgLink}`"
+      alt="logo image"
+      v-if="imgLink"
+      class="promo-logo"
+    />
     <slot name="pageTitle">
       <h2>{{ title }}</h2>
       <div class="pages-info">
@@ -27,7 +32,7 @@ export default {
       type: String,
       required: true,
     },
-    img: {
+    imgLink: {
       type: String,
       required: false,
     },
@@ -51,7 +56,7 @@ section {
   gap: 0.6rem;
   padding-top: 0.3rem;
   justify-content: center;
-  padding-left: 2.4rem;
+  /* padding-left: 2.4rem; */
 }
 h2 {
   font-size: 4.8rem;
