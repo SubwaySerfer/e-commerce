@@ -1,6 +1,10 @@
 <template>
   <div>
-    <page-navigation></page-navigation>
+    <page-navigation
+      mainPage="Home"
+      currentPage="Shop"
+      cardName="Sofa"
+    ></page-navigation>
     <card-section></card-section>
     <card-description></card-description>
     <related-products></related-products>
