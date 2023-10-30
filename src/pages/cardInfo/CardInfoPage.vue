@@ -3,7 +3,7 @@
     <page-navigation
       mainPage="Home"
       currentPage="Shop"
-      cardName="Sofa"
+      cardName="Asgaard sofa"
     ></page-navigation>
     <card-section></card-section>
     <card-description></card-description>
@@ -26,3 +26,5 @@ export default {
   },
 };
 </script>
+
+<style scoped></style>
