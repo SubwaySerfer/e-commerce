@@ -4,13 +4,12 @@
     <div class="search-wrapper__category-block">
       <h3 class="category-block__title">Categories</h3>
       <ul class="category-block__content">
-        <li class="content__topic">
-          <a href="" class="topic__label">Crafts</a>
-          <span class="topic_counter">0</span>
-        </li>
-        <li class="content__topic">
-          <a href="" class="topic__label">Crafts</a>
-          <span class="topic_counter">0</span>
+        <li v-for="category in getCategories" class="content__topic">
+          <!-- <a :href="category.link" class="topic__label">{{ category.name }}</a> -->
+          <router-link :to="category.link" class="topic__label">{{
+            category.name
+          }}</router-link>
+          <span class="topic_counter">{{ category.count }}</span>
         </li>
       </ul>
     </div>
@@ -21,6 +20,11 @@
 import BaseSearch from "../ui/BaseSearch.vue";
 
 export default {
+  computed: {
+    getCategories() {
+      return this.$store.getters["blog/getCategories"];
+    },
+  },
   components: {
     BaseSearch,
   },
@@ -34,6 +38,7 @@ export default {
   align-items: center;
   padding: 0 4.1rem 6.1rem;
   gap: 3.3rem;
+  margin-bottom: 3rem;
 }
 .search-wrapper__category-block {
   margin-top: 1rem;

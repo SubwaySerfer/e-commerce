@@ -45,6 +45,7 @@ export default {
   font-weight: 500;
   line-height: normal;
   align-self: flex-start;
+  margin-bottom: 1.5rem;
 }
 .recent-box__posts {
   display: flex;

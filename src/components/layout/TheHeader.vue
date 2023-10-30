@@ -60,7 +60,10 @@ header {
   padding-right: 26.6rem;
 }
 .icons-box {
-  padding-left: 15.8rem;
+  /* padding-left: 15.8rem; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 h1 {
   color: #000;
