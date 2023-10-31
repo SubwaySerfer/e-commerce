@@ -65,6 +65,7 @@
   font-size: 2.4rem;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
 }
 .nav-list__title_active {
   color: black;
