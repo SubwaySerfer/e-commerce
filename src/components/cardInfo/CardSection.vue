@@ -66,6 +66,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  margin: 0;
 }
 .images-list__item {
   list-style-type: none;

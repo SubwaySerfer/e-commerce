@@ -1,6 +1,6 @@
 <template>
   <button v-if="!link" :class="mode">
-    <slot></slot>
+    <slot>{{ linkName }}</slot>
   </button>
   <button v-else :class="mode" class="btn">
     <router-link :to="to" :linkName="linkName" class="btn"

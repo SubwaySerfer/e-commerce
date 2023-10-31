@@ -22,14 +22,21 @@
       <li class="list-colors__color list-colors__color_black"></li>
       <li class="list-colors__color list-colors__color_yellow"></li>
     </ul>
-    <div>buttons</div>
+    <card-buttons></card-buttons>
     <span class="line"></span>
-    <div>media</div>
+    <card-media></card-media>
   </div>
 </template>
 <script>
+import CardMedia from "./CardMedia.vue";
+import CardButtons from "./CardButtons.vue";
+
 export default {
   props: ["name", "price", "description"],
+  components: {
+    CardMedia,
+    CardButtons,
+  },
 };
 </script>
 
