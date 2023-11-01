@@ -29,10 +29,10 @@
     </div>
     <div class="image-block">
       <div class="image-back">
-        <img src="/src/assets/image/cardInfo/cardSofa1.png" alt="" />
+        <img src="assets/image/cardInfo/cardSofa1.png" alt="" />
       </div>
       <div class="image-back">
-        <img src="/src/assets/image/cardInfo/cardSofa2.png" alt="" />
+        <img src="assets/image/cardInfo/cardSofa2.png" alt="" />
       </div>
     </div>
   </section>

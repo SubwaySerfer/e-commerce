@@ -1,7 +1,7 @@
 <template>
   <div class="blog-wrapper">
     <base-promo
-      imgLink="/src/assets/icons/mainLogo.png"
+      imgLink="assets/icons/mainLogo.png"
       title="Blog"
       startPage="Home"
       currentPage="Blog"
@@ -38,8 +38,6 @@ export default {
 </script>
 
 <style scoped>
-.blog-wrapper {
-}
 .blog-wrapper__blog-content {
   display: flex;
   flex-direction: column;
