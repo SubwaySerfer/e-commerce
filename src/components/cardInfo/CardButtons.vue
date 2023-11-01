@@ -5,9 +5,9 @@
       class="card-buttons__btn card-buttons__btn_counter"
     ></base-button> -->
     <div class="card-buttons__btn_counter">
-      <button class="counter__item btn">-</button
-      ><input type="number" class="counter__input" value="1" /><button
-        class="counter__item btn"
+      <button class="counter__item btn btn__minus">-</button
+      ><input type="numeric" class="counter__input" value="1" /><button
+        class="counter__item btn btn__plus"
       >
         +
       </button>
@@ -64,6 +64,15 @@
   margin-right: 1.8rem;
   display: flex;
   padding: 2rem 1.5rem;
+  position: relative;
+}
+.btn__minus {
+  top: 1.6rem;
+  left: 1.2rem;
+}
+.btn__plus {
+  top: 1.6rem;
+  right: 0.9rem;
 }
 .counter__item {
   background: transparent;
@@ -71,11 +80,15 @@
 
   display: flex;
   align-items: center;
+  position: absolute;
 }
 .counter__input {
   border: none;
-  width: 3rem;
+  width: 100%;
   margin: 0 2rem;
   text-align: center;
+}
+.counter__input:focus {
+  border: transparent;
 }
 </style>
