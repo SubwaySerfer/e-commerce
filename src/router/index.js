@@ -4,7 +4,7 @@ import HomePage from '../pages/home/HomePage.vue'
 import ShopPage from '../pages/shop/ShopPage.vue'
 import ContactPage from '../pages/contact/ContactPage.vue'
 import BlogPage from '../pages/blog/BlogPage.vue'
-import CardInfoPage from '../pages/cardInfo/cardInfoPage.vue'
+import CardInfoPage from '../pages/cardInfo/CardInfoPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),

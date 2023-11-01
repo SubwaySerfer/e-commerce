@@ -38,8 +38,6 @@ export default {
 </script>
 
 <style scoped>
-.blog-wrapper {
-}
 .blog-wrapper__blog-content {
   display: flex;
   flex-direction: column;
