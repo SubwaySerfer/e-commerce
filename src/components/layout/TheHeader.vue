@@ -2,7 +2,7 @@
   <header>
     <div class="logo-box">
       <img
-        src="src/assets/icons/mainLogo.png"
+        src="/src/assets/icons/mainLogo.png"
         alt="furniro logo"
         class="main-logo"
       />

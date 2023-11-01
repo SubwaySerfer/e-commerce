@@ -4,7 +4,7 @@
     <ul class="post_info-block">
       <li class="info-block__elem">
         <img
-          src="src/assets/icons/blog/icon-admin.svg"
+          src="/src/assets/icons/blog/icon-admin.svg"
           alt="icon admin."
           class="elem__img"
         />
@@ -12,7 +12,7 @@
       </li>
       <li class="info-block__elem">
         <img
-          src="src/assets/icons/blog/icon-calender.svg"
+          src="/src/assets/icons/blog/icon-calender.svg"
           alt="icon calender."
           class="elem__img"
         />
@@ -20,7 +20,7 @@
       </li>
       <li class="info-block__elem">
         <img
-          src="src/assets/icons/blog/icon-tag.svg"
+          src="/src/assets/icons/blog/icon-tag.svg"
           alt="icon mark."
           class="elem__img elem__img_tag"
         />

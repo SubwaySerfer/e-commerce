@@ -2,7 +2,7 @@
   <section>
     <div class="adv-card">
       <img
-        src="src/assets/icons/shop/advantages/shop-trophy.svg"
+        src="/src/assets/icons/shop/advantages/shop-trophy.svg"
         alt="trophy icon"
       />
       <div>
@@ -12,7 +12,7 @@
     </div>
     <div class="adv-card">
       <img
-        src="src/assets/icons/shop/advantages/shop-guarantee.svg"
+        src="/src/assets/icons/shop/advantages/shop-guarantee.svg"
         alt="guarantee icon"
       />
       <div>
@@ -22,7 +22,7 @@
     </div>
     <div class="adv-card">
       <img
-        src="src/assets/icons/shop/advantages/shop-shipping.svg"
+        src="/src/assets/icons/shop/advantages/shop-shipping.svg"
         alt="shipping icon"
       />
       <div>
@@ -32,7 +32,7 @@
     </div>
     <div class="adv-card">
       <img
-        src="src/assets/icons/shop/advantages/shop-support.svg"
+        src="/src/assets/icons/shop/advantages/shop-support.svg"
         alt="support icon"
       />
       <div>

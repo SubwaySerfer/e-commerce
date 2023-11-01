@@ -4,21 +4,21 @@
       <ul>
         <li>
           <img
-            src="src/assets/icons/shop/filters-scroll.svg"
+            src="/src/assets/icons/shop/filters-scroll.svg"
             alt="filter scroll icon"
           />
         </li>
         <li class="scroll-label">Filter</li>
         <li>
           <img
-            src="src/assets/icons/shop/filters-dots.svg"
+            src="/src/assets/icons/shop/filters-dots.svg"
             alt="filter dots"
             class="filter-dots"
           />
         </li>
         <li>
           <img
-            src="src/assets/icons/shop/filters-view.svg"
+            src="/src/assets/icons/shop/filters-view.svg"
             alt="filter view"
             class="filter-view"
           />

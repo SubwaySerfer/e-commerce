@@ -1,7 +1,7 @@
 <template>
   <div class="blog-wrapper">
     <base-promo
-      imgLink="src/assets/icons/mainLogo.png"
+      imgLink="/src/assets/icons/mainLogo.png"
       title="Blog"
       startPage="Home"
       currentPage="Blog"

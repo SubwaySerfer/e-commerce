@@ -20,7 +20,7 @@
 <style scoped>
 .promo-section {
   height: 71.7rem;
-  background-image: url("src/assets/image/home/promo-homePage.png");
+  background-image: url("/src/assets/image/home/promo-homePage.png");
   display: flex;
   justify-content: flex-end;
   align-items: start;
@@ -43,6 +43,7 @@
   border-radius: 0;
   margin-left: -3px;
   cursor: pointer;
+  background-color: #b88e2f;
   transition: ease-in 0.25s;
 }
 .btn:hover {
@@ -52,6 +53,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .promo-text {

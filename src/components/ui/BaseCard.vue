@@ -21,7 +21,7 @@
       <div class="popup-content">
         <div class="popup-content_box">
           <img
-            src="src/assets/icons/furnitureCards/icon-share.svg"
+            src="/src/assets/icons/furnitureCards/icon-share.svg"
             alt="share icon"
             class="popup-icon"
           />
@@ -29,7 +29,7 @@
         </div>
         <div class="popup-content_box">
           <img
-            src="src/assets/icons/furnitureCards/icon-compare.svg"
+            src="/src/assets/icons/furnitureCards/icon-compare.svg"
             alt="compare icon"
             class="popup-icon"
           />
@@ -37,7 +37,7 @@
         </div>
         <div class="popup-content_box">
           <img
-            src="src/assets/icons/furnitureCards/icon-like.svg"
+            src="/src/assets/icons/furnitureCards/icon-like.svg"
             alt="like icon"
             class="popup-icon"
           />

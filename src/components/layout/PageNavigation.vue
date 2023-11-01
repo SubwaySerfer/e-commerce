@@ -5,7 +5,7 @@
     </router-link>
 
     <img
-      src="src/assets/icons/shop/arrow.svg"
+      src="/src/assets/icons/shop/arrow.svg"
       alt="arrow"
       class="navigation__icon"
     />
@@ -13,7 +13,7 @@
       <h5 class="navigation__page-title right-padding">{{ currentPage }}</h5>
     </router-link>
     <img
-      src="src/assets/icons/shop/arrow.svg"
+      src="/src/assets/icons/shop/arrow.svg"
       alt="arrow"
       class="navigation__icon"
     />

@@ -3,32 +3,32 @@
     <ul class="card-section__images-list">
       <li class="images-list__item">
         <img
-          src="src/assets/icons/cardInfo/mini-sofa1.png"
+          src="/src/assets/icons/cardInfo/mini-sofa1.png"
           alt="blue sofa with two armchairs."
         />
       </li>
       <li class="images-list__item">
         <img
-          src="src/assets/icons/cardInfo/mini-sofa2.png"
+          src="/src/assets/icons/cardInfo/mini-sofa2.png"
           alt="grey sofa with two armchairs."
         />
       </li>
       <li class="images-list__item">
         <img
-          src="src/assets/icons/cardInfo/mini-sofa3.png"
+          src="/src/assets/icons/cardInfo/mini-sofa3.png"
           alt="white sofa with two grey pillows."
         />
       </li>
       <li class="images-list__item">
         <img
-          src="src/assets/icons/cardInfo/mini-sofa4.png"
+          src="/src/assets/icons/cardInfo/mini-sofa4.png"
           alt="beige sofa with table."
         />
       </li>
     </ul>
     <div class="card-section__main-photo">
       <img
-        src="src/assets/image/cardInfo/mainSofa1.png"
+        src="/src/assets/image/cardInfo/mainSofa1.png"
         alt="sofa with two armchairs."
         class="main-photo"
       />
