@@ -26,7 +26,7 @@
 <style scoped>
 .card-buttons {
   margin-bottom: 6rem;
-  padding-top: 3.2rem;
+  padding-top: 2.1rem;
   display: flex;
   flex-direction: row;
 }
@@ -46,6 +46,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.counter__item:hover {
+  border: none;
+}
+.counter__item:active,
+.counter__item:focus {
+  outline: none;
+  border: none;
 }
 .card-buttons__btn_counter {
   width: 12.3rem;

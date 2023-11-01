@@ -57,6 +57,7 @@
   display: flex;
   text-align: center;
   gap: 5.2rem;
+  margin: 0;
 }
 .nav-list > li {
   list-style-type: none;

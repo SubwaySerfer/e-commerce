@@ -31,6 +31,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding-top: 4.1rem;
+  margin: 0;
 }
 .list__el {
   display: flex;

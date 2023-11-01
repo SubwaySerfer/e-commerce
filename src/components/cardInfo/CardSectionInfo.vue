@@ -2,7 +2,7 @@
   <div class="card-info">
     <h1 class="card-info__title">{{ name }}</h1>
     <h3 class="card-info__price">{{ price }}</h3>
-    <div>review</div>
+    <card-review></card-review>
     <p class="card-info__description">{{ description }}</p>
     <h5 class="card-info__parameter">Size</h5>
     <ul class="card-info__list">
@@ -16,7 +16,7 @@
         <span class="size__el">XS</span>
       </li>
     </ul>
-    <h5 class="card-info__parameter">Color</h5>
+    <h5 class="card-info__parameter card-info__parameter_color">Color</h5>
     <ul class="card-info__list">
       <li class="list-colors__color list-colors__color_purple"></li>
       <li class="list-colors__color list-colors__color_black"></li>
@@ -30,12 +30,14 @@
 <script>
 import CardMedia from "./CardMedia.vue";
 import CardButtons from "./CardButtons.vue";
+import CardReview from "./CardReview.vue";
 
 export default {
   props: ["name", "price", "description"],
   components: {
     CardMedia,
     CardButtons,
+    CardReview,
   },
 };
 </script>
@@ -68,6 +70,7 @@ export default {
   width: 42.4rem;
   height: auto;
   text-align: start;
+  margin-bottom: 2.2rem;
 }
 .card-info__parameter {
   color: #9f9f9f;
@@ -75,9 +78,13 @@ export default {
   font-weight: 400;
   line-height: normal;
 }
+.card-info__parameter_color {
+  margin-top: 0.53rem;
+}
 .card-info__list {
   display: flex;
   gap: 1.6rem;
+  margin: 1.2rem 0;
 }
 .list-sizes__size {
   width: 3rem;
