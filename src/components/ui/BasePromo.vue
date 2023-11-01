@@ -10,7 +10,7 @@
       <h2>{{ title }}</h2>
       <div class="pages-info">
         <h4>{{ startPage }}</h4>
-        <img src="/src/assets/icons/shop/arrow.svg" alt="arrow" />
+        <img src="assets/icons/shop/arrow.svg" alt="arrow" />
         <h5>{{ currentPage }}</h5>
       </div>
     </slot>
@@ -43,7 +43,7 @@ export default {
 <style scoped>
 section {
   height: 31.6rem;
-  background-image: url("/src/assets/image/shopPage/promoShop.png");
+  background-image: url("assets/image/shopPage/promoShop.png");
   display: flex;
   flex-direction: column;
   align-items: center;

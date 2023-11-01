@@ -2,7 +2,7 @@
   <header>
     <div class="logo-box">
       <img
-        src="/src/assets/icons/mainLogo.png"
+        src="assets/icons/mainLogo.png"
         alt="furniro logo"
         class="main-logo"
       />
@@ -21,16 +21,16 @@
     <div class="icons-box">
       <ul class="icons-list">
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/account-icon.svg" /></a>
+          <a href=""><img src="assets/icons/account-icon.svg" /></a>
         </li>
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/search-icon.svg" /></a>
+          <a href=""><img src="assets/icons/search-icon.svg" /></a>
         </li>
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/heart-icon.svg" /></a>
+          <a href=""><img src="assets/icons/heart-icon.svg" /></a>
         </li>
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/basket-icon.svg" /></a>
+          <a href=""><img src="assets/icons/basket-icon.svg" /></a>
         </li>
       </ul>
     </div>

@@ -1,9 +1,0 @@
-{
-  "posts": [
-    {"id":1,"title":"Going all-in with millennial design","date":"03 Aug 2022","img":"/src/assets/image/posts/recent/recentImage-1.png", "alt": "notepad with pen."},
-    {"id":2,"title":"Exploring new ways of decorating","date":"20 Jun 2022","img":"/src/assets/image/posts/recent/recentImage-2.png", "alt": "text at the image, read more."},
-    {"id":3,"title":"Handmade pieces that took time to make","date":"02 Jun 2022","img":"/src/assets/image/posts/recent/recentImage-3.png", "alt": "work place: tea, laptop and notepad."},
-    {"id":4,"title":"Modern home in Milan","date":"13 May 2022","img":"/src/assets/image/posts/recent/recentImage-4.png", "alt": "work place: laptop, phone and flowers."},  
-    {"id":5,"title":"Colorful office redesign","date":"01 Apr 2022","img":"/src/assets/image/posts/recent/recentImage-5.png", "alt": "morning, coffee, notepad, sunglasses and wood table with chair."}
-  ]
-}

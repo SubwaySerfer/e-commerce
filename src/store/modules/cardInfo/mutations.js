@@ -1,4 +1,4 @@
-import jsonObj from '../../../assets/data/relatedList.json'
+import jsonObj from '../../../../public/assets/data/relatedList.json'
 
 export default {
   createRandomList(state){

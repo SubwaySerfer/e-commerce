@@ -12,7 +12,7 @@
       <div class="content-wrapper_info">
         <div class="info-card info-card_local">
           <img
-            src="/src/assets/icons/contact/local-icon.svg"
+            src="assets/icons/contact/local-icon.svg"
             alt="location icon"
             class="info-card_img icon_local"
           />
@@ -25,7 +25,7 @@
         </div>
         <div class="info-card">
           <img
-            src="/src/assets/icons/contact/phone-icon.svg"
+            src="assets/icons/contact/phone-icon.svg"
             alt="phone icon"
             class="info-card_img icon_phone"
           />
@@ -38,7 +38,7 @@
         </div>
         <div class="info-card info-card_clock">
           <img
-            src="/src/assets/icons/contact/clock-icon.svg"
+            src="assets/icons/contact/clock-icon.svg"
             alt="clock icon"
             class="info-card_img icon_clock"
           />
