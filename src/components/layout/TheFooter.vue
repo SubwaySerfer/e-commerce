@@ -13,7 +13,7 @@
           <li><h6>Links</h6></li>
           <li class="btn-root_vertical"><a href="/">Home</a></li>
           <li class="btn-root_vertical"><a href="/shop">Shop</a></li>
-          <li class="btn-root_vertical"><a href="/about">About</a></li>
+          <li class="btn-root_vertical"><a href="/blog">Blog</a></li>
           <li class="btn-root_vertical"><a href="/contact">Contact</a></li>
         </ul>
         <ul class="footer-nav-items footer-ul_sec">

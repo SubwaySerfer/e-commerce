@@ -29,7 +29,8 @@ html {
   color: #000;
 }
 
-body {
+body,
+ul {
   margin: 0;
 }
 

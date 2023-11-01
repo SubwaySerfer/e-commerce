@@ -10,10 +10,7 @@
     </div>
     <div class="img-block">
       <div class="main-img__box">
-        <img
-          src="src/assets/image/search/BedRoom-search.png"
-          alt="BedRoom photo"
-        />
+        <img src="assets/image/search/BedRoom-search.png" alt="BedRoom photo" />
         <div class="img-info-box">
           <div class="img-info-box__label">
             <h6>01</h6>
@@ -24,7 +21,7 @@
         </div>
         <div class="info-arrow">
           <img
-            src="src/assets/icons/home/arrow-search.svg"
+            src="assets/icons/home/arrow-search.svg"
             alt="arrow icon"
             class="info-icon__itm"
           />
@@ -32,26 +29,26 @@
       </div>
       <div class="other-block">
         <div class="slider-images">
-          <img src="src/assets/image/search/SecRoom.png" alt="" />
+          <img src="assets/image/search/SecRoom.png" alt="" />
         </div>
         <div class="slider-box">
           <img
-            src="src/assets/icons/home/active-room-search.svg"
+            src="assets/icons/home/active-room-search.svg"
             alt=""
             class="slider-icon slider-icon_active"
           />
           <img
-            src="src/assets/icons/home/basic-room-search.svg"
+            src="assets/icons/home/basic-room-search.svg"
             alt=""
             class="slider-icon"
           />
           <img
-            src="src/assets/icons/home/basic-room-search.svg"
+            src="assets/icons/home/basic-room-search.svg"
             alt=""
             class="slider-icon"
           />
           <img
-            src="src/assets/icons/home/basic-room-search.svg"
+            src="assets/icons/home/basic-room-search.svg"
             alt=""
             class="slider-icon"
           />

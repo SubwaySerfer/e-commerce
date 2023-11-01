@@ -5,7 +5,7 @@
     <div class="room-cards">
       <div class="room-card">
         <img
-          src="../../assets/image/home/room-dining.png"
+          src="assets/image/home/room-dining.png"
           alt="dining room"
           class="room-card__img"
         />
@@ -13,7 +13,7 @@
       </div>
       <div class="room-card">
         <img
-          src="../../assets/image/home/room-living.png"
+          src="assets/image/home/room-living.png"
           alt="living room"
           class="room-card__img"
         />
@@ -21,7 +21,7 @@
       </div>
       <div class="room-card">
         <img
-          src="../../assets/image/home/room-bedroom.png"
+          src="assets/image/home/room-bedroom.png"
           alt="bedroom"
           class="room-card__img"
         />

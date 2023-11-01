@@ -1,11 +1,16 @@
 <template>
   <section>
-    <img :src="img" alt="logo image" v-if="img" class="promo-logo" />
+    <img
+      :src="`${imgLink}`"
+      alt="logo image"
+      v-if="imgLink"
+      class="promo-logo"
+    />
     <slot name="pageTitle">
       <h2>{{ title }}</h2>
       <div class="pages-info">
         <h4>{{ startPage }}</h4>
-        <img src="src/assets/icons/shop/arrow.svg" alt="arrow" />
+        <img src="assets/icons/shop/arrow.svg" alt="arrow" />
         <h5>{{ currentPage }}</h5>
       </div>
     </slot>
@@ -27,7 +32,7 @@ export default {
       type: String,
       required: true,
     },
-    img: {
+    imgLink: {
       type: String,
       required: false,
     },
@@ -38,7 +43,7 @@ export default {
 <style scoped>
 section {
   height: 31.6rem;
-  background-image: url("src/assets/image/shopPage/promoShop.png");
+  background-image: url("assets/image/shopPage/promoShop.png");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +56,7 @@ section {
   gap: 0.6rem;
   padding-top: 0.3rem;
   justify-content: center;
-  padding-left: 2.4rem;
+  /* padding-left: 2.4rem; */
 }
 h2 {
   font-size: 4.8rem;

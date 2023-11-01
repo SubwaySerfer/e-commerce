@@ -1,10 +1,13 @@
 <template>
   <button v-if="!link" :class="mode">
-    <slot></slot>
+    <slot>{{ linkName }}</slot>
   </button>
-  <router-link v-else :to="to" :linkName="linkName" :class="mode">
-    <slot></slot>
-  </router-link>
+  <button v-else :class="mode" class="btn">
+    <router-link :to="to" :linkName="linkName" class="btn"
+      >{{ linkName }}
+      <!-- <slot>{{ linkName }}</slot> -->
+    </router-link>
+  </button>
 </template>
 
 <script>
@@ -31,16 +34,20 @@ export default {
       default: "",
     },
   },
-  // computed: {
-  // createLink() {
-  //   return;
-  // },
-  // },
 };
 </script>
 
 <style scoped>
-button,
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.btn:hover {
+  color: white;
+}
+/* button,
 a {
   text-decoration: none;
   background-color: #b88e2f;
@@ -53,6 +60,31 @@ a {
   font-weight: 700;
   line-height: normal;
   white-space: nowrap;
+} */
+a {
+  text-decoration: none;
+  color: #b88e2f;
+  width: 100%;
+  height: 100%;
+}
+a:hover {
+  color: white;
+}
+.white-btn {
+  border: 1px solid #b88e2f;
+  background: #fff;
+  color: #b88e2f;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  width: 24.5rem;
+  height: 4.8rem;
+  border-radius: 0;
+}
+.white-btn:hover {
+  color: #fff;
 }
 
 a:hover,

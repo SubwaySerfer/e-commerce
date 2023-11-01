@@ -3,7 +3,8 @@ import {createRouter, createWebHistory} from 'vue-router'
 import HomePage from '../pages/home/HomePage.vue'
 import ShopPage from '../pages/shop/ShopPage.vue'
 import ContactPage from '../pages/contact/ContactPage.vue'
-import AboutPage from '../pages/about/AboutPage.vue'
+import BlogPage from '../pages/blog/BlogPage.vue'
+import CardInfoPage from '../pages/cardInfo/CardInfoPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -11,20 +12,29 @@ const router = createRouter({
     path: '/',
     redirect: '/home'
   },
-{ path: '/home',
+{ 
+  path: '/home',
   name: 'home',
   component: HomePage },
-{ path:'/shop',
+{ 
+  path:'/shop',
   name:'shop',
-  component: ShopPage },
+  component: ShopPage},
+  {
+    path: '/card-info',
+    name: 'cardInfo',
+    component: CardInfoPage
+  
+},
 { path:'/contact',
   name: 'contact',
   component: ContactPage  
 },
-{ path: '/about',
-  name:'about',
-  component: AboutPage
-}]
+{ path: '/blog',
+  name:'blog',
+  component: BlogPage
+},
+]
 })
 
 export default router;

@@ -1,7 +1,28 @@
-# Vue 3 + Vite
+# Проект: "E-commerce"
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+---
 
-## Recommended IDE Setup
+## Описание:
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Самостоятельный проект, макет был взян из общего доступа. Часть дизайна плохо продумана, либо встречаются не соответствия от страницы к странице, поэтому некоторые моменты отличаются от решений дизайнера. Проект находится в разработке.
+
+[Макет проекта](<https://www.figma.com/file/aB3ocscdgsZoxuXwpPgwKn/eCommerce-Website-%7C-Web-Page-Design-%7C-UI-KIT-(Community)?type=design&node-id=0%3A1&mode=dev>)
+
+---
+
+#### Стэк технологий:
+
+Vue3, Vuex, JS, CSS
+
+<!-- ---
+
+## Ссылки: -->
+
+---
+
+## Установка
+
+- `npm install` — установить зависимости
+- `npm run dev` — запуск сервера разработки
+<!-- - `npm run start` — запуск express версии port 3000 -->
+- `npm run build` — сборка проекта

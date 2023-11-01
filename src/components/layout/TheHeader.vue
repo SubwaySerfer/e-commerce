@@ -2,7 +2,7 @@
   <header>
     <div class="logo-box">
       <img
-        src="../../assets/icons/mainLogo.png"
+        src="assets/icons/mainLogo.png"
         alt="furniro logo"
         class="main-logo"
       />
@@ -12,7 +12,7 @@
       <ul>
         <li class="btn-root"><router-link to="/">Home</router-link></li>
         <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
-        <li class="btn-root"><router-link to="/about">About</router-link></li>
+        <li class="btn-root"><router-link to="/blog">Blog</router-link></li>
         <li class="btn-root">
           <router-link to="/contact">Contact</router-link>
         </li>
@@ -21,16 +21,16 @@
     <div class="icons-box">
       <ul class="icons-list">
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/account-icon.svg" /></a>
+          <a href=""><img src="assets/icons/account-icon.svg" /></a>
         </li>
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/search-icon.svg" /></a>
+          <a href=""><img src="assets/icons/search-icon.svg" /></a>
         </li>
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/heart-icon.svg" /></a>
+          <a href=""><img src="assets/icons/heart-icon.svg" /></a>
         </li>
         <li class="btn-root">
-          <a href=""><img src="../../assets/icons/basket-icon.svg" /></a>
+          <a href=""><img src="assets/icons/basket-icon.svg" /></a>
         </li>
       </ul>
     </div>
@@ -60,7 +60,10 @@ header {
   padding-right: 26.6rem;
 }
 .icons-box {
-  padding-left: 15.8rem;
+  /* padding-left: 15.8rem; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 h1 {
   color: #000;

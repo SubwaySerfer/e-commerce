@@ -2,51 +2,15 @@
   <section>
     <h4 class="title-desc">Share your setup with</h4>
     <h2 class="title-label">#FuniroFurniture</h2>
-    <img
-      src="src/assets/image/furniture/furniture-1.png"
-      alt=""
-      class="img-1"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-3.png"
-      alt=""
-      class="img-3"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-2.png"
-      alt=""
-      class="img-2"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-4.png"
-      alt=""
-      class="img-4"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-5.png"
-      alt=""
-      class="img-5"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-6.png"
-      alt=""
-      class="img-6"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-8.png"
-      alt=""
-      class="img-8"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-7.png"
-      alt=""
-      class="img-7"
-    />
-    <img
-      src="src/assets/image/furniture/furniture-9.png"
-      alt=""
-      class="img-9"
-    />
+    <img src="assets/image/furniture/furniture-1.png" alt="" class="img-1" />
+    <img src="assets/image/furniture/furniture-3.png" alt="" class="img-3" />
+    <img src="assets/image/furniture/furniture-2.png" alt="" class="img-2" />
+    <img src="assets/image/furniture/furniture-4.png" alt="" class="img-4" />
+    <img src="assets/image/furniture/furniture-5.png" alt="" class="img-5" />
+    <img src="assets/image/furniture/furniture-6.png" alt="" class="img-6" />
+    <img src="assets/image/furniture/furniture-8.png" alt="" class="img-8" />
+    <img src="assets/image/furniture/furniture-7.png" alt="" class="img-7" />
+    <img src="assets/image/furniture/furniture-9.png" alt="" class="img-9" />
   </section>
 </template>
 
