@@ -43,12 +43,13 @@ export default {
 <style scoped>
 section {
   height: 31.6rem;
-  background-image: url("assets/image/shopPage/promoShop.png");
+  background-image: url('assets/image/shopPage/promoShop.png');
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 9.5rem;
   justify-content: end;
+  width: 100%;
 }
 .pages-info {
   display: flex;

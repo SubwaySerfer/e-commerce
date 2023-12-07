@@ -7,6 +7,7 @@ import BlogPage from '../pages/blog/BlogPage.vue';
 import CardInfoPage from '../pages/cardInfo/CardInfoPage.vue';
 import CartPage from '../pages/cart/CartPage.vue';
 import ProfilePage from '../pages/profile/ProfilePage.vue'
+import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/profile',
       name: 'profile',
       component: ProfilePage
+    },
+    {
+      path: '/comparison',
+      name: 'comparison',
+      component: ComparisonPage
     },
     { path: '/contact', name: 'contact', component: ContactPage },
     { path: '/blog', name: 'blog', component: BlogPage },
