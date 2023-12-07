@@ -6,12 +6,16 @@
       currentPage="Comparison"
       imgLink="assets/icons/mainLogo.png"
     ></base-promo>
+    <comparison-products></comparison-products>
+    <our-advantages></our-advantages>
   </main>
 </template>
 
 <script>
+import ComparisonProducts from '../../components/comparison/ComparisonProducts.vue';
+
 export default {
-  components: {},
+  components: { ComparisonProducts },
 };
 </script>
 
