@@ -10,7 +10,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis.
       </p>
-      <base-button class="btn">
+      <base-button class="btn" @click="this.$router.push('/shop')">
         <router-link to="/shop" class="btn-text">BUY Now</router-link>
       </base-button>
     </div>
@@ -20,7 +20,7 @@
 <style scoped>
 .promo-section {
   height: 71.7rem;
-  background-image: url("assets/image/home/promo-homePage.png");
+  background-image: url('assets/image/home/promo-homePage.png');
   display: flex;
   justify-content: flex-end;
   align-items: start;
