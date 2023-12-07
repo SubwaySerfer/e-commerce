@@ -5,8 +5,9 @@
         src="assets/icons/mainLogo.png"
         alt="furniro logo"
         class="main-logo"
+        @click="this.routeHome"
       />
-      <h1>Furniro</h1>
+      <h1 @click="this.routeHome">Furniro</h1>
     </div>
     <nav>
       <ul>
@@ -21,7 +22,7 @@
     <div class="icons-box">
       <ul class="icons-list">
         <li class="btn-root">
-          <router-link to=""
+          <router-link to="/profile"
             ><img src="assets/icons/account-icon.svg"
           /></router-link>
         </li>
@@ -45,6 +46,17 @@
   </header>
 </template>
 
+<script>
+export default {
+  //TODO: сделать перезагрузку страницы если я уже на домашней
+  methods: {
+    routeHome() {
+      this.$router.push('/home');
+    },
+  },
+};
+</script>
+
 <style scoped>
 header {
   height: 10rem;
@@ -58,6 +70,7 @@ header {
 .main-logo {
   width: 5rem;
   height: 3.2rem;
+  cursor: pointer;
 }
 .logo-box {
   display: flex;
@@ -68,7 +81,7 @@ header {
   padding-right: 26.6rem;
 }
 .icons-box {
-  /* padding-left: 15.8rem; */
+  padding-left: 15.8rem;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -81,6 +94,7 @@ h1 {
   font-weight: 700;
   line-height: normal;
   margin: 0;
+  cursor: pointer;
 }
 ul {
   display: flex;

@@ -1,24 +1,70 @@
 <template>
-  <section>
-    <img src="" alt="Profile avatar." width="200px" height="250px" />
-    <div>Profile info</div>
-    <ul>
+  <section class="profile">
+    <img
+      src="/public/assets/image/profile/profile-image.jpeg"
+      alt="Profile avatar."
+      width="250px"
+      height="250px"
+      class="profile__img"
+    />
+    <h2>Profile info</h2>
+    <ul class="profile-info">
       <li>
-        <label for="">Login<input type="text" /></label>
+        <label for="" class="profile-info__el"
+          >Login<input type="text"
+        /></label>
       </li>
       <li>
-        <label for="">First Name<input type="text" /></label>
+        <label for="" class="profile-info__el"
+          >First Name<input type="text"
+        /></label>
       </li>
       <li>
-        <label for="">Last Name<input type="text" /></label>
+        <label for="" class="profile-info__el"
+          >Last Name<input type="text"
+        /></label>
       </li>
       <li>
-        <label for="">Email<input type="email" /></label>
+        <label for="" class="profile-info__el"
+          >Email<input type="email"
+        /></label>
       </li>
       <li>
-        <label for="">Phone<input type="tel" /></label>
+        <label for="" class="profile-info__el">Phone<input type="tel" /></label>
       </li>
     </ul>
   </section>
 </template>
 <!-- Сделать проверку на авторитизацию и модалку авторитизации -->
+
+<style scoped>
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile__img {
+  background-size: cover;
+  width: 250px;
+  box-shadow: 0px 0px 4px black;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+}
+
+.profile-info {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+.profile-info__el {
+  display: flex;
+  width: 30rem;
+  justify-content: space-between;
+  text-wrap: nowrap;
+  align-items: center;
+}
+</style>

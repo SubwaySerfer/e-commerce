@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="profile-wrapper">
     <ProfileInfo></ProfileInfo>
     <!-- TODO: Сделать несколько секций на выбор, изменение данных, карты, история покупок -->
   </main>
@@ -14,3 +14,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.profile-wrapper {
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
