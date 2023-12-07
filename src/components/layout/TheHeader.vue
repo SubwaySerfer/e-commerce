@@ -21,16 +21,24 @@
     <div class="icons-box">
       <ul class="icons-list">
         <li class="btn-root">
-          <a href=""><img src="assets/icons/account-icon.svg" /></a>
+          <router-link to=""
+            ><img src="assets/icons/account-icon.svg"
+          /></router-link>
         </li>
         <li class="btn-root">
-          <a href=""><img src="assets/icons/search-icon.svg" /></a>
+          <router-link to=""
+            ><img src="assets/icons/search-icon.svg"
+          /></router-link>
         </li>
         <li class="btn-root">
-          <a href=""><img src="assets/icons/heart-icon.svg" /></a>
+          <router-link to=""
+            ><img src="assets/icons/heart-icon.svg"
+          /></router-link>
         </li>
         <li class="btn-root">
-          <a href=""><img src="assets/icons/basket-icon.svg" /></a>
+          <router-link to="/cart"
+            ><img src="assets/icons/basket-icon.svg"
+          /></router-link>
         </li>
       </ul>
     </div>
