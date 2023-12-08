@@ -37,7 +37,7 @@
         <li class="items-box__li">
           <h6>Configuration</h6>
           <p class="second_tb"></p>
-          <p class="third_tb">yyy</p>
+          <p class="third_tb">Test</p>
         </li>
         <li class="items-box__li">
           <h6>Upholstery Material</h6>
@@ -71,14 +71,90 @@
         <li class="items-box__li">
           <h6>Maximum Load Capacity</h6>
           <p class="second_tb"></p>
-          <p class="third_tb">yyy</p>
+          <p class="third_tb">TODO!</p>
         </li>
         <li class="items-box__li">
           <h6>Origin of Manufacture</h6>
           <p class="second_tb"></p>
-          <p class="third_tb">yyy</p>
+          <p class="third_tb">Text</p>
         </li>
       </ul>
+
+      <h4 class="items__title items__title__dimenseion">Dimensions</h4>
+      <ul class="main__items-box main__items-box__dimenseion">
+        <li class="items-box__li">
+          <h6>Width</h6>
+          <p class="second_tb">test</p>
+          <p class="third_tb">test3</p>
+        </li>
+        <li class="items-box__li">
+          <h6>Height</h6>
+          <p class="second_tb"></p>
+          <p class="third_tb"></p>
+        </li>
+        <li class="items-box__li">
+          <h6>Depth</h6>
+          <p class="second_tb"></p>
+          <p class="third_tb"></p>
+        </li>
+        <li class="items-box__li">
+          <h6>Weight</h6>
+          <p class="second_tb"></p>
+          <p class="third_tb">test</p>
+        </li>
+        <li class="items-box__li">
+          <h6>Seat Height</h6>
+          <p class="second_tb"></p>
+          <p class="third_tb">Test Test</p>
+        </li>
+        <li class="items-box__li">
+          <h6>Leg Height</h6>
+          <p class="second_tb"></p>
+          <p class="third_tb">Test Test</p>
+        </li>
+      </ul>
+
+      <h4 class="items__title items__title__warranty">Warranty</h4>
+      <ul class="main__items-box main__items-box__warranty">
+        <li class="items-box__li">
+          <h6>Warranty Summary</h6>
+          <p class="second_tb">1 Year Manufacturing Warranty</p>
+          <p class="third_tb">1.2 Year Manufacturing Warranty</p>
+        </li>
+        <li class="items-box__li">
+          <h6>Warranty Service
+            Type</h6>
+          <p class="second_tb">For Warranty Claims or Any Product Related Issues Please Email at
+            operations@
+            trevifurniture.com</p>
+          <p class="third_tb">For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</p>
+        </li>
+        <li class="items-box__li">
+          <h6>Covered in Warranty</h6>
+          <p class="second_tb">Warranty Against Manufacturing Defect</p>
+          <p class="third_tb">Warranty of the product is limited to manufacturing defects only.</p>
+        </li>
+        <li class="items-box__li">
+          <h6>Not Covered in Warranty</h6>
+          <p class="second_tb">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And
+            Wear & Tear In The Natural Course Of Product Usage.</p>
+          <p class="third_tb">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And
+            Wear & Tear In The Natural Course Of Product Usage.</p>
+        </li>
+        <li class="items-box__li">
+          <h6>Domestic Warranty</h6>
+          <p class="second_tb">1 Year</p>
+          <p class="third_tb">3 Months</p>
+        </li>
+        <li class="items-box__li items-box__li__last">
+          <base-button linkName="Add To Cart" class="second_tb__btn" mode="yellow-btn"></base-button>
+          <base-button class="third_tb__btn" linkName="Add To Cart" mode="yellow-btn"></base-button>
+        </li>
+
+      </ul>
+      <span class="line_1 line"></span>
+      <span class="line_2 line"></span>
+      <span class="line_3 line"></span>
     </div>
   </section>
 </template>
@@ -152,8 +228,8 @@ ul {
   border-top: 1px solid #e8e8e8;
   display: grid;
   width: 100%;
-  grid-template-rows: 3rem 1fr 3rem 1fr 3rem 2fr;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3rem 1fr 3rem min-content 3rem min-content 3rem min-content;
+  grid-template-columns: 259px 1px 344px 1px 344px 1px 1fr;
   color: #000;
   font-family: Poppins;
   font-size: 2rem;
@@ -179,13 +255,21 @@ ul {
   grid-area: 3 / 1 / 4 / 2;
 }
 
+.items__title__dimenseion {
+  grid-area: 5 / 1 / 6 / 2;
+}
+
+.items__title__warranty {
+  grid-area: 7 / 1 / 8 / 2;
+}
+
 
 .main__items-box {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   row-gap: 3.4rem;
-  padding-top: 3.3rem;
+  padding-top: 3.4rem;
   margin-bottom: 9.3rem;
 }
 
@@ -194,11 +278,20 @@ ul {
 }
 
 .main__items-box__general {
-  grid-area: 2 / 1 / 2 / 4;
+  grid-area: 2 / 1 / 2 / 6;
 }
 
 .main__items-box__product {
-  grid-area: 4/ 1 / 5 / 4;
+  grid-area: 4/ 1 / 5 / 6;
+  margin-bottom: 9.4rem;
+}
+
+.main__items-box__dimenseion {
+  grid-area: 6 / 1 / 7 / 6;
+}
+
+.main__items-box__warranty {
+  grid-area: 8 / 1 / 9 / 6;
 }
 
 .items-box__li>h6 {
@@ -207,19 +300,60 @@ ul {
   font-weight: 400;
   line-height: 126.5%;
   text-wrap: wrap;
+  width: 259px;
+  padding-right: 16px;
 }
 
 .items-box__li {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 259px 345px 345px;
   width: 100%;
+  text-align: start;
 }
 
 .second_tb {
   grid-column: 2 / 3;
+  padding-left: 6.2rem;
+  padding-right: 4.1rem;
+}
+
+.second_tb__btn {
+  grid-column: 2 / 3;
+  justify-self: center;
 }
 
 .third_tb {
   grid-column: 3 / 4;
+  padding-left: 6.2rem;
+  padding-right: 4.1rem;
+}
+
+.third_tb__btn {
+  grid-column: 3 / 4;
+  justify-self: center;
+}
+
+.line {
+  background: #E8E8E8;
+  width: 1px;
+  height: 100%;
+}
+
+.items-box__li__last {
+  padding-top: 2.6rem;
+}
+
+.line_1 {
+  grid-area: 1 / 2 / -1 / 3;
+}
+
+.line_2 {
+  grid-area: 1 / 4 / -1 / 5;
+
+}
+
+.line_3 {
+  grid-area: 1 / 6 / -1 / 7;
+
 }
 </style>
