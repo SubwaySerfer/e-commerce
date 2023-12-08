@@ -1,11 +1,6 @@
 <template>
   <section>
-    <img
-      :src="`${imgLink}`"
-      alt="logo image"
-      v-if="imgLink"
-      class="promo-logo"
-    />
+    <img :src="`${imgLink}`" alt="logo image" v-if="imgLink" class="promo-logo" />
     <slot name="pageTitle">
       <h2>{{ title }}</h2>
       <div class="pages-info">
@@ -51,6 +46,7 @@ section {
   justify-content: end;
   width: 100%;
 }
+
 .pages-info {
   display: flex;
   flex-direction: row;
@@ -59,25 +55,33 @@ section {
   justify-content: center;
   /* padding-left: 2.4rem; */
 }
+
 h2 {
   font-size: 4.8rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
+
 h4 {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
+
 h5 {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
+
 .promo-logo {
   padding-bottom: 0.7rem;
+}
+
+.left-padding {
+  padding-left: 59px;
 }
 </style>

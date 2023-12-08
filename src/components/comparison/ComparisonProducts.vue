@@ -7,7 +7,7 @@
       </div>
 
       <div>
-        <h3>Add A Product</h3>
+        <h3 class="promo__product">Add A Product</h3>
         <select name="product" id="productSelet">
           <option value="">Choose a Product</option>
           <option value="Asgaard Sofa">Asgaard Sofa</option>
@@ -58,6 +58,7 @@
   width: 100%;
   padding: 0 5.4rem;
 }
+
 .comparison__promo {
   display: flex;
   flex-direction: row;
@@ -66,6 +67,7 @@
   height: 38.6rem;
   padding-top: 3.4rem;
 }
+
 .more__title {
   font-size: 2.8rem;
   font-weight: 500;
@@ -74,14 +76,22 @@
   text-align: start;
   margin-bottom: 2.1rem;
 }
+
 .more__btn {
   color: #727272;
   font-size: 2rem;
   font-weight: 500;
   line-height: normal;
   width: 11.5rem;
-
   border-bottom: 2px solid #727272;
+  text-align: start;
+}
+
+.promo__product {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 126.5%;
+  padding-right: 7.1rem;
 }
 
 .comparising__main {
@@ -98,34 +108,41 @@
   line-height: 126.5%;
   padding-top: 4.2rem;
 }
+
 .main__title__general {
   grid-area: 1 / 1 / 2 / 2;
   text-align: start;
 }
+
 .main__items-box {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   row-gap: 3.4rem;
-  /* grid-area: 1 / 1 / 2 / 4; */
-  /* grid-area: 2 / 1 / 2 / 4; */
 }
+
+.promo__more {
+  padding: 20px 0 0 42px;
+}
+
 .main__items-box__general {
   grid-area: 2 / 1 / 2 / 4;
 }
 
-.items-box__li > h6 {
+.items-box__li>h6 {
   text-align: start;
 }
+
 .items-box__li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
 }
+
 .second_tb {
-  /* display: grid; */
   grid-column: 2 / 3;
 }
+
 .third_tb {
   grid-column: 3 / 4;
 }

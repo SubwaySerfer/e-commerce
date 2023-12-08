@@ -1,11 +1,7 @@
 <template>
   <main class="comparison">
-    <base-promo
-      title="Product Comparison"
-      startPage="Home"
-      currentPage="Comparison"
-      imgLink="assets/icons/mainLogo.png"
-    ></base-promo>
+    <base-promo title="Product Comparison" startPage="Home" currentPage="Comparison"
+      imgLink="assets/icons/mainLogo.png"></base-promo>
     <comparison-products></comparison-products>
     <our-advantages></our-advantages>
   </main>
@@ -16,6 +12,9 @@ import ComparisonProducts from '../../components/comparison/ComparisonProducts.v
 
 export default {
   components: { ComparisonProducts },
+  mounted() {
+    document.querySelector('.pages-info').classList.add('left-padding')
+  }
 };
 </script>
 
