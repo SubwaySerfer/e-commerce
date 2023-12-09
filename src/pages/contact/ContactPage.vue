@@ -1,11 +1,6 @@
 <template>
   <section>
-    <base-promo
-      imgLink="assets/icons/mainLogo.png"
-      title="Contact"
-      startPage="Home"
-      currentPage="Contact"
-    ></base-promo>
+    <base-promo imgLink="/assets/icons/mainLogo.png" title="Contact" startPage="Home" currentPage="Contact"></base-promo>
     <contact-form></contact-form>
     <our-advantages class="advantages-container"></our-advantages>
   </section>

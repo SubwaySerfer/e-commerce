@@ -4,19 +4,11 @@
       <h5 class="navigation__page-title">{{ mainPage }}</h5>
     </router-link>
 
-    <img
-      src="assets/icons/shop/arrow.svg"
-      alt="arrow"
-      class="navigation__icon"
-    />
+    <img src="/assets/icons/shop/arrow.svg" alt="arrow" class="navigation__icon" />
     <router-link :to="currentPageName">
       <h5 class="navigation__page-title right-padding">{{ currentPage }}</h5>
     </router-link>
-    <img
-      src="assets/icons/shop/arrow.svg"
-      alt="arrow"
-      class="navigation__icon"
-    />
+    <img src="/assets/icons/shop/arrow.svg" alt="arrow" class="navigation__icon" />
     <span class="navigation__line"></span>
     <router-link :to="cardPageName">
       <h5 class="navigation__card-name">{{ cardName }}</h5>
@@ -41,6 +33,7 @@ export default {
 a {
   text-decoration: none;
 }
+
 .navigation {
   width: 144rem;
   height: 10rem;
@@ -51,6 +44,7 @@ a {
   justify-content: flex-start;
   padding-left: 9.9rem;
 }
+
 .navigation__page-title {
   color: #9f9f9f;
   font-family: Poppins;
@@ -59,6 +53,7 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+
 .navigation__card-name {
   color: #000;
   font-family: Poppins;
@@ -67,6 +62,7 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+
 .navigation__icon {
   width: 2rem;
   height: 2rem;
@@ -79,9 +75,11 @@ a {
   background: #9f9f9f;
   margin-right: 3.4rem;
 }
+
 .navigation__page-title:first-child {
   margin-right: 1.4rem;
 }
+
 .right-padding {
   padding-right: 2.1rem;
 }

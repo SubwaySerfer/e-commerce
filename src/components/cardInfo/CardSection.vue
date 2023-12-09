@@ -2,44 +2,24 @@
   <section class="card-section">
     <ul class="card-section__images-list">
       <li class="images-list__item">
-        <img
-          src="assets/icons/cardInfo/mini-sofa1.png"
-          alt="blue sofa with two armchairs."
-        />
+        <img src="/assets/icons/cardInfo/mini-sofa1.png" alt="blue sofa with two armchairs." />
       </li>
       <li class="images-list__item">
-        <img
-          src="assets/icons/cardInfo/mini-sofa2.png"
-          alt="grey sofa with two armchairs."
-        />
+        <img src="/assets/icons/cardInfo/mini-sofa2.png" alt="grey sofa with two armchairs." />
       </li>
       <li class="images-list__item">
-        <img
-          src="assets/icons/cardInfo/mini-sofa3.png"
-          alt="white sofa with two grey pillows."
-        />
+        <img src="/assets/icons/cardInfo/mini-sofa3.png" alt="white sofa with two grey pillows." />
       </li>
       <li class="images-list__item">
-        <img
-          src="assets/icons/cardInfo/mini-sofa4.png"
-          alt="beige sofa with table."
-        />
+        <img src="/assets/icons/cardInfo/mini-sofa4.png" alt="beige sofa with table." />
       </li>
     </ul>
     <div class="card-section__main-photo">
-      <img
-        src="assets/image/cardInfo/mainSofa1.png"
-        alt="sofa with two armchairs."
-        class="main-photo"
-      />
+      <img src="/assets/image/cardInfo/mainSofa1.png" alt="sofa with two armchairs." class="main-photo" />
     </div>
 
-    <card-section-info
-      name="Asgaard sofa"
-      price="Rs. 250,000.00"
-      description="Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
-"
-    ></card-section-info>
+    <card-section-info name="Asgaard sofa" price="Rs. 250,000.00" description="Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
+"></card-section-info>
   </section>
 </template>
 
@@ -62,12 +42,14 @@ export default {
   padding: 3.5rem 10rem 6.7rem;
   gap: 3.1rem;
 }
+
 .card-section__images-list {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
   margin: 0;
 }
+
 .images-list__item {
   list-style-type: none;
   width: 7.6rem;
@@ -78,6 +60,7 @@ export default {
   align-items: center;
   padding-bottom: 1rem;
 }
+
 .card-section__main-photo {
   width: 42.3rem;
   height: 50rem;
@@ -86,6 +69,7 @@ export default {
   display: flex;
   justify-content: center;
 }
+
 .main-photo {
   width: 100%;
 }

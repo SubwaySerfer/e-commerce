@@ -11,11 +11,7 @@
     <div class="content-wrapper">
       <div class="content-wrapper_info">
         <div class="info-card info-card_local">
-          <img
-            src="assets/icons/contact/local-icon.svg"
-            alt="location icon"
-            class="info-card_img icon_local"
-          />
+          <img src="/assets/icons/contact/local-icon.svg" alt="location icon" class="info-card_img icon_local" />
           <div class="info-card_text">
             <h3>Address</h3>
             <p class="content-wrapper_paragraph">
@@ -24,11 +20,7 @@
           </div>
         </div>
         <div class="info-card">
-          <img
-            src="assets/icons/contact/phone-icon.svg"
-            alt="phone icon"
-            class="info-card_img icon_phone"
-          />
+          <img src="/assets/icons/contact/phone-icon.svg" alt="phone icon" class="info-card_img icon_phone" />
           <div class="info-card_text">
             <h3>Phone</h3>
             <p class="content-wrapper_paragraph">
@@ -37,11 +29,7 @@
           </div>
         </div>
         <div class="info-card info-card_clock">
-          <img
-            src="assets/icons/contact/clock-icon.svg"
-            alt="clock icon"
-            class="info-card_img icon_clock"
-          />
+          <img src="/assets/icons/contact/clock-icon.svg" alt="clock icon" class="info-card_img icon_clock" />
           <div class="info-card_text">
             <h3>Working Time</h3>
             <p class="content-wrapper_paragraph">
@@ -79,6 +67,7 @@ section {
   justify-content: flex-start;
   align-items: center;
 }
+
 h2 {
   font-size: 3.6rem;
   font-style: normal;
@@ -86,6 +75,7 @@ h2 {
   line-height: normal;
   margin-bottom: 0.7rem;
 }
+
 .main-info {
   color: #9f9f9f;
   text-align: center;
@@ -95,6 +85,7 @@ h2 {
   line-height: normal;
   max-width: 64.5rem;
 }
+
 .content-wrapper {
   display: flex;
   flex-direction: row;
@@ -102,6 +93,7 @@ h2 {
   justify-content: flex-start;
   padding-top: 8.2rem;
 }
+
 .btn-contact {
   color: #fff;
   font-family: Poppins;
@@ -110,32 +102,40 @@ h2 {
   font-weight: 400;
   line-height: normal;
 }
+
 .icon_clock {
   padding-top: 1.8rem;
 }
+
 .icon_phone {
   padding-top: 1.3rem;
 }
+
 .icon_local {
   padding-top: 1.2rem;
 }
+
 .icon_phone {
   padding-left: 2px;
 }
+
 .info-card_local,
 .info-card_clock {
   padding-left: 1rem;
 }
+
 .info-card_img {
   align-self: flex-start;
   /* width: 23px; */
 }
+
 .content-wrapper_info {
   display: flex;
   flex-direction: column;
   padding: 4.6rem 7.5rem 0 1.5rem;
   gap: 3.2rem;
 }
+
 .content-wrapper_paragraph {
   font-size: 1.6rem;
   font-style: normal;
@@ -143,11 +143,13 @@ h2 {
   line-height: normal;
   width: 21.2rem;
 }
+
 .info-card {
   display: flex;
   flex-direction: row;
   gap: 3rem;
 }
+
 .info-card_text {
   display: flex;
   flex-direction: column;
@@ -156,6 +158,7 @@ h2 {
   text-align: start;
   /* padding-left: 0.5rem; */
 }
+
 h3 {
   font-size: 2.4rem;
   font-style: normal;
@@ -163,6 +166,7 @@ h3 {
   line-height: normal;
   /* text-indent: 2.8rem; */
 }
+
 label {
   font-size: 1.6rem;
   font-style: normal;
@@ -171,6 +175,7 @@ label {
   text-align: start;
   margin-bottom: 2.2rem;
 }
+
 .form-box {
   display: flex;
   flex-direction: column;
@@ -179,6 +184,7 @@ label {
   justify-content: space-between;
   /* gap: 3.6rem; */
 }
+
 input {
   height: 7.5rem;
   border-radius: 1rem;
@@ -194,6 +200,7 @@ input {
   font-weight: 400;
   line-height: normal;
 }
+
 textarea {
   margin-bottom: 4.8rem;
   height: 12rem;
@@ -208,6 +215,7 @@ textarea {
   border: 1px solid #9f9f9f;
   background: #fff;
 }
+
 .btn {
   width: 23.7rem;
   height: 5.5rem;

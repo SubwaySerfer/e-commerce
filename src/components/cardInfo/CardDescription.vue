@@ -29,10 +29,10 @@
     </div>
     <div class="image-block">
       <div class="image-back">
-        <img src="assets/image/cardInfo/cardSofa1.png" alt="" />
+        <img src="/assets/image/cardInfo/cardSofa1.png" alt="" />
       </div>
       <div class="image-back">
-        <img src="assets/image/cardInfo/cardSofa2.png" alt="" />
+        <img src="/assets/image/cardInfo/cardSofa2.png" alt="" />
       </div>
     </div>
   </section>
@@ -53,25 +53,30 @@
   color: #9f9f9f;
   gap: 3.6rem;
 }
+
 .nav-list {
   display: flex;
   text-align: center;
   gap: 5.2rem;
   margin: 0;
 }
-.nav-list > li {
+
+.nav-list>li {
   list-style-type: none;
 }
+
 .nav-list__title {
   font-size: 2.4rem;
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
 }
+
 .nav-list__title_active {
   color: black;
   font-weight: 500;
 }
+
 .text-block {
   width: 102.6rem;
   display: flex;
@@ -83,14 +88,15 @@
   font-weight: 400;
   line-height: normal;
 }
+
 .image-block {
   display: flex;
   gap: 3rem;
 }
+
 .image-back {
   width: 60.5rem;
   height: 34.8rem;
   border-radius: 1rem;
   background: #f9f1e7;
-}
-</style>
+}</style>

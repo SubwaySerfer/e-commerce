@@ -1,11 +1,6 @@
 <template>
   <div class="cart-page">
-    <base-promo
-      title="Cart"
-      startPage="Home"
-      currentPage="Cart"
-      imgLink="assets/icons/mainLogo.png"
-    ></base-promo>
+    <base-promo title="Cart" startPage="Home" currentPage="Cart" imgLink="/assets/icons/mainLogo.png"></base-promo>
     <section class="cart-list">
       <div>
         <ul class="cart-list__nav">
@@ -53,12 +48,14 @@ export default {
   font-weight: 400;
   color: #000;
 }
+
 .cart-list {
   display: flex;
   flex-direction: row;
   gap: 3rem;
   padding: 7.2rem 10rem 8.5rem;
 }
+
 .cart-list__nav {
   width: 81.7rem;
   height: 5.5rem;
@@ -72,9 +69,11 @@ export default {
   font-weight: 500;
   line-height: normal;
 }
+
 li {
   list-style-type: none;
 }
+
 .cart-list__costs {
   width: 39.3rem;
   height: 39rem;
@@ -84,6 +83,7 @@ li {
   align-items: center;
   padding-top: 1.5rem;
 }
+
 .costs__btn {
   width: 22.2rem;
   height: 5.8954rem;
@@ -94,12 +94,14 @@ li {
   font-weight: 400;
   line-height: normal;
 }
+
 .costs__title {
   font-size: 3.2rem;
   font-weight: 600;
   line-height: normal;
   margin-bottom: 6.1rem;
 }
+
 .costs__price-list {
   width: 24.3rem;
   display: flex;
@@ -107,6 +109,7 @@ li {
   gap: 3.1rem;
   margin-bottom: 4.2rem;
 }
+
 .price-list__title {
   font-size: 1.6rem;
   font-weight: 500;
@@ -118,15 +121,16 @@ li {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .price-list__total-sm {
   color: #9f9f9f;
   font-size: 1.6rem;
   line-height: normal;
 }
+
 .price-list__total-bg {
   color: #b88e2f;
   font-size: 2rem;
   font-weight: 500;
   line-height: normal;
-}
-</style>
+}</style>

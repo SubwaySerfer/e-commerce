@@ -1,11 +1,6 @@
 <template>
   <div class="blog-wrapper">
-    <base-promo
-      imgLink="assets/icons/mainLogo.png"
-      title="Blog"
-      startPage="Home"
-      currentPage="Blog"
-    ></base-promo>
+    <base-promo imgLink="/assets/icons/mainLogo.png" title="Blog" startPage="Home" currentPage="Blog"></base-promo>
     <section class="blog-wrapper__blog-content">
       <div class="blog-content">
         <posts-section></posts-section>
@@ -46,6 +41,7 @@ export default {
   min-height: 500px;
   padding: 10.6rem 10rem 2.2rem;
 }
+
 .blog-content {
   display: flex;
   flex-direction: row;
