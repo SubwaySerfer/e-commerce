@@ -6,6 +6,27 @@
         <h5 class="more__btn">View More</h5>
       </div>
 
+      <div class="comparison__photo-box">
+        <div class="photo-box">
+          <figure class="photo-box__background">
+            <img src="/public/assets/image/comparison/Asgaard-sofa.png" alt="Asgaard sofa.">
+          </figure>
+          <h3 class="photo-box__label">Asgaard Sofa</h3>
+          <h4 class="photo-box__price">Rs. 250,000.00</h4>
+          <card-review></card-review>
+          <!-- TODO: скорректировать звездочки и сделать вывод средней оценки + пропсы для данных о отзывах -->
+        </div>
+        <div class="photo-box">
+          <figure class="photo-box__background">
+            <img src="/public/assets/image/comparison/Outdoor-sofa.png" class="photo-box__background__up-img"
+              alt="Outdoor sofa.">
+          </figure>
+          <h3 class="photo-box__label">Outdoor Sofa Set</h3>
+          <h4 class="photo-box__price">Rs. 224,000.00</h4>
+          <card-review></card-review>
+        </div>
+      </div>
+
       <div class="promo__product">
         <h3 class="product__title">Add A Product</h3>
         <select name="product" id="productSelet" class="product__select">
@@ -159,6 +180,14 @@
   </section>
 </template>
 
+<script>
+import CardReview from '../cardInfo/CardReview.vue';
+
+export default {
+  components: { CardReview }
+}
+</script>
+
 <style scoped>
 ul {
   margin: 0;
@@ -195,6 +224,53 @@ ul {
   width: 11.5rem;
   border-bottom: 2px solid #727272;
   text-align: start;
+}
+
+.comparison__photo-box {
+  display: flex;
+  flex-direction: row;
+  gap: 4.7rem;
+  align-items: start
+}
+
+
+.photo-box {
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+}
+
+.photo-box__background {
+  border-radius: 1rem;
+  background: #F9F1E7;
+  width: 28rem;
+  height: 17.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 1.8rem;
+}
+
+.photo-box__background__up-img {
+  transform: translateY(-17px);
+}
+
+.photo-box__label {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 126.5%;
+  text-align: start;
+  margin-bottom: .6rem;
+  padding-left: .2rem;
+}
+
+.photo-box__price {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: normal;
+  text-align: start;
+  padding-left: .2rem;
 }
 
 .product__title {
