@@ -2,15 +2,15 @@
   <the-header></the-header>
   <router-view class="wrapper" v-slot="slotProps">
     <transition name="route" mode="out-in">
-      <component :is="slotProps.Component"></component>
+      <component :is="slotProps.Component" class="component"></component>
     </transition>
   </router-view>
   <the-footer></the-footer>
 </template>
 
 <script>
-import TheHeader from "./components/layout/TheHeader.vue";
-import TheFooter from "./components/layout/TheFooter.vue";
+import TheHeader from './components/layout/TheHeader.vue';
+import TheFooter from './components/layout/TheFooter.vue';
 
 export default {
   components: {
@@ -18,13 +18,13 @@ export default {
     TheFooter,
   },
   created() {
-    this.$store.commit("home/getFurnitureList");
+    this.$store.commit('home/getFurnitureList');
   },
 };
 </script>
 <style scoped>
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 10px;
   color: #000;
 }
@@ -71,5 +71,9 @@ p {
 }
 ul {
   padding-left: 0;
+}
+
+.component {
+  min-height: 50rem;
 }
 </style>

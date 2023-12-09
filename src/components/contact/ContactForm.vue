@@ -64,7 +64,7 @@
         <label for="">Message</label>
         <textarea placeholder="Hi! i’d like to ask about"></textarea>
 
-        <base-button class="btn">Submit</base-button>
+        <base-button class="btn btn-contact">Submit</base-button>
       </div>
     </div>
   </section>
@@ -101,6 +101,14 @@ h2 {
   /* gap: 5.1rem; */
   justify-content: flex-start;
   padding-top: 8.2rem;
+}
+.btn-contact {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .icon_clock {
   padding-top: 1.8rem;

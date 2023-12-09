@@ -1,5 +1,5 @@
 <template>
-  <div class="furniture-card" @mouseover="hover = true">
+  <div class="furniture-card" @mouseenter="hover = true">
     <!-- <slot>{{ (name, price, img) }} </slot> -->
     <!-- <slot name="img">
       <img src="" alt="" />
@@ -16,7 +16,12 @@
       <h4>Rp {{ price }}</h4>
     </div>
 
-    <div class="furniture-card_popup" @mouseleave="hover = false" v-if="hover">
+    <div
+      class="furniture-card_popup"
+      @mouseleave="hover = false"
+      v-if="hover"
+      @click="this.$router.push('/card-info')"
+    >
       <base-button class="btn">Add to cart</base-button>
       <div class="popup-content">
         <div class="popup-content_box">
@@ -50,8 +55,9 @@
 
 <script>
 //TODO: сделать наведение на карточку
+//TODO: сделать проверку если есть наводка на одну карточку, то все остальные должны быть открыты.
 export default {
-  props: ["name", "price", "img", "description"],
+  props: ['name', 'price', 'img', 'description'],
   data() {
     return {
       hover: false,

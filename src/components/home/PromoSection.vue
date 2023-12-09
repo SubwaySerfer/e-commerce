@@ -10,7 +10,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis.
       </p>
-      <base-button class="btn">
+      <base-button class="btn" @click="this.$router.push('/shop')">
         <router-link to="/shop" class="btn-text">BUY Now</router-link>
       </base-button>
     </div>
@@ -20,13 +20,14 @@
 <style scoped>
 .promo-section {
   height: 71.7rem;
-  background-image: url("assets/image/home/promo-homePage.png");
+  background-image: url('assets/image/home/promo-homePage.png');
   display: flex;
   justify-content: flex-end;
   align-items: start;
   padding-top: 15.3rem;
   padding-right: 5.8rem;
 }
+
 .promo-box {
   display: flex;
   flex-direction: column;
@@ -37,6 +38,7 @@
   justify-content: start;
   text-align: start;
 }
+
 .btn {
   width: 22.2rem;
   height: 7.4rem;
@@ -46,9 +48,11 @@
   background-color: #b88e2f;
   transition: ease-in 0.25s;
 }
+
 .btn:hover {
   transform: scale(1.05);
 }
+
 .btn-text {
   text-transform: uppercase;
   text-decoration: none;
@@ -79,6 +83,7 @@ h6 {
   letter-spacing: 0.3rem;
   padding-bottom: 0.4rem;
 }
+
 h2 {
   color: #b88e2f;
   font-size: 5.2rem;

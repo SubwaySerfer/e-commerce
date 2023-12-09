@@ -1,7 +1,7 @@
 <template>
   <section>
     <base-promo
-      img="assets/icons/mainLogo.png"
+      imgLink="assets/icons/mainLogo.png"
       title="Contact"
       startPage="Home"
       currentPage="Contact"
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import ContactForm from "../../components/contact/ContactForm.vue";
+import ContactForm from '../../components/contact/ContactForm.vue';
 export default {
   components: {
     ContactForm,
