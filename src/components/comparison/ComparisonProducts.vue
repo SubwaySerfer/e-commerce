@@ -9,7 +9,7 @@
       <div class="comparison__photo-box">
         <div class="photo-box">
           <figure class="photo-box__background">
-            <img src="/public/assets/image/comparison/Asgaard-sofa.png" alt="Asgaard sofa.">
+            <img src="/assets/image/comparison/Asgaard-sofa.png" alt="Asgaard sofa.">
           </figure>
           <h3 class="photo-box__label">Asgaard Sofa</h3>
           <h4 class="photo-box__price">Rs. 250,000.00</h4>
@@ -18,7 +18,7 @@
         </div>
         <div class="photo-box">
           <figure class="photo-box__background">
-            <img src="/public/assets/image/comparison/Outdoor-sofa.png" class="photo-box__background__up-img"
+            <img src="/assets/image/comparison/Outdoor-sofa.png" class="photo-box__background__up-img"
               alt="Outdoor sofa.">
           </figure>
           <h3 class="photo-box__label">Outdoor Sofa Set</h3>

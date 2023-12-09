@@ -1,12 +1,7 @@
 <template>
   <header>
     <div class="logo-box">
-      <img
-        src="assets/icons/mainLogo.png"
-        alt="furniro logo"
-        class="main-logo"
-        @click="this.routeHome"
-      />
+      <img src="/assets/icons/mainLogo.png" alt="furniro logo" class="main-logo" @click="this.routeHome" />
       <h1 @click="this.routeHome">Furniro</h1>
     </div>
     <nav>
@@ -22,24 +17,16 @@
     <div class="icons-box">
       <ul class="icons-list">
         <li class="btn-root">
-          <router-link to="/profile"
-            ><img src="assets/icons/account-icon.svg"
-          /></router-link>
+          <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to=""
-            ><img src="assets/icons/search-icon.svg"
-          /></router-link>
+          <router-link to=""><img src="/assets/icons/search-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to=""
-            ><img src="assets/icons/heart-icon.svg"
-          /></router-link>
+          <router-link to=""><img src="/assets/icons/heart-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to="/cart"
-            ><img src="assets/icons/basket-icon.svg"
-          /></router-link>
+          <router-link to="/cart"><img src="/assets/icons/basket-icon.svg" /></router-link>
         </li>
       </ul>
     </div>
@@ -72,6 +59,7 @@ header {
   height: 3.2rem;
   cursor: pointer;
 }
+
 .logo-box {
   display: flex;
   flex-direction: row;
@@ -80,12 +68,14 @@ header {
   height: 4.1rem;
   padding-right: 26.6rem;
 }
+
 .icons-box {
   padding-left: 15.8rem;
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
+
 h1 {
   color: #000;
   font-family: Montserrat;
@@ -96,15 +86,18 @@ h1 {
   margin: 0;
   cursor: pointer;
 }
+
 ul {
   display: flex;
   flex-direction: row;
   gap: 7.5rem;
   margin: 0;
 }
+
 li {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
   color: #000;

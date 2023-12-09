@@ -1,40 +1,28 @@
 <template>
   <section>
     <div class="adv-card">
-      <img
-        src="assets/icons/shop/advantages/shop-trophy.svg"
-        alt="trophy icon"
-      />
+      <img src="/assets/icons/shop/advantages/shop-trophy.svg" alt="trophy icon" />
       <div>
         <h3>High Quality</h3>
         <p>crafted from top materials</p>
       </div>
     </div>
     <div class="adv-card">
-      <img
-        src="assets/icons/shop/advantages/shop-guarantee.svg"
-        alt="guarantee icon"
-      />
+      <img src="/assets/icons/shop/advantages/shop-guarantee.svg" alt="guarantee icon" />
       <div>
         <h3>Warranty Protection</h3>
         <p>Over 2 years</p>
       </div>
     </div>
     <div class="adv-card">
-      <img
-        src="assets/icons/shop/advantages/shop-shipping.svg"
-        alt="shipping icon"
-      />
+      <img src="/assets/icons/shop/advantages/shop-shipping.svg" alt="shipping icon" />
       <div>
         <h3>Free Shipping</h3>
         <p>Order over 150 $</p>
       </div>
     </div>
     <div class="adv-card">
-      <img
-        src="assets/icons/shop/advantages/shop-support.svg"
-        alt="support icon"
-      />
+      <img src="/assets/icons/shop/advantages/shop-support.svg" alt="support icon" />
       <div>
         <h3>24 / 7 Support</h3>
         <p>Dedicated support</p>
@@ -54,11 +42,13 @@ section {
   padding: 10rem 5.3rem;
   width: 100%;
 }
+
 .adv-card {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 h3 {
   /* color: #242424;
   font-family: Poppins; */
@@ -68,6 +58,7 @@ h3 {
   line-height: 150%;
   text-align: start;
 }
+
 p {
   color: #898989;
   font-size: 2rem;

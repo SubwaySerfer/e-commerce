@@ -3,25 +3,14 @@
     <div class="filters-box-first">
       <ul>
         <li>
-          <img
-            src="assets/icons/shop/filters-scroll.svg"
-            alt="filter scroll icon"
-          />
+          <img src="/assets/icons/shop/filters-scroll.svg" alt="filter scroll icon" />
         </li>
         <li class="scroll-label">Filter</li>
         <li>
-          <img
-            src="assets/icons/shop/filters-dots.svg"
-            alt="filter dots"
-            class="filter-dots"
-          />
+          <img src="/assets/icons/shop/filters-dots.svg" alt="filter dots" class="filter-dots" />
         </li>
         <li>
-          <img
-            src="assets/icons/shop/filters-view.svg"
-            alt="filter view"
-            class="filter-view"
-          />
+          <img src="/assets/icons/shop/filters-view.svg" alt="filter view" class="filter-view" />
         </li>
       </ul>
       <span class="cross-line"></span>
@@ -45,23 +34,27 @@ section {
   justify-content: space-between;
   padding: 0 10rem 0 9.8rem;
 }
+
 .filters-box-first {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 3rem;
 }
+
 .cross-line {
   background-color: #9f9f9f;
   width: 0.2rem;
   height: 3.7rem;
 }
+
 .scroll-label {
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 ul {
   list-style-type: none;
   display: flex;
@@ -70,13 +63,16 @@ ul {
   gap: 1.2rem;
   padding-top: 3px;
 }
+
 .filter-dots {
   padding-left: 12px;
   padding-top: 3px;
 }
+
 .filter-view {
   padding-left: 12px;
 }
+
 h6 {
   font-size: 1.6rem;
   font-style: normal;
@@ -84,6 +80,7 @@ h6 {
   line-height: normal;
   padding-left: 2px;
 }
+
 .filters-box-sec {
   display: flex;
   gap: 1.7rem;
@@ -93,6 +90,7 @@ h6 {
   line-height: normal;
   align-items: center;
 }
+
 input {
   color: #9f9f9f;
   font-size: 2rem;
@@ -102,6 +100,7 @@ input {
   line-height: normal;
   border: none;
 }
+
 /* label {
 } */
 .show-input {
@@ -114,6 +113,7 @@ input {
 
   margin-right: 1.2rem;
 }
+
 .short-input {
   width: 18.8rem;
   height: 5.5rem;

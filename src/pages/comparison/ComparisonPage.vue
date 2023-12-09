@@ -1,7 +1,7 @@
 <template>
   <main class="comparison">
     <base-promo title="Product Comparison" startPage="Home" currentPage="Comparison"
-      imgLink="assets/icons/mainLogo.png"></base-promo>
+      imgLink="/assets/icons/mainLogo.png"></base-promo>
     <comparison-products></comparison-products>
     <our-advantages></our-advantages>
   </main>
