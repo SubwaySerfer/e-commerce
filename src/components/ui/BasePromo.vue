@@ -1,11 +1,11 @@
 <template>
   <section>
-    <img :src="`${imgLink}`" alt="logo image" v-if="imgLink" class="promo-logo" />
+    <img :src="`${imgLink}`" alt="Company logo." v-if="imgLink" class="promo-logo" />
     <slot name="pageTitle">
       <h2>{{ title }}</h2>
       <div class="pages-info">
         <h4>{{ startPage }}</h4>
-        <img src="assets/icons/shop/arrow.svg" alt="arrow" />
+        <img src="assets/icons/shop/arrow.svg" alt="arrow." />
         <h5>{{ currentPage }}</h5>
       </div>
     </slot>
