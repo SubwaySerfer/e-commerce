@@ -30,12 +30,19 @@
         </li>
       </ul>
     </div>
+    <teleport to="#app">
+      <base-aside-popup></base-aside-popup>
+
+    </teleport>
   </header>
 </template>
 
 <script>
+import BaseAsidePopup from '../ui/BaseAsidePopup.vue';
+
 export default {
   //TODO: сделать перезагрузку страницы если я уже на домашней
+  components: { BaseAsidePopup },
   methods: {
     routeHome() {
       this.$router.push('/home');
