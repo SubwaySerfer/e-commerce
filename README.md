@@ -14,7 +14,7 @@
 
 #### Стэк технологий:
 
-Vue3, Vuex, JS, CSS, Vite
+Vue3, Vuex, JS, CSS, Vite, Vue-router
 
 <!-- ---
 
