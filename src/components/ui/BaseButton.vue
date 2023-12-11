@@ -2,7 +2,7 @@
   <button v-if="!link" :class="mode">
     <slot>{{ linkName }}</slot>
   </button>
-  <router-link v-else :to="to" :linkName="linkName" :class="mode" class="btn">
+  <router-link v-else :to="to" :class="mode" class="btn">
     <button class="btn" :class="modeLabel">{{ linkName }}
       <!-- <slot>{{ linkName }}</slot> -->
     </button>
@@ -101,7 +101,12 @@ a {
 .transparent-btn__label {
   color: #000;
   background-color: transparent;
+  outline: none;
 }
+
+/* .transparent-btn__label:active {
+  border: none;
+} */
 
 .transparent-btn__label:hover {
   color: #000;
@@ -109,7 +114,6 @@ a {
 
 .transparent-btn:hover {
   color: #000;
-  border: transparent;
 }
 
 a {

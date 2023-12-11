@@ -43,8 +43,8 @@
       </div>
     </div>
     <div class="popup__footer">
-      <base-button :link="true" modeLabel="transparent-btn__label" to="/cart" linkName="Cart"
-        mode="transparent-btn"></base-button>
+      <base-button :link="true" modeLabel="transparent-btn__label" to="/cart" linkName="Cart" mode="transparent-btn"
+        @click="checkCartPageRoute"></base-button>
       <base-button :link="true" modeLabel="transparent-btn__label" to="/checkout" linkName="Checkout"
         mode="transparent-btn"></base-button>
       <base-button :link="true" modeLabel="transparent-btn__label" to="/comparison" linkName="Comparison"
@@ -59,8 +59,18 @@ export default {
   methods: {
     toggleCartPopup() {
       this.$store.commit('header/toggleCartPopup')
+    },
+    checkCartPageRoute() {
+      if (this.isCartPopupOpen) {
+        this.toggleCartPopup()
+      }
     }
-  }
+  },
+  computed: {
+    isCartPopupOpen() {
+      return this.$store.getters['header/getCartPopupStatus'];
+    },
+  },
 };
 </script>
 
