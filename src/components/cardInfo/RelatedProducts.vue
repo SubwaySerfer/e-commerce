@@ -22,11 +22,11 @@
 <script>
 export default {
   created() {
-    this.$store.commit("cardInfo/createRandomList");
+    this.$store.commit('cardInfo/createRandomList');
   },
   computed: {
     relatedCards() {
-      return this.$store.getters["cardInfo/getRandomList"];
+      return this.$store.getters['cardInfo/getRandomList'];
     },
   },
 };

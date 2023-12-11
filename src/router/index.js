@@ -5,7 +5,9 @@ import ShopPage from '../pages/shop/ShopPage.vue';
 import ContactPage from '../pages/contact/ContactPage.vue';
 import BlogPage from '../pages/blog/BlogPage.vue';
 import CardInfoPage from '../pages/cardInfo/CardInfoPage.vue';
-import CartPage from '../pages/cart/CartPage.vue'
+import CartPage from '../pages/cart/CartPage.vue';
+import ProfilePage from '../pages/profile/ProfilePage.vue'
+import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -34,12 +36,22 @@ const router = createRouter({
       name: 'cart',
       component: CartPage,
     },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: ProfilePage
+    },
+    {
+      path: '/comparison',
+      name: 'comparison',
+      component: ComparisonPage
+    },
     { path: '/contact', name: 'contact', component: ContactPage },
     { path: '/blog', name: 'blog', component: BlogPage },
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 }
-  }
+    return { top: 0 };
+  },
 });
 
 export default router;

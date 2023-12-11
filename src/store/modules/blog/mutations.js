@@ -1,7 +1,7 @@
-import jsonObj from '../../../../public/assets/data/recentPosts.json'
+import jsonObj from '/public/assets/data/recentPosts.json'
 
 export default {
-  getRecentPosts(state){
+  getRecentPosts(state) {
     state.recentPosts = jsonObj.posts
   },
 }

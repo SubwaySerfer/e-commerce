@@ -10,7 +10,7 @@
     </div>
     <div class="img-block">
       <div class="main-img__box">
-        <img src="assets/image/search/BedRoom-search.png" alt="BedRoom photo" />
+        <img src="/assets/image/search/BedRoom-search.png" alt="BedRoom photo" />
         <div class="img-info-box">
           <div class="img-info-box__label">
             <h6>01</h6>
@@ -20,38 +20,18 @@
           <h3>Inner Peace</h3>
         </div>
         <div class="info-arrow">
-          <img
-            src="assets/icons/home/arrow-search.svg"
-            alt="arrow icon"
-            class="info-icon__itm"
-          />
+          <img src="/assets/icons/home/arrow-search.svg" alt="arrow icon" class="info-icon__itm" />
         </div>
       </div>
       <div class="other-block">
         <div class="slider-images">
-          <img src="assets/image/search/SecRoom.png" alt="" />
+          <img src="/assets/image/search/SecRoom.png" alt="" />
         </div>
         <div class="slider-box">
-          <img
-            src="assets/icons/home/active-room-search.svg"
-            alt=""
-            class="slider-icon slider-icon_active"
-          />
-          <img
-            src="assets/icons/home/basic-room-search.svg"
-            alt=""
-            class="slider-icon"
-          />
-          <img
-            src="assets/icons/home/basic-room-search.svg"
-            alt=""
-            class="slider-icon"
-          />
-          <img
-            src="assets/icons/home/basic-room-search.svg"
-            alt=""
-            class="slider-icon"
-          />
+          <img src="/assets/icons/home/active-room-search.svg" alt="" class="slider-icon slider-icon_active" />
+          <img src="/assets/icons/home/basic-room-search.svg" alt="" class="slider-icon" />
+          <img src="/assets/icons/home/basic-room-search.svg" alt="" class="slider-icon" />
+          <img src="/assets/icons/home/basic-room-search.svg" alt="" class="slider-icon" />
         </div>
       </div>
     </div>
@@ -67,6 +47,7 @@ section {
   flex-direction: row;
   gap: 4.2rem;
 }
+
 .info-block {
   padding-top: 17.9rem;
   display: flex;
@@ -75,11 +56,13 @@ section {
   justify-content: flex-start;
   width: 29.3vw;
 }
+
 .img-block {
   display: flex;
   flex-direction: row;
   gap: 2.4rem;
 }
+
 h2 {
   color: #3a3a3a;
   font-size: 4rem;
@@ -89,6 +72,7 @@ h2 {
   margin-bottom: 0.7rem;
   text-align: start;
 }
+
 h3 {
   color: #3a3a3a;
   font-size: 2.8rem;
@@ -96,6 +80,7 @@ h3 {
   font-weight: 600;
   line-height: 120%;
 }
+
 h6 {
   color: #616161;
   font-size: 1.6rem;
@@ -103,6 +88,7 @@ h6 {
   font-weight: 500;
   line-height: 150%;
 }
+
 p {
   color: #616161;
   font-size: 1.6rem;
@@ -112,6 +98,7 @@ p {
   margin-bottom: 2.5rem;
   text-align: start;
 }
+
 .btn {
   color: #fff;
   font-size: 1.6rem;
@@ -123,14 +110,17 @@ p {
   border-radius: 0;
   transition: all ease-in 0.2s;
 }
+
 .btn:hover {
   background-color: #fff;
   color: #b88e2f;
   transform: scale(1.1);
 }
+
 .main-img__box {
   position: relative;
 }
+
 .img-info-box {
   position: absolute;
   left: 2.4rem;
@@ -143,6 +133,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .info-arrow {
   background-color: #b88e2f;
   width: 4.8rem;
@@ -157,21 +148,25 @@ p {
   transition: all ease-in 0.25s;
 }
 
-.info-arrow:hover > .info-icon__itm {
+.info-arrow:hover>.info-icon__itm {
   transform: scale(1.1);
 }
+
 .info-arrow:hover {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.69);
 }
+
 .info-icon__itm {
   width: 2.4rem;
   transition: all ease-in-out 0.2s;
 }
+
 .img-info-line {
   width: 2.7rem;
   height: 0.1rem;
   background-color: #616161;
 }
+
 .img-info-box__label {
   display: flex;
   flex-direction: row;
@@ -187,13 +182,16 @@ p {
   display: flex;
   flex-direction: row;
 }
+
 .slider-icon {
   width: 11px;
   cursor: pointer;
 }
+
 .slider-icon_active {
   width: 27px;
 }
+
 /* .slider-images{
 
 } */
