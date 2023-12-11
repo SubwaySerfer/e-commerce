@@ -8,6 +8,7 @@ import CardInfoPage from '../pages/cardInfo/CardInfoPage.vue';
 import CartPage from '../pages/cart/CartPage.vue';
 import ProfilePage from '../pages/profile/ProfilePage.vue'
 import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
+import CheckoutPage from '../pages/checkout/CheckoutPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -45,6 +46,11 @@ const router = createRouter({
       path: '/comparison',
       name: 'comparison',
       component: ComparisonPage
+    },
+    {
+      path: '/checkout',
+      name: 'checkout',
+      component: CheckoutPage
     },
     { path: '/contact', name: 'contact', component: ContactPage },
     { path: '/blog', name: 'blog', component: BlogPage },

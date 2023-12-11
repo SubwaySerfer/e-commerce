@@ -109,6 +109,7 @@ p {
   height: 4.8rem;
   border-radius: 0;
   transition: all ease-in 0.2s;
+  background-color: #B88E2F;
 }
 
 .btn:hover {

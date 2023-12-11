@@ -30,9 +30,9 @@
       <div class="promo__product">
         <h3 class="product__title">Add A Product</h3>
         <select name="product" id="productSelet" class="product__select">
-          <option value="">Choose a Product</option>
-          <option value="Asgaard Sofa">Asgaard Sofa</option>
-          <option value="Outdoor Sofa Set">Outdoor Sofa Set</option>
+          <option value="" class="product__select__option">Choose a Product</option>
+          <option value="Asgaard Sofa" class="product__select__option">Asgaard Sofa</option>
+          <option value="Outdoor Sofa Set" class="product__select__option">Outdoor Sofa Set</option>
         </select>
       </div>
     </div>
@@ -297,7 +297,12 @@ ul {
   font-weight: 600;
   line-height: 126.5%;
   padding: .6rem 0 0.7rem 1.3rem;
+  cursor: pointer;
   /*TODO: Сделать кастомный селектор */
+}
+
+.product__select__option {
+  cursor: pointer;
 }
 
 .comparising__main {

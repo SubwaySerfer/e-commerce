@@ -2,13 +2,8 @@
   <section>
     <h2>Our Products</h2>
     <div class="furnitures-list">
-      <base-card
-        v-for="furniture in this.furnitureList"
-        :name="furniture.name"
-        :img="furniture.img"
-        :price="furniture.price"
-        :description="furniture.description"
-      >
+      <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
+        :price="furniture.price" :description="furniture.description">
         <!-- <p>{{ furniture }}</p> -->
       </base-card>
       <!-- <div>{{ furnitureList }}</div> -->
@@ -49,6 +44,7 @@ section {
   gap: 2rem;
   align-items: center;
 }
+
 h2 {
   color: #3a3a3a;
   text-align: center;
@@ -58,6 +54,7 @@ h2 {
   line-height: 120%;
   text-indent: 5px;
 }
+
 .furnitures-list {
   height: 92.4rem;
   display: flex;
@@ -66,6 +63,7 @@ h2 {
   flex-wrap: wrap;
   margin-top: 1.2rem;
 }
+
 .btn {
   width: 24.5rem;
   height: 4.8rem;
@@ -79,24 +77,27 @@ h2 {
   line-height: 150%;
   text-indent: 9px;
   transition: ease-in 0.25s;
+  border: 1px solid #b88e2f;
 }
+
 .btn:hover {
   transform: scale(1.1);
   background-color: #b88e2f;
   color: white;
 }
-.btn:hover > .btn-text {
+
+.btn:hover>.btn-text {
   color: white;
 }
 
 .btn-text {
-  text-transform: uppercase;
   text-decoration: none;
   color: #b88e2f;
   transition: ease-in 0.25s;
 
   /* color: #ffffff; */
 }
+
 /* .btn-text:hover {
   color: white;
 } */

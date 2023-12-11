@@ -20,7 +20,7 @@
           <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to=""><img src="/assets/icons/search-icon.svg" /></router-link>
+          <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
           <router-link to=""><img src="/assets/icons/heart-icon.svg" /></router-link>
