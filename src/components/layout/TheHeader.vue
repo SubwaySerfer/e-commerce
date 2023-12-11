@@ -26,12 +26,12 @@
           <router-link to=""><img src="/assets/icons/heart-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to="/cart"><img src="/assets/icons/basket-icon.svg" /></router-link>
+          <router-link to="" @click="toggleCartPopup"><img src="/assets/icons/basket-icon.svg" /></router-link>
         </li>
       </ul>
     </div>
     <teleport to="#app">
-      <base-aside-popup></base-aside-popup>
+      <base-aside-popup v-if="isCartPopupOpen"></base-aside-popup>
 
     </teleport>
   </header>
@@ -46,6 +46,14 @@ export default {
   methods: {
     routeHome() {
       this.$router.push('/home');
+    },
+    toggleCartPopup() {
+      this.$store.commit('header/toggleCartPopup')
+    }
+  },
+  computed: {
+    isCartPopupOpen() {
+      return this.$store.getters['header/getCartPopupStatus'];
     },
   },
 };

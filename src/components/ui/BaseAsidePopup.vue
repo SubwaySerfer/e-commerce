@@ -2,7 +2,8 @@
   <div class="popup">
     <div class="popup__header">
       <h2 class="header__label">Shopping Cart</h2>
-      <img src="/assets/icons/ui/popup-cart.svg" alt="cart and exit button." class="header__icon" />
+      <img src="/assets/icons/ui/popup-cart.svg" alt="cart and exit button." class="header__icon"
+        @click="toggleCartPopup" />
     </div>
     <span class="line"></span>
 
@@ -55,6 +56,11 @@
 <script>
 export default {
   props: [],
+  methods: {
+    toggleCartPopup() {
+      this.$store.commit('header/toggleCartPopup')
+    }
+  }
 };
 </script>
 
@@ -92,6 +98,7 @@ export default {
 .header__icon {
   width: 1.6625rem;
   height: 1.9rem;
+  cursor: pointer;
 }
 
 .line {
