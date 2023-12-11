@@ -3,7 +3,7 @@
     <slot>{{ linkName }}</slot>
   </button>
   <button v-else :class="mode" class="btn">
-    <router-link :to="to" :linkName="linkName" class="btn">{{ linkName }}
+    <router-link :to="to" :linkName="linkName" class="btn" :class="modeLabel">{{ linkName }}
       <!-- <slot>{{ linkName }}</slot> -->
     </router-link>
   </button>
@@ -32,6 +32,11 @@ export default {
       required: false,
       default: "",
     },
+    modeLabel: {
+      type: String,
+      required: false,
+      default: null
+    }
   },
 };
 </script>
@@ -77,6 +82,33 @@ a {
   text-wrap: nowrap;
   border-radius: 0;
 
+}
+
+.transparent-btn {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 50px;
+  border: 1px solid #000;
+  padding: .6rem 3rem;
+  text-align: center;
+  background: none;
+}
+
+.transparent-btn__label {
+  color: #000;
+
+}
+
+.transparent-btn__label:hover {
+  color: #000;
+}
+
+.transparent-btn:hover {
+  color: #000;
 }
 
 a {
