@@ -32,7 +32,6 @@
     </div>
     <teleport to="#app">
       <base-aside-popup v-if="isCartPopupOpen"></base-aside-popup>
-
     </teleport>
   </header>
 </template>

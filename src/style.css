@@ -19,19 +19,18 @@
 html {
   font-size: 10px;
   font-family: 'Poppins', sans-serif;
-
 }
-.btn-root{
-  transition: transform ease-in .25s;
-  }
-.btn-root:hover{
-    /* transform: translateY(-3px); */
-    transform: scale(1.2)
-  }
-.btn-root_vertical{
-  transition: transform ease-in-out .25s;
+.btn-root {
+  transition: transform ease-in 0.25s;
 }
-.btn-root_vertical:hover{
+.btn-root:hover {
+  /* transform: translateY(-3px); */
+  transform: scale(1.2);
+}
+.btn-root_vertical {
+  transition: transform ease-in-out 0.25s;
+}
+.btn-root_vertical:hover {
   transform: translateY(-3px);
 }
 /* a {
@@ -84,7 +83,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 * {
-  box-sizing: border-box;   
+  box-sizing: border-box;
 }
 
 .card {
@@ -100,7 +99,8 @@ button:focus-visible {
   flex-direction: column;
   justify-content: flex-start;
   /* height: 100vh; */
-  width: 1440px;
+  max-width: 1440px;
+  overflow-x: hidden;
 }
 
 /* @media (prefers-color-scheme: light) {

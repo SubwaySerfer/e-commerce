@@ -1,31 +1,35 @@
 <template>
-  <section>
-    <div class="info-block">
-      <h2>50+ Beautiful rooms inspiration</h2>
-      <p>
+  <section class="search-room">
+    <div class="search-room__info-block">
+      <h2 class="search-room__label">50+ Beautiful rooms inspiration</h2>
+      <p class="search-room__description">
         Our designer already made a lot of beautiful prototipe of rooms that
         inspire you
       </p>
       <base-button class="btn">Explore More</base-button>
     </div>
-    <div class="img-block">
-      <div class="main-img__box">
-        <img src="/assets/image/search/BedRoom-search.png" alt="BedRoom photo" />
-        <div class="img-info-box">
+
+    <div class="search-room__img-block">
+      <div class="img-block__slider">
+        <img class="slider__main-img" src="/assets/image/search/BedRoom-search.png"
+          alt="BedRoom, wall with 5 pictures and mattress with three pillows." />
+        <div class="slider__text-content">
           <div class="img-info-box__label">
-            <h6>01</h6>
+            <h6 class="text-content__room-label">01</h6>
             <span class="img-info-line"></span>
-            <h6>Bed Room</h6>
+            <h6 class="text-content__room-label">Bed Room</h6>
           </div>
-          <h3>Inner Peace</h3>
+          <h3 class="text-content__description">Inner Peace</h3>
         </div>
         <div class="info-arrow">
           <img src="/assets/icons/home/arrow-search.svg" alt="arrow icon" class="info-icon__itm" />
         </div>
       </div>
-      <div class="other-block">
-        <div class="slider-images">
-          <img src="/assets/image/search/SecRoom.png" alt="" />
+
+      <div class="img-block__other-block">
+        <div class="other-block__slider-images">
+          <img src="/assets/image/search/SecRoom.png" class="slider-images__second-room"
+            alt="light room with wood desk and two wood armchairs." />
         </div>
         <div class="slider-box">
           <img src="/assets/icons/home/active-room-search.svg" alt="" class="slider-icon slider-icon_active" />
@@ -39,7 +43,7 @@
 </template>
 
 <style scoped>
-section {
+.search-room {
   height: 67rem;
   padding: 4.4rem 0 4.4rem 10rem;
   background-color: #fcf8f3;
@@ -48,7 +52,7 @@ section {
   gap: 4.2rem;
 }
 
-.info-block {
+.search-room__info-block {
   padding-top: 17.9rem;
   display: flex;
   flex-direction: column;
@@ -57,13 +61,13 @@ section {
   width: 29.3vw;
 }
 
-.img-block {
+.search-room__img-block {
   display: flex;
   flex-direction: row;
   gap: 2.4rem;
 }
 
-h2 {
+.search-room__label {
   color: #3a3a3a;
   font-size: 4rem;
   font-style: normal;
@@ -73,7 +77,7 @@ h2 {
   text-align: start;
 }
 
-h3 {
+.text-content__description {
   color: #3a3a3a;
   font-size: 2.8rem;
   font-style: normal;
@@ -81,7 +85,7 @@ h3 {
   line-height: 120%;
 }
 
-h6 {
+.text-content__room-label {
   color: #616161;
   font-size: 1.6rem;
   font-style: normal;
@@ -89,7 +93,7 @@ h6 {
   line-height: 150%;
 }
 
-p {
+.search-room__description {
   color: #616161;
   font-size: 1.6rem;
   font-style: normal;
@@ -118,11 +122,11 @@ p {
   transform: scale(1.1);
 }
 
-.main-img__box {
+.img-block__slider {
   position: relative;
 }
 
-.img-info-box {
+.slider__text-content {
   position: absolute;
   left: 2.4rem;
   bottom: 2.4rem;
@@ -193,12 +197,59 @@ p {
   width: 27px;
 }
 
-/* .slider-images{
-
-} */
-.other-block {
+.img-block__other-block {
   display: flex;
   flex-direction: column;
   gap: 3.6rem;
 }
+
+@media (max-width: 1250px) {
+  .search-room {
+    padding-left: 3vw;
+  }
+
+  .search-room__info-block {
+    padding-top: 8rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .search-room__label {
+    /* font-size: 3.5rem;
+    line-height: 4rem; */
+    text-align: center;
+  }
+
+  .search-room__description {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .search-room__info-block {
+    gap: 1rem;
+    width: 80vw;
+    align-items: center
+  }
+
+  .search-room {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .btn {
+    width: 22rem;
+  }
+
+  .img-block__other-block {
+    display: none;
+  }
+
+  .slider__main-img {
+    width: 95vw;
+  }
+}
+
+/* //TODO: Сделать другой слайдер при уменьшении экрана */
 </style>
