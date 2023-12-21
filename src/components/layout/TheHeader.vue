@@ -1,11 +1,11 @@
 <template>
-  <header>
-    <div class="logo-box">
-      <img src="/assets/icons/mainLogo.png" alt="furniro logo" class="main-logo" @click="this.routeHome" />
-      <h1 @click="this.routeHome">Furniro</h1>
+  <header class="header">
+    <div class="header__logo-box">
+      <img src="/assets/icons/mainLogo.png" alt="furniro logo" class="logo-box__main-logo" @click="this.routeHome" />
+      <h2 @click="this.routeHome" class="logo-box__label">Furniro</h2>
     </div>
-    <nav>
-      <ul>
+    <nav class="header__nav">
+      <ul class="nav__nav-list ul-list">
         <li class="btn-root"><router-link to="/">Home</router-link></li>
         <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
         <li class="btn-root"><router-link to="/blog">Blog</router-link></li>
@@ -15,7 +15,7 @@
       </ul>
     </nav>
     <div class="icons-box">
-      <ul class="icons-list">
+      <ul class="icons-box__icons-list ul-list">
         <li class="btn-root">
           <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
         </li>
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style scoped>
-header {
+.header {
   height: 10rem;
   display: flex;
   flex-direction: row;
@@ -68,13 +68,13 @@ header {
   align-items: center;
 }
 
-.main-logo {
+.logo-box__main-logo {
   width: 5rem;
   height: 3.2rem;
   cursor: pointer;
 }
 
-.logo-box {
+.header__logo-box {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -90,7 +90,7 @@ header {
   justify-content: flex-end;
 }
 
-h1 {
+.logo-box__label {
   color: #000;
   font-family: Montserrat;
   font-size: 3.4rem;
@@ -101,16 +101,15 @@ h1 {
   cursor: pointer;
 }
 
-ul {
+.ul-list {
   display: flex;
   flex-direction: row;
   gap: 7.5rem;
   margin: 0;
+  list-style-type: none;
+
 }
 
-li {
-  list-style-type: none;
-}
 
 a {
   text-decoration: none;
@@ -121,12 +120,37 @@ a {
   line-height: normal;
 }
 
-.icons-list {
+.icons-box__icons-list {
   width: 24.7rem;
   gap: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 7px 0 0 5px;
+}
+
+@media (max-width: 1420px) {
+  .header__logo-box {
+    padding-right: 0
+  }
+
+  .icons-box {
+    padding-left: 0;
+    width: min-content;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav__nav-list {
+    gap: 3.2vw;
+  }
+
+  .header {
+    padding: 3.35rem 3vw 3.45rem;
+  }
 }
 </style>

@@ -2,10 +2,10 @@
   <section class="promo-section">
     <div class="promo-section__promo-box">
       <h6 class="promo-box__label__info">New Arrival</h6>
-      <h2 class="promo-box__label">
+      <h1 class="promo-box__label">
         Discover Our<br />
         New Collection
-      </h2>
+      </h1>
       <p class="promo-box__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis.

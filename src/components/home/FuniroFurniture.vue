@@ -152,11 +152,11 @@
 
 }
 
-@media (max-width: 1350px) {
+/* @media (max-width: 1350px) {
   .img-1 {
-    /* align-self: center */
+    align-self: center
   }
-}
+} */
 
 @media (max-width: 1200px) {
 
