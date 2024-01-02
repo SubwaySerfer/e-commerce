@@ -1,20 +1,11 @@
 <template>
   <section>
     <div class="cards-list">
-      <base-card
-        v-for="furniture in this.furnitureList"
-        :name="furniture.name"
-        :img="furniture.img"
-        :price="furniture.price"
-        :description="furniture.description"
-      ></base-card>
-      <base-card
-        v-for="furniture in this.furnitureList"
-        :name="furniture.name"
-        :img="furniture.img"
-        :price="furniture.price"
-        :description="furniture.description"
-      ></base-card>
+      <base-card v-for="furniture, index in this.furnitureList" :name="furniture.name" :img="furniture.img"
+        :price="furniture.price" :description="furniture.description" :id="furniture.id"
+        @click="test(furniture.id, index)"></base-card>
+      <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
+        :price="furniture.price" :description="furniture.description"></base-card>
     </div>
     <buttons-field></buttons-field>
   </section>
@@ -32,6 +23,11 @@ export default {
       return this.$store.getters["home/furnitureList"];
     },
   },
+  methods: {
+    test(id, index) {
+      console.log(index, id, this.furnitureList[index])
+    }
+  }
 };
 </script>
 
@@ -45,6 +41,7 @@ section {
   height: auto;
   gap: 4rem;
 }
+
 .cards-list {
   display: flex;
   flex-flow: row wrap;
