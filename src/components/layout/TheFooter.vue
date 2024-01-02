@@ -275,5 +275,24 @@ input {
   .input-box {
     align-items: center
   }
+
+  .contact-info__adress {
+    width: auto;
+    text-align: end;
+  }
+
+  .contact-info {
+    gap: .5rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .footer-nav {
+    gap: 7.4rem;
+  }
+
+  .footer-nav-items {
+    width: 14rem;
+  }
 }
 </style>
