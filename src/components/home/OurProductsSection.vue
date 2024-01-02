@@ -6,9 +6,9 @@
         :price="furniture.price" :description="furniture.description">
       </base-card>
     </div>
-    <base-button class="btn">
-      <router-link to="/shop" class="btn-text">Show More</router-link>
-    </base-button>
+    <!-- <base-button class="btn"> -->
+    <router-link to="/shop" class="btn-text btn">Show More</router-link>
+    <!-- </base-button> -->
   </section>
 </template>
 
@@ -65,6 +65,9 @@ export default {
   text-indent: 9px;
   transition: ease-in 0.25s;
   border: 1px solid #b88e2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {
@@ -81,7 +84,6 @@ export default {
   text-decoration: none;
   color: #b88e2f;
   transition: ease-in 0.25s;
-
   /* color: #ffffff; */
 }
 
