@@ -1,5 +1,5 @@
 <template>
-  <div class="cart-page">
+  <main class="cart-page">
     <base-promo title="Cart" startPage="Home" currentPage="Cart" imgLink="/assets/icons/mainLogo.png"></base-promo>
     <section class="cart-list">
       <div>
@@ -28,7 +28,7 @@
       </div>
     </section>
     <our-advantages></our-advantages>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -133,4 +133,5 @@ li {
   font-size: 2rem;
   font-weight: 500;
   line-height: normal;
-}</style>
+}
+</style>

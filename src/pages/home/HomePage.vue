@@ -1,11 +1,11 @@
 <template>
-  <section>
+  <main>
     <PromoSection></PromoSection>
     <RoomsSection></RoomsSection>
     <OurProductsSection></OurProductsSection>
     <SearchRoom></SearchRoom>
     <FuniroFurniture></FuniroFurniture>
-  </section>
+  </main>
 </template>
 
 <script>

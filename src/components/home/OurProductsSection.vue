@@ -3,7 +3,7 @@
     <h2 class="products__label">Our Products</h2>
     <div class="furnitures-list">
       <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description">
+        :price="furniture.price" :description="furniture.description" :id="furniture.id">
       </base-card>
     </div>
     <!-- <base-button class="btn"> -->

@@ -1,17 +1,11 @@
 <template>
-  <div>
-    <page-navigation
-      mainPage="Home"
-      currentPage="Shop"
-      cardName="Asgaard sofa"
-      mainPageName="/home"
-      currentPageName="/shop"
-      cardPageName="/card-info"
-    ></page-navigation>
+  <main>
+    <page-navigation mainPage="Home" currentPage="Shop" cardName="Asgaard sofa" mainPageName="/home"
+      currentPageName="/shop" cardPageName="/card-info"></page-navigation>
     <card-section></card-section>
     <card-description></card-description>
     <related-products></related-products>
-  </div>
+  </main>
 </template>
 
 <script>

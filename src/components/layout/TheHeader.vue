@@ -23,7 +23,7 @@
           <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to=""><img src="/assets/icons/heart-icon.svg" /></router-link>
+          <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" /></router-link>
         </li>
         <li class="btn-root">
           <router-link to="" @click="toggleCartPopup"><img src="/assets/icons/basket-icon.svg" /></router-link>

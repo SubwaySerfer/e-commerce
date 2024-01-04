@@ -5,7 +5,7 @@
         :price="furniture.price" :description="furniture.description" :id="furniture.id"
         @click="test(furniture.id, index)"></base-card>
       <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description"></base-card>
+        :price="furniture.price" :description="furniture.description" :id="furniture.id"></base-card>
     </div>
     <buttons-field></buttons-field>
   </section>

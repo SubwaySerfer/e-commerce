@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-wrapper">
+  <main class="blog-wrapper">
     <base-promo imgLink="/assets/icons/mainLogo.png" title="Blog" startPage="Home" currentPage="Blog"></base-promo>
     <section class="blog-wrapper__blog-content">
       <div class="blog-content">
@@ -13,7 +13,7 @@
       <buttons-field></buttons-field>
     </section>
     <our-advantages></our-advantages>
-  </div>
+  </main>
 </template>
 
 <script>

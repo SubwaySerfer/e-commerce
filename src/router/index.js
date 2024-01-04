@@ -9,6 +9,7 @@ import CartPage from '../pages/cart/CartPage.vue';
 import ProfilePage from '../pages/profile/ProfilePage.vue'
 import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
 import CheckoutPage from '../pages/checkout/CheckoutPage.vue'
+import FavoritePage from '../pages/favorite/FavoritePage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -54,6 +55,7 @@ const router = createRouter({
     },
     { path: '/contact', name: 'contact', component: ContactPage },
     { path: '/blog', name: 'blog', component: BlogPage },
+    { path: '/wishlist', name: 'wishlist', component: FavoritePage }
   ],
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 };

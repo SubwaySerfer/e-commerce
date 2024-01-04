@@ -1,10 +1,10 @@
 <template>
-  <section>
+  <main>
     <promo-shop></promo-shop>
     <filters-shop></filters-shop>
     <shop-items></shop-items>
     <our-advantages></our-advantages>
-  </section>
+  </main>
 </template>
 
 <script>
