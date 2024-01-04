@@ -5,7 +5,8 @@ export default {
   namespaced: true, state() {
     return {
       furnitureList: [],
-      favoriteList: []
+      favoriteList: [],
+      cartList: []
     }
   },
   mutations,

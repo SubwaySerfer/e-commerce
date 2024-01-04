@@ -9,7 +9,7 @@
         </base-card>
       </li>
       <div v-if="this.favoriteList.length == 0" class="cards-list__empty-box">
-        <h2>Your wish list is empty</h2>
+        <h2 class="empty-box__label">Your wish list is empty</h2>
         <router-link to="/shop">
           <base-button class="" mode="yellow-btn">Back to shop</base-button>
         </router-link>
@@ -61,8 +61,13 @@ export default {
 .cards-list__empty-box {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   align-self: center;
   flex: 0 1 100%;
+}
+
+.empty-box__label {
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 </style>
