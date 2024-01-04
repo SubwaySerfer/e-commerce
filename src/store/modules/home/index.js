@@ -1,8 +1,13 @@
 import mutations from "./mutations"
 import getters from "./getters"
 
-export default {namespaced: true, state(){
- return{ furnitureList: []}
-},
-mutations,
-getters}
+export default {
+  namespaced: true, state() {
+    return {
+      furnitureList: [],
+      favoriteList: []
+    }
+  },
+  mutations,
+  getters
+}

@@ -52,11 +52,12 @@ export default {
     },
     toggleLikeItem(id) {
       console.log('like', id)
+      this.$store.commit('home/toggleFavoriteList', id)
     },
     shareItem(id) {
       console.log('share', id)
     }
-  }
+  },
 
 };
 </script>
