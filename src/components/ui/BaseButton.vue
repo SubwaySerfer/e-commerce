@@ -2,11 +2,11 @@
   <button v-if="!link" :class="mode">
     <slot>{{ linkName }}</slot>
   </button>
-  <button v-else :class="mode" class="btn">
-    <router-link :to="to" :linkName="linkName" class="btn">{{ linkName }}
+  <router-link v-else :to="to" :class="mode" class="btn">
+    <button class="btn" :class="modeLabel">{{ linkName }}
       <!-- <slot>{{ linkName }}</slot> -->
-    </router-link>
-  </button>
+    </button>
+  </router-link>
 </template>
 
 <script>
@@ -32,6 +32,11 @@ export default {
       required: false,
       default: "",
     },
+    modeLabel: {
+      type: String,
+      required: false,
+      default: null
+    }
   },
 };
 </script>
@@ -79,11 +84,43 @@ a {
 
 }
 
+.transparent-btn {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 50px;
+  border: 1px solid #000;
+  padding: .6rem 3rem;
+  text-align: center;
+  background: none;
+}
+
+.transparent-btn__label {
+  color: #000;
+  background-color: transparent;
+  outline: none;
+}
+
+/* .transparent-btn__label:active {
+  border: none;
+} */
+
+.transparent-btn__label:hover {
+  color: #000;
+}
+
+.transparent-btn:hover {
+  color: #000;
+}
+
 a {
   text-decoration: none;
-  color: #b88e2f;
+  /* color: #b88e2f;
   width: 100%;
-  height: 100%;
+  height: 100%; */
 }
 
 a:hover {

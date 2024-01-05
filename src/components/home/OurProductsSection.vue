@@ -1,34 +1,16 @@
 <template>
-  <section>
-    <h2>Our Products</h2>
+  <section class="products">
+    <h2 class="products__label">Our Products</h2>
     <div class="furnitures-list">
-      <base-card
-        v-for="furniture in this.furnitureList"
-        :name="furniture.name"
-        :img="furniture.img"
-        :price="furniture.price"
-        :description="furniture.description"
-      >
-        <!-- <p>{{ furniture }}</p> -->
+      <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
+        :price="furniture.price" :description="furniture.description" :id="furniture.id">
       </base-card>
-      <!-- <div>{{ furnitureList }}</div> -->
-      <!-- <div class="furniture-card">
-        <img src="" alt="" />
-        <h3></h3>
-        <p>Stylish cafe chair</p>
-      </div> -->
     </div>
-    <base-button class="btn">
-      <router-link to="/shop" class="btn-text">Show More</router-link>
-    </base-button>
-    <!-- <base-button class="btn">
-      <router-link to="/shop" class="btn-text">BUY Now</router-link>
-    </base-button> -->
+    <!-- <base-button class="btn"> -->
+    <router-link to="/shop" class="btn-text btn">Show More</router-link>
+    <!-- </base-button> -->
   </section>
 </template>
-<!--let currentLink = '/' + payload
-  //   return currentLink
-       :to="this.$store.commit('home/creatLinkToButton', shop)" -->
 
 <script>
 export default {
@@ -41,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-section {
+.products {
   height: auto;
   padding: 0.4rem 10.2rem 6.9rem;
   display: flex;
@@ -49,7 +31,8 @@ section {
   gap: 2rem;
   align-items: center;
 }
-h2 {
+
+.products__label {
   color: #3a3a3a;
   text-align: center;
   font-size: 4rem;
@@ -58,6 +41,7 @@ h2 {
   line-height: 120%;
   text-indent: 5px;
 }
+
 .furnitures-list {
   height: 92.4rem;
   display: flex;
@@ -66,6 +50,7 @@ h2 {
   flex-wrap: wrap;
   margin-top: 1.2rem;
 }
+
 .btn {
   width: 24.5rem;
   height: 4.8rem;
@@ -79,25 +64,43 @@ h2 {
   line-height: 150%;
   text-indent: 9px;
   transition: ease-in 0.25s;
+  border: 1px solid #b88e2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .btn:hover {
   transform: scale(1.1);
   background-color: #b88e2f;
   color: white;
 }
-.btn:hover > .btn-text {
+
+.btn:hover>.btn-text {
   color: white;
 }
 
 .btn-text {
-  text-transform: uppercase;
   text-decoration: none;
   color: #b88e2f;
   transition: ease-in 0.25s;
-
   /* color: #ffffff; */
 }
+
 /* .btn-text:hover {
   color: white;
 } */
+
+@media (max-width: 1450px) {
+  .products {
+    padding: .4rem .69vw 6.9rem;
+  }
+
+  .furnitures-list {
+    height: auto;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
 </style>

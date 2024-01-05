@@ -1,5 +1,5 @@
-export default{
-  getRandomList(state){
+export default {
+  getRandomList(state) {
     return state.relatedList
   }
 }

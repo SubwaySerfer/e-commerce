@@ -1,7 +1,7 @@
 <template>
-  <section>
-    <h4 class="title-desc">Share your setup with</h4>
-    <h2 class="title-label">#FuniroFurniture</h2>
+  <section class="furniture-wrapper">
+    <h4 class="furniture-wrapper__title-description">Share your setup with</h4>
+    <h2 class="furniture-wrapper__title-label">#FuniroFurniture</h2>
     <img src="/assets/image/furniture/furniture-1.png" alt="" class="img-1" />
     <img src="/assets/image/furniture/furniture-3.png" alt="" class="img-3" />
     <img src="/assets/image/furniture/furniture-2.png" alt="" class="img-2" />
@@ -15,7 +15,7 @@
 </template>
 
 <style scoped>
-section {
+.furniture-wrapper {
   height: 89.7rem;
   display: grid;
   grid-template-rows: repeat(10, 1fr);
@@ -87,7 +87,7 @@ section {
   padding-bottom: 0.4rem;
 }
 
-.title-desc {
+.furniture-wrapper__title-description {
   grid-area: 1 / 5 / 2 / 9;
   color: #616161;
   text-align: center;
@@ -98,7 +98,7 @@ section {
   padding-right: 3.4rem;
 }
 
-.title-label {
+.furniture-wrapper__title-label {
   grid-area: 1 / 5 / 2 / 9;
   align-self: end;
   justify-self: center;
@@ -111,4 +111,150 @@ section {
   padding-right: 3.4rem;
   /* padding-bottom: -3rem; */
   transform: translateY(3px);
-}</style>
+}
+
+@media(max-width: 1439px) {
+  .img-1 {
+    width: 5.41vw;
+  }
+
+  .img-2 {
+    width: 33.95vw;
+  }
+
+  .img-3 {
+    width: 12.84vw;
+  }
+
+  .img-4 {
+    width: 25.62vw;
+  }
+
+  .img-5 {
+    width: 20.48vw;
+  }
+
+  .img-6 {
+    width: 20.69vw;
+  }
+
+  .img-7 {
+    width: 12.36vw;
+  }
+
+  .img-8 {
+    width: 18.19vw;
+  }
+
+  .img-9 {
+    width: 18.68vw;
+  }
+
+}
+
+/* @media (max-width: 1350px) {
+  .img-1 {
+    align-self: center
+  }
+} */
+
+@media (max-width: 1200px) {
+
+  .img-9 {
+    grid-area: 7 / 10 / 10 / 13;
+    align-self: end
+  }
+
+  .img-8 {
+    grid-area: 1 / 10 / 7 / 13;
+    align-self: end
+  }
+
+  .img-3 {
+    padding-top: 3rem;
+  }
+
+  .furniture-wrapper {
+    height: auto;
+  }
+
+  .furniture-wrapper__title-label {
+    grid-area: 1 / 1 / 3 / 13;
+    align-self: center;
+  }
+
+  .furniture-wrapper__title-description {
+    grid-area: 1 / 1 / 2 / 13;
+    align-self: center;
+  }
+}
+
+@media (max-width: 770px) {
+  .furniture-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding-top: 0;
+  }
+
+  .furniture-wrapper__title-description {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+
+  .furniture-wrapper__title-label {
+    grid-area: 1 / 1 / 3 / 4;
+  }
+
+  .img-1 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .img-2 {
+    grid-area: 3 / 1 / 4 / 3;
+    align-self: end;
+    justify-content: center;
+  }
+
+  .img-8 {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+
+  .img-3 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .img-4 {
+    grid-area: 4 / 2 / 5 / 3;
+    align-self: center
+  }
+
+  .img-7 {
+    grid-area: 4 / 3 / 5 / 4;
+    align-self: center
+  }
+
+  .img-5 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+
+  .img-6 {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+
+  .img-9 {
+    grid-area: 5 / 3 / 6 / 4;
+    align-self: center;
+    justify-self: center
+  }
+}
+
+@media(max-width: 450px) {
+  .furniture-wrapper__title-label {
+    padding-right: 0;
+    font-size: 3.3rem;
+  }
+
+  .furniture-wrapper__title-description {
+    padding-right: 0;
+  }
+}
+</style>

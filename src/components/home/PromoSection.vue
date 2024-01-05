@@ -1,16 +1,16 @@
 <template>
   <section class="promo-section">
-    <div class="promo-box">
-      <h6>New Arrival</h6>
-      <h2>
+    <div class="promo-section__promo-box">
+      <h6 class="promo-box__label__info">New Arrival</h6>
+      <h1 class="promo-box__label">
         Discover Our<br />
         New Collection
-      </h2>
-      <p class="promo-text">
+      </h1>
+      <p class="promo-box__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis.
       </p>
-      <base-button class="btn" @click="this.$router.push('/shop')">
+      <base-button class="promo-box__btn" @click="this.$router.push('/shop')">
         <router-link to="/shop" class="btn-text">BUY Now</router-link>
       </base-button>
     </div>
@@ -28,7 +28,7 @@
   padding-right: 5.8rem;
 }
 
-.promo-box {
+.promo-section__promo-box {
   display: flex;
   flex-direction: column;
   width: 64.3rem;
@@ -39,7 +39,7 @@
   text-align: start;
 }
 
-.btn {
+.promo-box__btn {
   width: 22.2rem;
   height: 7.4rem;
   border-radius: 0;
@@ -49,7 +49,7 @@
   transition: ease-in 0.25s;
 }
 
-.btn:hover {
+.promo-box__btn:hover {
   transform: scale(1.05);
 }
 
@@ -63,7 +63,7 @@
   line-height: normal;
 }
 
-.promo-text {
+.promo-box__text {
   color: #333;
   font-size: 1.8rem;
   font-style: normal;
@@ -73,9 +73,8 @@
   padding-bottom: 5.1rem;
 }
 
-h6 {
+.promo-box__label__info {
   color: #333;
-  /* font-family: Poppins; */
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 600;
@@ -84,12 +83,80 @@ h6 {
   padding-bottom: 0.4rem;
 }
 
-h2 {
+.promo-box__label {
   color: #b88e2f;
   font-size: 5.2rem;
   font-style: normal;
   font-weight: 700;
   line-height: 6.5rem;
   padding-bottom: 1.3rem;
+}
+
+@media(max-width: 1439px) {
+  .promo-section {
+    padding-right: 4vw;
+    width: 100%;
+    background-position: center center;
+  }
+}
+
+@media(max-width: 1000px) {
+  .promo-section {
+    padding-top: 10vh;
+
+  }
+
+  .promo-section__promo-box {
+    width: 44.65vw;
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .promo-box__text {
+    padding-bottom: 1.5rem;
+  }
+
+  .promo-box__label {
+    font-size: 4rem;
+    line-height: 5rem;
+
+  }
+}
+
+@media (max-width: 750px) {
+  .promo-section {
+    justify-content: center;
+    padding-top: 15vh;
+  }
+
+  .promo-section__promo-box {
+    width: 80vw;
+  }
+
+  .promo-box__text {
+    padding-bottom: 3vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .promo-section__promo-box {
+    width: 90vw;
+  }
+
+  .promo-section {
+    padding-right: 0;
+  }
+
+  .promo-box__btn {
+    width: 80vw;
+  }
+
+  .promo-box__label {
+    text-align: center;
+  }
+
+  .promo-box__text {
+    text-align: center;
+  }
 }
 </style>

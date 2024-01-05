@@ -15,20 +15,20 @@
       <p>{{ description }}</p>
       <h4>Rp {{ price }}</h4>
     </div>
-
-    <div class="furniture-card_popup" @mouseleave="hover = false" v-if="hover" @click="this.$router.push('/card-info')">
-      <base-button class="btn">Add to cart</base-button>
+    <!-- @click="this.$router.push('/card-info')" -->
+    <div class="furniture-card_popup" @mouseleave="hover = false" v-if="hover" :id='id'>
+      <base-button class="btn" @click="addItemToCart(id)">Add to cart</base-button>
       <div class="popup-content">
-        <div class="popup-content_box">
-          <img src="/public/assets/icons/furnitureCards/icon-share.svg" alt="share icon." class="popup-icon" />
+        <div class="popup-content_box" @click="shareItem(id)">
+          <img src="/assets/icons/furnitureCards/icon-share.svg" alt="share icon." class="popup-icon" />
           <h5>Share</h5>
         </div>
         <div class="popup-content_box">
-          <img src="/public/assets/icons/furnitureCards/icon-compare.svg" alt="compare icon." class="popup-icon" />
+          <img src="/assets/icons/furnitureCards/icon-compare.svg" alt="compare icon." class="popup-icon" />
           <h5>Compare</h5>
         </div>
-        <div class="popup-content_box">
-          <img src="/public/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" />
+        <div class="popup-content_box" @click="toggleLikeItem(id)">
+          <img src="/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" />
           <h5>Like</h5>
         </div>
       </div>
@@ -40,12 +40,26 @@
 //TODO: сделать наведение на карточку
 //TODO: сделать проверку если есть наводка на одну карточку, то все остальные должны быть открыты.
 export default {
-  props: ['name', 'price', 'img', 'description'],
+  props: ['name', 'price', 'img', 'description', 'id'],
   data() {
     return {
       hover: false,
     };
   },
+  methods: {
+    addItemToCart(id) {
+      console.log('test', id)
+      this.$store.commit('home/editCartItems', { id: id, action: "add" })
+    },
+    toggleLikeItem(id) {
+      console.log('like', id)
+      this.$store.commit('home/toggleFavoriteList', id)
+    },
+    shareItem(id) {
+      console.log('share', id)
+    }
+  },
+
 };
 </script>
 <style scoped>

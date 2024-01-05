@@ -12,6 +12,13 @@
   border-radius: 1rem;
   border: 1px solid #9f9f9f;
   background: #fff;
+  padding-left: 15px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .search {
@@ -22,5 +29,6 @@
   position: absolute;
   right: 1rem;
   top: 1.7rem;
+  cursor: pointer;
 }
 </style>

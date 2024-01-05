@@ -1,8 +1,8 @@
-import jsonObj from '../../../../public/assets/data/relatedList.json'
+import jsonObj from '/public/assets/data/relatedList.json'
 
 export default {
-  createRandomList(state){
-    state.relatedList = jsonObj.products.slice(0,4)
+  createRandomList(state) {
+    state.relatedList = jsonObj.products.slice(0, 4)
     // let arr = jsonObj.products
     // let length = arr.length
     // let result = new Set()
@@ -25,5 +25,5 @@ export default {
     // }
     // console.log(result)
     // state.relatedList = result
-  },
+  }
 }

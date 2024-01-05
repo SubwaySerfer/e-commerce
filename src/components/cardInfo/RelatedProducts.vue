@@ -2,20 +2,10 @@
   <section class="related-section">
     <h2 class="related__title">Related Products</h2>
     <div class="related__cards">
-      <base-card
-        v-for="card in this.relatedCards"
-        :name="card.name"
-        :img="card.img"
-        :price="card.price"
-        :description="card.description"
-      ></base-card>
+      <base-card v-for="card in this.relatedCards" :name="card.name" :img="card.img" :price="card.price"
+        :description="card.description" :id="card.id"></base-card>
     </div>
-    <base-button
-      :link="true"
-      to="/shop"
-      mode="white-btn"
-      linkName="Show More"
-    ></base-button>
+    <base-button :link="true" to="/shop" mode="white-btn" linkName="Show More"></base-button>
   </section>
 </template>
 
@@ -40,6 +30,7 @@ export default {
   align-items: center;
   padding-top: 5.5rem;
 }
+
 .related__cards {
   height: 44.6rem;
   display: flex;
@@ -47,6 +38,7 @@ export default {
   gap: 3.2rem;
   margin-bottom: 4.4rem;
 }
+
 .related__title {
   color: #000;
   font-family: Poppins;

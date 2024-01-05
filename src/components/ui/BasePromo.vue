@@ -13,6 +13,7 @@
 </template>
 
 <script>
+// TODO: Подумать нужно ли сделать стрелочку по середине относительно изображения
 export default {
   props: {
     title: {

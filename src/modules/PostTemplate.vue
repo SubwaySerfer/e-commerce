@@ -92,6 +92,7 @@ export default {
   align-self: flex-start;
   padding: 0;
   padding-top: 2.9rem;
+  transition: transform .25s ease-in-out;
 }
 
 .post__button:after {
@@ -102,6 +103,12 @@ export default {
   width: 7.7rem;
   margin: 10px auto 0;
   transition: 1s;
+}
+
+.post__button:hover {
+  border-color: transparent;
+  transform: scale(1.1);
+
 }
 
 .post__image {
