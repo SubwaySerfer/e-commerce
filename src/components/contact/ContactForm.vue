@@ -1,8 +1,8 @@
 <template>
-  <section>
-    <div>
-      <h2>Get In Touch With Us</h2>
-      <p class="main-info">
+  <section class="contact-wrapper">
+    <div class="contact-info">
+      <h2 class="contact-info__label">Get In Touch With Us</h2>
+      <p class="contact-info__description">
         For More Information About Our Product & Services. Please Feel Free To
         Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not
         Hesitate!
@@ -12,8 +12,8 @@
       <div class="content-wrapper_info">
         <div class="info-card info-card_local">
           <img src="/assets/icons/contact/local-icon.svg" alt="location icon" class="info-card_img icon_local" />
-          <div class="info-card_text">
-            <h3>Address</h3>
+          <div class="text-contact">
+            <h3 class="text-contact__label">Address</h3>
             <p class="content-wrapper_paragraph">
               236 5th SE Avenue, New York NY10000, United States
             </p>
@@ -21,8 +21,8 @@
         </div>
         <div class="info-card">
           <img src="/assets/icons/contact/phone-icon.svg" alt="phone icon" class="info-card_img icon_phone" />
-          <div class="info-card_text">
-            <h3>Phone</h3>
+          <div class="text-contact">
+            <h3 class="text-contact__label">Phone</h3>
             <p class="content-wrapper_paragraph">
               Mobile: +(84) 546-6789 Hotline: +(84) 456-6789
             </p>
@@ -30,8 +30,8 @@
         </div>
         <div class="info-card info-card_clock">
           <img src="/assets/icons/contact/clock-icon.svg" alt="clock icon" class="info-card_img icon_clock" />
-          <div class="info-card_text">
-            <h3>Working Time</h3>
+          <div class="text-contact">
+            <h3 class="text-contact__label">Working Time</h3>
             <p class="content-wrapper_paragraph">
               Monday-Friday: 9:00 - 22:00<br />
               Saturday-Sunday: 9:00 - 21:00
@@ -59,7 +59,7 @@
 </template>
 
 <style scoped>
-section {
+.contact-wrapper {
   height: 114.5rem;
   padding: 9.8rem 19.1rem 6.3rem;
   display: flex;
@@ -68,7 +68,7 @@ section {
   align-items: center;
 }
 
-h2 {
+.contact-info__label {
   font-size: 3.6rem;
   font-style: normal;
   font-weight: 600;
@@ -76,7 +76,7 @@ h2 {
   margin-bottom: 0.7rem;
 }
 
-.main-info {
+.contact-info__description {
   color: #9f9f9f;
   text-align: center;
   font-size: 1.6rem;
@@ -89,7 +89,6 @@ h2 {
 .content-wrapper {
   display: flex;
   flex-direction: row;
-  /* gap: 5.1rem; */
   justify-content: flex-start;
   padding-top: 8.2rem;
 }
@@ -150,21 +149,19 @@ h2 {
   gap: 3rem;
 }
 
-.info-card_text {
+.text-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 1rem;
   text-align: start;
-  /* padding-left: 0.5rem; */
 }
 
-h3 {
+.text-contact__label {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  /* text-indent: 2.8rem; */
 }
 
 label {
@@ -182,7 +179,6 @@ label {
   width: 63.5rem;
   padding: 5.1rem 2rem 6.3rem 8.4rem;
   justify-content: space-between;
-  /* gap: 3.6rem; */
 }
 
 input {
@@ -223,5 +219,37 @@ textarea {
   border-radius: 0.5rem;
   border: 1px solid #b88e2f;
   background: #b88e2f;
+}
+
+@media(max-width: 1100px) {
+  .contact-wrapper {
+    height: auto;
+    padding: 9.8rem 4vw 6.3rem;
+  }
+
+  .content-wrapper {
+    justify-content: space-between;
+    width: 100%;
+    gap: 2vw;
+  }
+
+  .content-wrapper_info {
+    padding: 4.6rem 0 0;
+  }
+
+  .form-box {
+    padding: 5.1rem 0 6.3rem;
+    max-width: 51.3rem;
+  }
+}
+
+@media(max-width: 720px) {
+  .contact-info__label {
+    margin-bottom: 2rem;
+  }
+
+  .content-wrapper {
+    padding-top: 0;
+  }
 }
 </style>

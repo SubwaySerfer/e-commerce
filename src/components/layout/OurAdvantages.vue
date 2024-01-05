@@ -81,24 +81,25 @@
   .advnt-wrapper {
     flex-wrap: wrap;
     padding: 8rem 3vw;
-    gap: 2vw;
+    gap: 3rem;
   }
 
   .adv-card {
-    width: 45vw;
+    width: 44vw;
   }
 }
 
 @media(max-width: 640px) {
   .advnt-wrapper {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     padding: 5rem 4vw;
   }
 
   .adv-card {
     width: 100%;
     padding-left: 5vw;
+    gap: 8vw;
   }
 }
 
