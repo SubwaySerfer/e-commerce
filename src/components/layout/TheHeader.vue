@@ -30,8 +30,35 @@
         </li>
       </ul>
     </div>
-    <div v-else>
-      Бургер
+
+    <div v-else class="burger" @click="toggleBurger">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <nav class="burger-wrapper" v-if="isBurgerOpen && windowWidth < 770">
+        <ul class="burger-page__list">
+          <li class="btn-root"><router-link to="/">Home</router-link></li>
+          <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
+          <li class="btn-root"><router-link to="/blog">Blog</router-link></li>
+          <li class="btn-root">
+            <router-link to="/contact">Contact</router-link>
+          </li>
+        </ul>
+        <ul class="burger-icons__list">
+          <li class="btn-root">
+            <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
+          </li>
+          <li class="btn-root">
+            <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
+          </li>
+          <li class="btn-root">
+            <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" /></router-link>
+          </li>
+          <li class="btn-root">
+            <router-link to="/cart"><img src="/assets/icons/basket-icon.svg" /></router-link>
+          </li>
+        </ul>
+      </nav>
     </div>
     <teleport to="#app">
       <base-aside-popup v-if="isCartPopupOpen"></base-aside-popup>
@@ -47,7 +74,8 @@ export default {
   components: { BaseAsidePopup },
   data() {
     return {
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
+      isBurgerOpen: false
     }
   },
   mounted() {
@@ -67,6 +95,17 @@ export default {
     },
     onResize() {
       this.windowWidth = window.innerWidth;
+    },
+    toggleBurger() {
+      this.isBurgerOpen = !this.isBurgerOpen
+    },
+    closeCartPopup() {
+      this.$store.commit('header/closeCartPopup')
+    }
+  },
+  watch: {
+    windowWidth(val) {
+      if (val < 770) this.closeCartPopup()
     }
   },
 
@@ -149,6 +188,49 @@ a {
   padding: 7px 0 0 5px;
 }
 
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.burger__line {
+  width: 3.5rem;
+  height: .4rem;
+  background-color: #cfc7bc;
+  z-index: 5;
+}
+
+.burger-wrapper {
+  position: absolute;
+  width: 80vw;
+  top: 0;
+  right: 0;
+  height: auto;
+  border-radius: 1rem 0 0 1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 8rem 1rem 3rem;
+}
+
+.burger-page__list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 1.6rem;
+  justify-content: space-around;
+}
+
+.burger-icons__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 @media (max-width: 1420px) {
   .header__logo-box {
     padding-right: 0
@@ -175,6 +257,19 @@ a {
 
   .icons-box__icons-list {
     gap: 3.5rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .header {
+    padding: 5rem 5vw
+  }
+}
+
+@media (max-width: 450px) {
+  .burger-wrapper {
+    width: 100vw;
+    border-radius: 0
   }
 }
 </style>
