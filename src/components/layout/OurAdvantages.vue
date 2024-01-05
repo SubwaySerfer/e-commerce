@@ -1,38 +1,38 @@
 <template>
-  <section>
+  <section class="advnt-wrapper">
     <div class="adv-card">
       <img src="/assets/icons/shop/advantages/shop-trophy.svg" alt="trophy icon" />
-      <div>
-        <h3>High Quality</h3>
-        <p>crafted from top materials</p>
+      <div class="card-descr">
+        <h3 class="card-descr__label">High Quality</h3>
+        <p class="card-descr__description">crafted from top materials</p>
       </div>
     </div>
     <div class="adv-card">
       <img src="/assets/icons/shop/advantages/shop-guarantee.svg" alt="guarantee icon" />
-      <div>
-        <h3>Warranty Protection</h3>
-        <p>Over 2 years</p>
+      <div class="card-descr">
+        <h3 class="card-descr__label">Warranty Protection</h3>
+        <p class="card-descr__description">Over 2 years</p>
       </div>
     </div>
     <div class="adv-card">
       <img src="/assets/icons/shop/advantages/shop-shipping.svg" alt="shipping icon" />
-      <div>
-        <h3>Free Shipping</h3>
-        <p>Order over 150 $</p>
+      <div class="card-descr">
+        <h3 class="card-descr__label">Free Shipping</h3>
+        <p class="card-descr__description">Order over 150 $</p>
       </div>
     </div>
     <div class="adv-card">
       <img src="/assets/icons/shop/advantages/shop-support.svg" alt="support icon" />
-      <div>
-        <h3>24 / 7 Support</h3>
-        <p>Dedicated support</p>
+      <div class="card-descr">
+        <h3 class="card-descr__label">24 / 7 Support</h3>
+        <p class="card-descr__description">Dedicated support</p>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-section {
+.advnt-wrapper {
   height: 27rem;
   background-color: #faf3ea;
   display: flex;
@@ -49,7 +49,7 @@ section {
   gap: 1rem;
 }
 
-h3 {
+.card-descr__label {
   /* color: #242424;
   font-family: Poppins; */
   font-size: 2.5rem;
@@ -59,12 +59,53 @@ h3 {
   text-align: start;
 }
 
-p {
+.card-descr__description {
   color: #898989;
   font-size: 2rem;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
   text-align: start;
+}
+
+@media(max-width: 1400px) {
+  .advnt-wrapper {
+    height: auto;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 10rem 3rem;
+  }
+}
+
+@media(max-width: 880px) {
+  .advnt-wrapper {
+    flex-wrap: wrap;
+    padding: 8rem 3vw;
+    gap: 2vw;
+  }
+
+  .adv-card {
+    width: 45vw;
+  }
+}
+
+@media(max-width: 640px) {
+  .advnt-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem 4vw;
+  }
+
+  .adv-card {
+    width: 100%;
+    padding-left: 5vw;
+  }
+}
+
+@media(max-width: 400px) {
+
+  .adv-card {
+    padding-left: 0;
+  }
 }
 </style>

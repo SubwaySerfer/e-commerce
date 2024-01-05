@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="cards-wrapper">
     <div class="cards-list">
       <base-card v-for="furniture, index in this.furnitureList" :name="furniture.name" :img="furniture.img"
         :price="furniture.price" :description="furniture.description" :id="furniture.id"
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-section {
+.cards-wrapper {
   padding: 6.3rem 10.5rem 8.6rem 9.9rem;
   display: flex;
   flex-direction: column;
@@ -46,5 +46,13 @@ section {
   display: flex;
   flex-flow: row wrap;
   gap: 4.2rem 3.2rem;
+  justify-content: space-around;
+}
+
+
+@media(max-width: 1250px) {
+  .cards-wrapper {
+    padding: 6.3rem 4rem 8.6rem 4rem;
+  }
 }
 </style>
