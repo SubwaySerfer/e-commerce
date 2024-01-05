@@ -20,15 +20,15 @@
       <base-button class="btn" @click="addItemToCart(id)">Add to cart</base-button>
       <div class="popup-content">
         <div class="popup-content_box" @click="shareItem(id)">
-          <img src="/public/assets/icons/furnitureCards/icon-share.svg" alt="share icon." class="popup-icon" />
+          <img src="/assets/icons/furnitureCards/icon-share.svg" alt="share icon." class="popup-icon" />
           <h5>Share</h5>
         </div>
         <div class="popup-content_box">
-          <img src="/public/assets/icons/furnitureCards/icon-compare.svg" alt="compare icon." class="popup-icon" />
+          <img src="/assets/icons/furnitureCards/icon-compare.svg" alt="compare icon." class="popup-icon" />
           <h5>Compare</h5>
         </div>
         <div class="popup-content_box" @click="toggleLikeItem(id)">
-          <img src="/public/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" />
+          <img src="/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" />
           <h5>Like</h5>
         </div>
       </div>

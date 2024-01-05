@@ -4,8 +4,8 @@
       <img src="/assets/icons/mainLogo.png" alt="furniro logo" class="logo-box__main-logo" @click="this.routeHome" />
       <h2 @click="this.routeHome" class="logo-box__label">Furniro</h2>
     </div>
-    <nav class="header__nav">
-      <ul class="nav__nav-list ul-list">
+    <nav class="header__nav" v-if="windowWidth > 770">
+      <ul class=" nav__nav-list ul-list">
         <li class="btn-root"><router-link to="/">Home</router-link></li>
         <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
         <li class="btn-root"><router-link to="/blog">Blog</router-link></li>
@@ -14,7 +14,7 @@
         </li>
       </ul>
     </nav>
-    <div class="icons-box">
+    <div class="icons-box" v-if="windowWidth > 770">
       <ul class="icons-box__icons-list ul-list">
         <li class="btn-root">
           <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
@@ -30,6 +30,9 @@
         </li>
       </ul>
     </div>
+    <div v-else>
+      Бургер
+    </div>
     <teleport to="#app">
       <base-aside-popup v-if="isCartPopupOpen"></base-aside-popup>
     </teleport>
@@ -42,14 +45,31 @@ import BaseAsidePopup from '../ui/BaseAsidePopup.vue';
 export default {
   //TODO: сделать перезагрузку страницы если я уже на домашней
   components: { BaseAsidePopup },
+  data() {
+    return {
+      windowWidth: window.innerWidth
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize)
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  },
   methods: {
     routeHome() {
       this.$router.push('/home');
     },
     toggleCartPopup() {
       this.$store.commit('header/toggleCartPopup')
+    },
+    onResize() {
+      this.windowWidth = window.innerWidth;
     }
   },
+
   computed: {
     isCartPopupOpen() {
       return this.$store.getters['header/getCartPopupStatus'];
@@ -151,6 +171,10 @@ a {
 
   .header {
     padding: 3.35rem 3vw 3.45rem;
+  }
+
+  .icons-box__icons-list {
+    gap: 3.5rem;
   }
 }
 </style>

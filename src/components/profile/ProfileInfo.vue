@@ -1,33 +1,20 @@
 <template>
   <section class="profile">
-    <img
-      src="/public/assets/image/profile/profile-image.jpeg"
-      alt="Profile avatar."
-      width="250px"
-      height="250px"
-      class="profile__img"
-    />
+    <img src="/assets/image/profile/profile-image.jpeg" alt="Profile avatar." width="250px" height="250px"
+      class="profile__img" />
     <h2>Profile info</h2>
     <ul class="profile-info">
       <li>
-        <label for="" class="profile-info__el"
-          >Login<input type="text"
-        /></label>
+        <label for="" class="profile-info__el">Login<input type="text" /></label>
       </li>
       <li>
-        <label for="" class="profile-info__el"
-          >First Name<input type="text"
-        /></label>
+        <label for="" class="profile-info__el">First Name<input type="text" /></label>
       </li>
       <li>
-        <label for="" class="profile-info__el"
-          >Last Name<input type="text"
-        /></label>
+        <label for="" class="profile-info__el">Last Name<input type="text" /></label>
       </li>
       <li>
-        <label for="" class="profile-info__el"
-          >Email<input type="email"
-        /></label>
+        <label for="" class="profile-info__el">Email<input type="email" /></label>
       </li>
       <li>
         <label for="" class="profile-info__el">Phone<input type="tel" /></label>
@@ -60,6 +47,7 @@
   align-items: center;
   list-style-type: none;
 }
+
 .profile-info__el {
   display: flex;
   width: 30rem;

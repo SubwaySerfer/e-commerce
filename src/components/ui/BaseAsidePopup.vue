@@ -11,7 +11,7 @@
       <ul class="content__cart-items">
         <li class="cart-items__sofa-block">
           <figure class="sofa-block__background">
-            <img src="/public/assets/icons/cart/sofa-asgaard.png" alt="asgaard sofa."
+            <img src="/assets/icons/cart/sofa-asgaard.png" alt="asgaard sofa."
               class="sofa-block__image sofa-block__image__down" />
           </figure>
           <div class="sofa-block__item-info">
@@ -21,19 +21,18 @@
                 250,000.00</span>
             </p>
           </div>
-          <img src="/public/assets/icons/ui/delete-item.svg" alt="delete item button." class="sofa-block__close-icon" />
+          <img src="/assets/icons/ui/delete-item.svg" alt="delete item button." class="sofa-block__close-icon" />
         </li>
         <li class="cart-items__sofa-block">
           <figure class="sofa-block__background sofa-block__background__none">
-            <img src="/public/assets/icons/cart/casaliving-sofa.png" alt="Casaliving sofa."
-              class="sofa-block__image__normal" />
+            <img src="/assets/icons/cart/casaliving-sofa.png" alt="Casaliving sofa." class="sofa-block__image__normal" />
           </figure>
           <div class="sofa-block__item-info">
             <h5 class="item-info__label">Casaliving Wood</h5>
             <p class="item-info__description">1 <span class="item-info__description__increase">X</span><span
                 class="item-info__description__price">Rs. 270,000.00</span></p>
           </div>
-          <img src="/public/assets/icons/ui/delete-item.svg" alt="delete item button." class="sofa-block__close-icon" />
+          <img src="/assets/icons/ui/delete-item.svg" alt="delete item button." class="sofa-block__close-icon" />
         </li>
         <!-- TODO: более адекватно сделать)) -->
       </ul>
