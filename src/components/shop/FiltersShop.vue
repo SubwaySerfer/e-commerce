@@ -1,32 +1,56 @@
 <template>
-  <section>
+  <section class="filter-wrapper">
     <div class="filters-box-first">
       <ul>
         <li>
           <img src="/assets/icons/shop/filters-scroll.svg" alt="filter scroll icon" />
         </li>
         <li class="scroll-label">Filter</li>
-        <li>
+        <li v-if="windowWidth > 740">
           <img src="/assets/icons/shop/filters-dots.svg" alt="filter dots" class="filter-dots" />
         </li>
-        <li>
+        <li v-if="windowWidth > 740">
           <img src="/assets/icons/shop/filters-view.svg" alt="filter view" class="filter-view" />
         </li>
       </ul>
       <span class="cross-line"></span>
-      <h6>Showing 1–16 of 32 results</h6>
+      <h6 v-if="windowWidth > 1020">Showing 1–16 of 32 results</h6>
     </div>
     <div class="filters-box-sec">
       <label for="">Show</label>
       <input type="number" placeholder="16" class="show-input" />
-      <label for="">Short by</label>
-      <input type="text" placeholder="Default" class="short-input" />
+      <label for="" v-if="windowWidth > 620">Short by</label>
+      <input v-if="windowWidth > 620" type="text" placeholder="Default" class="short-input" />
     </div>
   </section>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      windowWidth: window.innerWidth,
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize)
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  },
+  methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth;
+    }
+  }
+}
+
+</script>
+
 <style scoped>
-section {
+.filter-wrapper {
   height: 10rem;
   background-color: #f9f1e7;
   display: flex;
@@ -101,16 +125,12 @@ input {
   border: none;
 }
 
-/* label {
-} */
 .show-input {
   width: 5.5rem;
   height: 5.5rem;
   background-color: #ffffff;
-  /* padding: 1.2rem 1.3rem 1.2rem 1.8rem; */
   display: block;
   text-align: center;
-
   margin-right: 1.2rem;
 }
 
@@ -118,6 +138,18 @@ input {
   width: 18.8rem;
   height: 5.5rem;
   padding-left: 3rem;
-  /* flex-shrink: 0; */
+}
+
+@media(max-width: 1200px) {
+  .filter-wrapper {
+    padding: 3.5vw;
+  }
+}
+
+@media(max-width: 620px) {
+  .filter-wrapper {
+    justify-content: center;
+    gap: 3rem;
+  }
 }
 </style>

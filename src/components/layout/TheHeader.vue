@@ -37,10 +37,10 @@
       <span class="burger__line"></span>
       <nav class="burger-wrapper" v-if="isBurgerOpen && windowWidth < 770">
         <ul class="burger-page__list">
-          <li class="btn-root"><router-link to="/">Home</router-link></li>
-          <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
-          <li class="btn-root"><router-link to="/blog">Blog</router-link></li>
-          <li class="btn-root">
+          <li class="btn-root "><router-link to="/">Home</router-link></li>
+          <li class="btn-root burger-list__btn"><router-link to="/shop">Shop</router-link></li>
+          <li class="btn-root burger-list__btn"><router-link to="/blog">Blog</router-link></li>
+          <li class="btn-root burger-list__btn">
             <router-link to="/contact">Contact</router-link>
           </li>
         </ul>
@@ -214,15 +214,20 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 8rem 1rem 3rem;
+  padding: 7.5rem 1rem 3rem;
 }
 
 .burger-page__list {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
   font-size: 1.6rem;
   justify-content: space-around;
+}
+
+.burger-list__btn {
+  border-top: 1px solid;
+  padding-top: 1rem;
 }
 
 .burger-icons__list {
