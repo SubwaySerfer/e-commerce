@@ -70,7 +70,6 @@ export default {
   font-style: normal;
   display: flex;
   flex-direction: column;
-  /* padding-bottom: 4.6rem; */
 }
 
 .post_info-block {
@@ -125,12 +124,6 @@ export default {
 }
 
 .post__description {
-  /* color: #9f9f9f;
-  text-align: justify;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 150%;
-   */
   padding-top: 1.2rem;
   color: #9f9f9f;
   text-align: justify;
@@ -162,5 +155,22 @@ export default {
 
 .elem__img_tag {
   width: 2.2rem;
+}
+
+@media(max-width: 1300px) {
+  .post {
+    width: 60vw;
+  }
+
+  .post__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media(max-width: 825px) {
+  .post {
+    width: 100%;
+  }
 }
 </style>

@@ -31,4 +31,14 @@
   top: 1.7rem;
   cursor: pointer;
 }
+
+@media(max-width: 1100px) {
+  .search-input {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
 </style>

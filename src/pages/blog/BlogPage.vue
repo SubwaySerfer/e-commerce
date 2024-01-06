@@ -47,4 +47,38 @@ export default {
   flex-direction: row;
   gap: 3rem;
 }
+
+@media(max-width:1200px) {
+  .blog-wrapper__blog-content {
+    padding: 10.6rem 3rem 2.2rem;
+  }
+
+  .blog-content {
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+@media(max-width: 825px) {
+  .blog-wrapper__blog-content {
+    padding-top: 6rem;
+  }
+
+  .blog-content {
+    flex-direction: column-reverse;
+  }
+
+  .blog-content__aside {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+}
+
+@media(max-width: 551px) {
+  .blog-content__aside {
+    flex-direction: column;
+    align-items: center
+  }
+}
 </style>

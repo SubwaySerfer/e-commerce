@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: row;
 }
+
 .slider-item {
   width: 6rem;
   height: 6rem;
@@ -28,11 +29,19 @@
   background: #f9f1e7;
   cursor: pointer;
 }
+
 .slider-active {
   color: #fff;
   background: #b88e2f;
 }
+
 .next-item {
   width: 9.8rem;
+}
+
+@media(max-width: 470px) {
+  .slider {
+    gap: 1rem;
+  }
 }
 </style>

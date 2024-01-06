@@ -1,10 +1,6 @@
 <template>
   <div class="post">
-    <img
-      :src="`${recentPostImage}`"
-      :alt="recentPostImageAlt"
-      class="post__image"
-    />
+    <img :src="`${recentPostImage}`" :alt="recentPostImageAlt" class="post__image" />
     <h5 class="post__title">{{ recentPostTitle }}</h5>
     <span class="post__date">{{ recentPostDate }}</span>
   </div>
@@ -31,11 +27,13 @@ export default {
   font-style: normal;
   text-align: start;
 }
+
 .post__image {
   width: 8rem;
   height: 8rem;
   margin-right: 1.2rem;
 }
+
 .post__title {
   max-width: 16rem;
   color: #000;
@@ -45,10 +43,19 @@ export default {
   margin-bottom: 0.5rem;
   padding-top: 0.8rem;
 }
+
 .post__date {
   color: #9f9f9f;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: normal;
+}
+
+@media(max-width: 900px) {
+
+  .post__title {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <promo-shop></promo-shop>
+    <base-promo title="Shop" startPage="Home" currentPage="Shop"></base-promo>
     <filters-shop></filters-shop>
     <shop-items></shop-items>
     <our-advantages></our-advantages>
@@ -8,13 +8,11 @@
 </template>
 
 <script>
-import PromoShop from "../../components/shop/PromoShop.vue";
 import FiltersShop from "../../components/shop/FiltersShop.vue";
 import ShopItems from "../../components/shop/ShopItems.vue";
 
 export default {
   components: {
-    PromoShop,
     FiltersShop,
     ShopItems,
   },
