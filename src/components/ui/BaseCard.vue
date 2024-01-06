@@ -48,7 +48,6 @@ export default {
   },
   methods: {
     addItemToCart(id) {
-      console.log('test', id)
       this.$store.commit('home/editCartItems', { id: id, action: "add" })
     },
     toggleLikeItem(id) {

@@ -1,6 +1,21 @@
 <template>
   <ul class="cart">
-    <li class="cart__item">
+    <li class="cart__item" v-for="cartItem in CartList" :id=cartItem.id>
+      <!-- { "id": 2, "name": "Leviosa", "discount": 0, "isNew": false, "price": 2500000, "img":
+      "assets/image/products/Leviosa-product.png", "description": "Stylish cafe chair", "counter": 2 } -->
+
+      <figure class="item__img-box">
+        <img :src=cartItem.img :alt=cartItem.description class="img-box__img" />
+      </figure>
+      <h5 class="item__title">{{ cartItem.name }}</h5>
+      <h5 class="item__price">Rs. {{ cartItem.price }}</h5>
+      <input type="numeric" :value=cartItem.counter class="item__counter" />
+      <h5 class="item__subtotal">Rs. {{ cartItem.price }}</h5>
+      <button class="item__trash-btn" @click="delCartItem(cartItem.id)">
+        <img src="/assets/icons/cart/trash-icon.svg" alt="garbage button." class="trash-btn__icon" />
+      </button>
+    </li>
+    <!-- <li class="cart__item">
       <figure class="item__img-box">
         <img src="/assets/icons/cart/sofa-asgaard.png" alt="asgaard sofa." class="img-box__img" />
       </figure>
@@ -11,14 +26,33 @@
       <button class="item__trash-btn">
         <img src="/assets/icons/cart/trash-icon.svg" alt="garbage button." class="trash-btn__icon" />
       </button>
-    </li>
+    </li> -->
   </ul>
 </template>
+
+<script>
+export default {
+  computed: {
+    CartList() {
+      return this.$store.getters['home/getCartList']
+    }
+  },
+  methods: {
+    delCartItem(id) {
+      console.log('ddd')
+      this.$store.commit('home/editCartItems', { id: id, action: "del" })
+    }
+  }
+
+}
+</script>
 
 <style scoped>
 .cart {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+
 }
 
 .cart__item {
@@ -37,6 +71,7 @@
   font-family: Poppins;
   font-style: normal;
   line-height: normal;
+  width: 10.5rem;
 }
 
 .item__img-box {
@@ -77,5 +112,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  width: 10.5rem;
 }
 </style>

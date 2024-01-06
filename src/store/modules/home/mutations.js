@@ -18,19 +18,21 @@ export default {
   },
   editCartItems(state, payload) {
     let newItem = state.furnitureList.find(el => el.id === payload.id)
-
+    let currentItem = state.cartList.find(el => el.id === payload.id)
     if (payload.action === 'add') {
-      if (!state.cartList.find(el => el.id === payload.id)) {
+      if (!currentItem) {
         newItem['counter'] = 1
         state.cartList.push(newItem)
       } else {
-        state.cartList.find(el => el.id === payload.id).counter++
+        currentItem.counter++
       }
+    } else if (payload.action === 'del') {
+      state.cartList.splice(state.cartList.findIndex(el => el.id === payload.id), 1)
     } else {
-      if (!state.cartList.find(el => el.id === payload.id)) {
+      if (!currentItem) {
         return
       } else {
-        state.cartList.find(el => el.id === payload.id).counter--
+        currentItem.counter--
       }
     }
   }

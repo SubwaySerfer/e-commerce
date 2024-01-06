@@ -59,9 +59,9 @@ export default {
 .cart-list__nav {
   width: 81.7rem;
   height: 5.5rem;
-  padding-left: 14.2rem;
+  padding-left: 19rem;
   align-items: center;
-  gap: 10rem;
+  gap: 9.6rem;
   background: #f9f1e7;
   display: flex;
   flex-direction: row;

@@ -4,5 +4,8 @@ export default {
   },
   getFavoriteList(state) {
     return state.favoriteList
+  },
+  getCartList(state) {
+    return state.cartList
   }
 }
