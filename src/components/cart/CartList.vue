@@ -116,4 +116,40 @@ export default {
   line-height: normal;
   width: 10.5rem;
 }
+
+@media(max-width: 650px) {
+  .item__img-box {
+    width: 6rem;
+    height: 6rem;
+    padding: .5rem;
+  }
+
+  .img-box__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media(max-width: 550px) {
+  .item__title {
+    /* width: auto; */
+    width: 5rem;
+    text-align: wrap;
+    font-size: 1.2rem;
+  }
+
+  .item__price,
+  .item__subtotal {
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width: 430px) {
+
+  .item__price,
+  .item__subtotal {
+    width: 7rem;
+    font-size: 1rem;
+  }
+}
 </style>
