@@ -70,7 +70,6 @@ export default {
   font-style: normal;
   display: flex;
   flex-direction: column;
-  /* padding-bottom: 4.6rem; */
 }
 
 .post_info-block {
@@ -169,9 +168,9 @@ export default {
   }
 }
 
-@media(max-width: 1200px) {
-  /* .post {
-    width: 60vw;
-  } */
+@media(max-width: 825px) {
+  .post {
+    width: 100%;
+  }
 }
 </style>
