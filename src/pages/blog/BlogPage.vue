@@ -47,4 +47,15 @@ export default {
   flex-direction: row;
   gap: 3rem;
 }
+
+@media(max-width:1200px) {
+  .blog-wrapper__blog-content {
+    padding: 10.6rem 3rem 2.2rem;
+  }
+
+  .blog-content {
+    justify-content: space-around;
+    width: 100%;
+  }
+}
 </style>
