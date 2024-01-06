@@ -8,9 +8,9 @@
         <img :src=cartItem.img :alt=cartItem.description class="img-box__img" />
       </figure>
       <h5 class="item__title">{{ cartItem.name }}</h5>
-      <h5 class="item__price">Rs. {{ cartItem.price }}</h5>
+      <h5 class="item__price">Rs. {{ priceToString(cartItem.price) }}</h5>
       <input type="numeric" :value=cartItem.counter class="item__counter" />
-      <h5 class="item__subtotal">Rs. {{ cartItem.price }}</h5>
+      <h5 class="item__subtotal">Rs. {{ priceToString(cartItem.price) }}</h5>
       <button class="item__trash-btn" @click="delCartItem(cartItem.id)">
         <img src="/assets/icons/cart/trash-icon.svg" alt="garbage button." class="trash-btn__icon" />
       </button>
@@ -39,8 +39,10 @@ export default {
   },
   methods: {
     delCartItem(id) {
-      console.log('ddd')
       this.$store.commit('home/editCartItems', { id: id, action: "del" })
+    },
+    priceToString(num) {
+      return num.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     }
   }
 

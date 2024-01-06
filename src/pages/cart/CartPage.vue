@@ -17,14 +17,16 @@
         <ul class="costs__price-list">
           <li class="price-list__block">
             <h4 class="price-list__title">Subtotal</h4>
-            <span class="price-list__total-sm">Rs. 250,000.00</span>
+            <span class="price-list__total-sm">Rs. {{ getTotal }}</span>
           </li>
           <li class="price-list__block">
             <h4 class="price-list__title">Total</h4>
-            <span class="price-list__total-bg">Rs. 250,000.00</span>
+            <span class="price-list__total-bg">Rs. {{ getTotal }}</span>
           </li>
         </ul>
-        <button class="costs__btn">Check Out</button>
+        <router-link to="/checkout">
+          <button class="costs__btn">Check Out</button>
+        </router-link>
       </div>
     </section>
     <our-advantages></our-advantages>
@@ -38,6 +40,11 @@ export default {
   components: {
     CartList,
   },
+  computed: {
+    getTotal() {
+      return this.$store.getters['home/getSubtotal']
+    }
+  }
 };
 </script>
 

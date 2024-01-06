@@ -9,7 +9,22 @@
 
     <div class="popup__content">
       <ul class="content__cart-items">
-        <li class="cart-items__sofa-block">
+        <li class="cart-items__sofa-block" v-for="cartItem in CartList">
+          <figure class="sofa-block__background">
+            <img :src=cartItem.img :alt=cartItem.description class="sofa-block__image sofa-block__image__down" />
+          </figure>
+          <div class="sofa-block__item-info">
+            <h5 class="item-info__label">{{ cartItem.name }}</h5>
+            <p class="item-info__description">
+              {{ cartItem.counter }} <span class="item-info__description__increase">X</span><span
+                class="item-info__description__price">Rs.
+                {{ priceToString(cartItem.price) }}</span>
+            </p>
+          </div>
+          <img src="/assets/icons/ui/delete-item.svg" alt="delete item button." class="sofa-block__close-icon"
+            @click="delCartItem(cartItem.id)" />
+        </li>
+        <!-- <li class="cart-items__sofa-block">
           <figure class="sofa-block__background">
             <img src="/assets/icons/cart/sofa-asgaard.png" alt="asgaard sofa."
               class="sofa-block__image sofa-block__image__down" />
@@ -33,12 +48,13 @@
                 class="item-info__description__price">Rs. 270,000.00</span></p>
           </div>
           <img src="/assets/icons/ui/delete-item.svg" alt="delete item button." class="sofa-block__close-icon" />
-        </li>
+        </li> -->
         <!-- TODO: более адекватно сделать)) -->
       </ul>
       <div class="content__price-block">
         <h4 class="price-block__label">Subtotal</h4>
-        <h4 class="price-block__total">Rs. 520,000.00</h4>
+        <!-- <h4 class="price-block__total">Rs. 520,000.00</h4> -->
+        <h4 class="price-block__total">Rs. {{ getTotal }}</h4>
       </div>
     </div>
     <div class="popup__footer">
@@ -63,13 +79,26 @@ export default {
       if (this.isCartPopupOpen) {
         this.toggleCartPopup()
       }
+    },
+    delCartItem(id) {
+      this.$store.commit('home/editCartItems', { id: id, action: "del" })
+    },
+    priceToString(num) {
+      return num.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
     }
   },
   computed: {
     isCartPopupOpen() {
       return this.$store.getters['header/getCartPopupStatus'];
     },
+    CartList() {
+      return this.$store.getters['home/getCartList']
+    },
+    getTotal() {
+      return this.$store.getters['home/getSubtotal']
+    }
   },
+
 };
 </script>
 
@@ -87,6 +116,8 @@ export default {
   font-family: Poppins;
   font-style: normal;
   line-height: normal;
+  z-index: 10;
+  box-shadow: 2px 5px 10px 1px rgba(143, 135, 143, 1);
 }
 
 .popup__header {
@@ -122,6 +153,7 @@ export default {
   padding: 4.2rem 4rem 2.3rem 3rem;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .content__cart-items {
@@ -130,7 +162,6 @@ export default {
   flex: 1;
   list-style-type: none;
   gap: 2rem;
-  overflow: auto;
 }
 
 .sofa-block__close-icon {
@@ -224,5 +255,10 @@ export default {
   gap: 1.4rem;
   align-items: center;
   justify-content: center;
+}
+
+.sofa-block__image {
+  width: 80%;
+  height: 80%;
 }
 </style>
