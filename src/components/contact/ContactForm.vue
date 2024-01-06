@@ -41,13 +41,13 @@
       </div>
       <div class="form-box">
         <label for="">Your name</label>
-        <input type="text" placeholder="Abc" />
+        <input class="form-box__input" type="text" placeholder="Abc" />
 
         <label for="">Email address</label>
-        <input type="email" placeholder="Abc@def.com" />
+        <input class="form-box__input" type="email" placeholder="Abc@def.com" />
 
         <label for="">Subject</label>
-        <input type="text" placeholder="This is an optional" />
+        <input class="form-box__input" type="text" placeholder="This is an optional" />
 
         <label for="">Message</label>
         <textarea placeholder="Hi! i’d like to ask about"></textarea>
@@ -181,7 +181,7 @@ label {
   justify-content: space-between;
 }
 
-input {
+.form-box__input {
   height: 7.5rem;
   border-radius: 1rem;
   border: 1px solid #9f9f9f;
@@ -250,6 +250,32 @@ textarea {
 
   .content-wrapper {
     padding-top: 0;
+    flex-direction: column-reverse;
+    align-items: center
+  }
+
+  .btn-contact {
+    width: 50vw;
+    align-self: center;
+    margin: 0;
+  }
+
+  .content-wrapper_info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .form-box {
+    width: 100%;
+  }
+
+  .btn-contact {
+    width: 100%;
+    height: 6rem;
   }
 }
 </style>

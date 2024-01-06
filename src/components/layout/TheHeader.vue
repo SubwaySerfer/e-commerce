@@ -38,8 +38,11 @@
       <nav class="burger-wrapper" v-if="isBurgerOpen && windowWidth < 770">
         <ul class="burger-page__list">
           <li class="btn-root "><router-link to="/">Home</router-link></li>
+          <span class="burger-icons__line"></span>
           <li class="btn-root burger-list__btn"><router-link to="/shop">Shop</router-link></li>
+          <span class="burger-icons__line"></span>
           <li class="btn-root burger-list__btn"><router-link to="/blog">Blog</router-link></li>
+          <span class="burger-icons__line"></span>
           <li class="btn-root burger-list__btn">
             <router-link to="/contact">Contact</router-link>
           </li>
@@ -225,9 +228,15 @@ a {
   justify-content: space-around;
 }
 
-.burger-list__btn {
+/* .burger-list__btn {
   border-top: 1px solid;
   padding-top: 1rem;
+} */
+
+.burger-icons__line {
+  height: 2px;
+  width: 100%;
+  background-color: #cfc7bc
 }
 
 .burger-icons__list {
