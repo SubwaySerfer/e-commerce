@@ -246,6 +246,8 @@ a {
 }
 
 @media (max-width: 1420px) {
+
+
   .header__logo-box {
     padding-right: 0
   }
@@ -257,6 +259,7 @@ a {
 
   .header {
     justify-content: space-between;
+    gap: 6vw;
   }
 }
 

@@ -94,14 +94,11 @@ ul {
 }
 
 #app {
-  /* max-width: 1440px; */
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* height: 100vh; */
   max-width: 1440px;
   overflow-x: hidden;
 }
