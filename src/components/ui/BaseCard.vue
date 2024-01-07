@@ -58,7 +58,7 @@ export default {
       console.log('share', id)
     },
     routeToCart(id) {
-      this.$router.push('/card-info');
+      this.$router.push(`/card-info/${id}`);
     }
   },
 

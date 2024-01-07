@@ -32,6 +32,9 @@ export default {
       if (!currentItem) {
         return
       } else {
+        if (currentItem.counter == 0) {
+          return
+        }
         currentItem.counter--
       }
     }

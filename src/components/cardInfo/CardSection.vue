@@ -15,11 +15,11 @@
       </li>
     </ul>
     <div class="card-section__main-photo">
-      <img src="/assets/image/cardInfo/mainSofa1.png" alt="sofa with two armchairs." class="main-photo" />
+      <img :src=currentItem.img alt="sofa with two armchairs." class="main-photo" />
     </div>
 
-    <card-section-info name="Asgaard sofa" price="Rs. 250,000.00" description="Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
-"></card-section-info>
+    <card-section-info :name=currentItem.name :price=currentItem.price :description=currentItem.description
+      :counter=currentItem.counter :id=currentItem.id></card-section-info>
   </section>
 </template>
 
@@ -27,6 +27,7 @@
 import CardSectionInfo from "./CardSectionInfo.vue";
 
 export default {
+  props: ['currentItem'],
   components: {
     CardSectionInfo,
   },
@@ -150,9 +151,6 @@ export default {
 }
 
 @media(max-width: 420px) {
-  .card-section__images-list {
-    /* padding: 0; */
-  }
 
   .images-list__item {
     width: 6rem;

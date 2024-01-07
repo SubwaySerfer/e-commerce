@@ -5,15 +5,42 @@
       class="card-buttons__btn card-buttons__btn_counter"
     ></base-button> -->
     <div class="card-buttons__btn_counter">
-      <button class="counter__item btn btn__minus">-</button><input type="numeric" class="counter__input"
-        value="1" /><button class="counter__item btn btn__plus">
-        +
-      </button>
+      <button class="counter__item btn btn__minus" @click="removeToCounter(id)">-</button><input type="numeric"
+        class="counter__input" :value="count" />
+      <button class="counter__item btn btn__plus" @click="appendToCounter(id)">+</button>
     </div>
-    <base-button linkName="Add To Cart" class="card-buttons__btn btn"></base-button>
+    <base-button linkName="Add To Cart" class="card-buttons__btn btn" @click="appendToCart(id)"></base-button>
     <base-button linkName="+ Compare" class="card-buttons__btn btn"></base-button>
   </div>
 </template>
+
+<script>
+export default {
+  props: ['counter', 'id'],
+  data() {
+    return {
+      count: this.counter
+    }
+  },
+  methods: {
+    appendToCounter(val) {
+      this.count++
+      // this.$store.commit('home/editCartItems', { id: id, action: 'add' })
+    },
+    removeToCounter(val) {
+      if (this.count <= 0) {
+        return this.count = 0
+      } else {
+        this.count--
+      }
+      // this.$store.commit('home/editCartItems', { id: id })
+    },
+    // appendToCart(id) {
+    // TODO: Сделать добавление с определенным колличеством + описание товара
+    // }
+  }
+}
+</script>
 
 <style scoped>
 .card-buttons {

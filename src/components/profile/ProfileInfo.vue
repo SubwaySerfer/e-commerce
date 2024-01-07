@@ -22,7 +22,7 @@
           <label for="" class="profile-field__el">Phone<input type="tel" class="profile-field__input" /></label>
         </li>
       </ul>
-      <base-button class="" modeLabel="white-btn" mode="white-btn" type="submit">Save</base-button>
+      <base-button modeLabel="white-btn" mode="white-btn" type="submit">Save</base-button>
     </form>
   </main>
 </template>

@@ -1,12 +1,12 @@
 {
   "products":[
-    {"id":1,"name":"Syltherine","discount":30,"isNew":false,"price": 2500000,"img":"assets/image/products/Syltherine-product.png","description":"Stylish cafe chair"},
-    {"id":2,"name":"Leviosa","discount":0,"isNew":false,"price": 2500000,"img":"assets/image/products/Leviosa-product.png","description":"Stylish cafe chair"},
-    {"id":3,"name":"Lolito","discount":50,"isNew":false,"price": 2500000,"img":"assets/image/products/Lolito-product.png","description":"Stylish cafe chair"},
-    {"id":4,"name":"Respira","discount":0,"isNew":true,"price": 2500000,"img":"assets/image/products/Respira-product.png","description":"Stylish cafe chair"},
-    {"id":5,"name":"Grifo","discount":0,"isNew":false,"price": 2500000,"img":"assets/image/products/Grifo-product.png","description":"Stylish cafe chair"},
-    {"id":6,"name":"Muggo","discount":0,"isNew":true,"price": 2500000,"img":"assets/image/products/Muggo-product.png","description":"Stylish cafe chair"},
-    {"id":7,"name":"Pingky","discount":50,"isNew":false,"price": 2500000,"img":"assets/image/products/Pingky-product.png","description":"Stylish cafe chair"},
-    {"id":8,"name":"Potty","discount":0,"isNew":true,"price": 2500000,"img":"assets/image/products/Potty-product.png","description":"Stylish cafe chair"}
+    {"id":1,"name":"Syltherine","discount":30,"isNew":false,"price": 2500000,"img":"/assets/image/products/Syltherine-product.png","description":"Stylish cafe chair", "counter": 0},
+    {"id":2,"name":"Leviosa","discount":0,"isNew":false,"price": 2500000,"img":"/assets/image/products/Leviosa-product.png","description":"Stylish cafe chair", "counter": 0},
+    {"id":3,"name":"Lolito","discount":50,"isNew":false,"price": 2500000,"img":"/assets/image/products/Lolito-product.png","description":"Stylish cafe chair", "counter": 0},
+    {"id":4,"name":"Respira","discount":0,"isNew":true,"price": 2500000,"img":"/assets/image/products/Respira-product.png","description":"Stylish cafe chair", "counter": 0},
+    {"id":5,"name":"Grifo","discount":0,"isNew":false,"price": 2500000,"img":"/assets/image/products/Grifo-product.png","description":"Stylish cafe chair", "counter": 0},
+    {"id":6,"name":"Muggo","discount":0,"isNew":true,"price": 2500000,"img":"/assets/image/products/Muggo-product.png","description":"Stylish cafe chair", "counter": 0},
+    {"id":7,"name":"Pingky","discount":50,"isNew":false,"price": 2500000,"img":"/assets/image/products/Pingky-product.png","description":"Stylish cafe chair", "counter": 0},
+    {"id":8,"name":"Potty","discount":0,"isNew":true,"price": 2500000,"img":"/assets/image/products/Potty-product.png","description":"Stylish cafe chair", "counter": 0}
   ]
 }

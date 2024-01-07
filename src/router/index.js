@@ -30,8 +30,7 @@ const router = createRouter({
       component: ShopPage,
     },
     {
-      path: '/card-info',
-      name: 'cardInfo',
+      path: '/card-info/:id',
       component: CardInfoPage,
     },
     {
