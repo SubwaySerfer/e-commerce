@@ -1,7 +1,8 @@
 <template>
   <section class="rooms-wrapper">
     <h2 class="rooms-wrapper__label">Browse The Range</h2>
-    <p class="rooms-wrapper__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="rooms-wrapper__description">Explore our curated range for your unique style.
+    </p>
     <div class="room-cards">
       <div class="room-card">
         <img src="/assets/image/home/room-dining.png" alt="dining room" class="room-card__img" />
