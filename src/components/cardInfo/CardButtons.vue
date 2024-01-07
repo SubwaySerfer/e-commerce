@@ -5,9 +5,9 @@
       class="card-buttons__btn card-buttons__btn_counter"
     ></base-button> -->
     <div class="card-buttons__btn_counter">
-      <button class="counter__item btn btn__minus" @click="removeToCounter(id)">-</button><input type="numeric"
+      <button class="counter__item btn btn__minus" @click="removeToCounter()">-</button><input type="numeric"
         class="counter__input" :value="count" />
-      <button class="counter__item btn btn__plus" @click="appendToCounter(id)">+</button>
+      <button class="counter__item btn btn__plus" @click="appendToCounter()">+</button>
     </div>
     <base-button linkName="Add To Cart" class="card-buttons__btn btn" @click="appendToCart(id)"></base-button>
     <base-button linkName="+ Compare" class="card-buttons__btn btn"></base-button>
@@ -23,22 +23,35 @@ export default {
     }
   },
   methods: {
-    appendToCounter(val) {
+    appendToCounter() {
       this.count++
-      // this.$store.commit('home/editCartItems', { id: id, action: 'add' })
     },
-    removeToCounter(val) {
+    removeToCounter() {
       if (this.count <= 0) {
         return this.count = 0
       } else {
         this.count--
       }
-      // this.$store.commit('home/editCartItems', { id: id })
     },
-    // appendToCart(id) {
-    // TODO: Сделать добавление с определенным колличеством + описание товара
-    // }
+    appendToCart(id) {
+      if (this.count == 0) return
+      this.$store.commit('home/editCartItems', { id: id, action: 'add', counter: this.count })
+      // this.count = this.counter
+      // TODO: Сделать добавление с определенным колличеством + описание товара
+    }
+  },
+  computed: {
+    cartList() {
+      return this.$store.getters['home/getCartList']
+    }
   }
+  // watch: {
+  //   counter(oldVal, counter) {
+  //     console.log('alarm', oldVal, counter)
+  //   }
+  // при удаление из попапа должно меняться число в каунт
+
+  // }
 }
 </script>
 
@@ -56,7 +69,6 @@ export default {
   border-radius: 1.5rem;
   border: 1px solid #000;
   background: transparent;
-
   margin-right: 1rem;
 }
 
@@ -67,16 +79,6 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.counter__item:hover {
-  border: none;
-}
-
-.counter__item:active,
-.counter__item:focus {
-  outline: none;
-  border: none;
 }
 
 .card-buttons__btn_counter {
@@ -98,16 +100,18 @@ export default {
 
 .btn__plus {
   top: 1.6rem;
-  right: 0.9rem;
+  right: 1.2rem;
 }
 
 .counter__item {
   background: transparent;
   padding: 0;
-
   display: flex;
   align-items: center;
   position: absolute;
+  outline: none;
+  border: none;
+  font-weight: 600;
 }
 
 .counter__input {
@@ -115,10 +119,9 @@ export default {
   width: 100%;
   margin: 0 2rem;
   text-align: center;
-}
-
-.counter__input:focus {
-  border: transparent;
+  outline: none;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 @media(max-width: 1220px) {

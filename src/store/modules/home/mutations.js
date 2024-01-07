@@ -21,8 +21,10 @@ export default {
     let currentItem = state.cartList.find(el => el.id === payload.id)
     if (payload.action === 'add') {
       if (!currentItem) {
-        newItem['counter'] = 1
         state.cartList.push(newItem)
+        payload.counter ? (newItem['counter'] = payload.counter) : (newItem['counter'] = 1)
+      } else if (payload.counter) {
+        currentItem.counter = payload.counter
       } else {
         currentItem.counter++
       }
