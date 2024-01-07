@@ -10,6 +10,7 @@ import ProfilePage from '../pages/profile/ProfilePage.vue'
 import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
 import CheckoutPage from '../pages/checkout/CheckoutPage.vue'
 import FavoritePage from '../pages/favorite/FavoritePage.vue'
+import NotFound from '../pages/notFound/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -55,7 +56,9 @@ const router = createRouter({
     },
     { path: '/contact', name: 'contact', component: ContactPage },
     { path: '/blog', name: 'blog', component: BlogPage },
-    { path: '/wishlist', name: 'wishlist', component: FavoritePage }
+    { path: '/wishlist', name: 'wishlist', component: FavoritePage },
+    { path: '/page404', name: 'page404', component: NotFound },
+    { path: '/:pathMatch(.*)*', component: NotFound },
   ],
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 };
