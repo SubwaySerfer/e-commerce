@@ -100,7 +100,7 @@ ul {
   flex-direction: column;
   justify-content: flex-start;
   max-width: 1440px;
-  overflow-x: hidden;
+  overflow-x: none;
 }
 
 /* @media (prefers-color-scheme: light) {
