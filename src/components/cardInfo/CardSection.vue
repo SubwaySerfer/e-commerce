@@ -72,5 +72,96 @@ export default {
 
 .main-photo {
   width: 100%;
+
+}
+
+@media(max-width: 1400px) {
+  .card-section {
+    height: auto;
+    padding: 3.5rem 2vw 6.7rem;
+    width: 100vw;
+  }
+
+  .card-section__main-photo {
+    width: 80vw;
+
+  }
+
+
+}
+
+@media(max-width: 1270px) {
+  .card-section {
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 1200px) {
+  .card-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-section__main-photo {
+    width: 50vw;
+
+  }
+}
+
+@media(max-width:960px) {
+  .card-section__main-photo {
+    width: 70vw;
+  }
+
+  .main-photo {
+    object-fit: fill;
+  }
+}
+
+@media(max-width:630px) {
+  .card-section {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .card-section__main-photo {
+    flex: 1
+  }
+}
+
+@media(max-width: 540px) {
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .card-section__images-list {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 4vw;
+  }
+
+  .card-section__main-photo {
+    width: 100%;
+  }
+}
+
+@media(max-width: 420px) {
+  .card-section__images-list {
+    /* padding: 0; */
+  }
+
+  .images-list__item {
+    width: 6rem;
+    height: 6.5rem;
+    padding-bottom: .7rem;
+  }
+
+  .images-list__item>img {
+    width: 100%;
+  }
 }
 </style>

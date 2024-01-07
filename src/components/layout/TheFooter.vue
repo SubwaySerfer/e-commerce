@@ -1,5 +1,5 @@
 <template>
-  <section class="footer">
+  <footer class="footer">
     <div class="footer__main-block">
       <div class="contact-info">
         <h4 class="contact-info__label">Funiro.</h4>
@@ -40,7 +40,7 @@
     <div class="footer__rights-block">
       <p class="rights-info">2023 furino. All rights reverved</p>
     </div>
-  </section>
+  </footer>
 </template>
 
 <style scoped>

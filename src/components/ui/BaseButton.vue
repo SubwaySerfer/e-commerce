@@ -3,8 +3,8 @@
     <slot>{{ linkName }}</slot>
   </button>
   <router-link v-else :to="to" :class="mode" :type="type" class="btn">
-    <button class="btn" :class="modeLabel">{{ linkName }}
-      <!-- <slot>{{ linkName }}</slot> -->
+    <button class="btn" :class="modeLabel">
+      {{ linkName }}
     </button>
   </router-link>
 </template>

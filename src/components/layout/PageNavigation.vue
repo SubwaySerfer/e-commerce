@@ -35,7 +35,7 @@ a {
 }
 
 .navigation {
-  width: 144rem;
+  width: 100%;
   height: 10rem;
   background: #f9f1e7;
   display: flex;
@@ -82,5 +82,34 @@ a {
 
 .right-padding {
   padding-right: 2.1rem;
+}
+
+@media (max-width: 1000px) {
+  .navigation {
+    padding-left: 10vw;
+  }
+}
+
+@media(max-width: 500px) {
+
+  .navigation__icon,
+  .navigation__page-title,
+  .navigation__page-title:first-child {
+    margin-right: 1rem;
+  }
+
+  .navigation__line {
+    margin-right: 1.5rem;
+  }
+
+  .right-padding {
+    padding-right: 0;
+  }
+}
+
+@media(max-width: 370px) {
+  .navigation {
+    padding-left: 6vw;
+  }
 }
 </style>
