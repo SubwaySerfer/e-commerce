@@ -39,24 +39,50 @@
           </div>
         </div>
       </div>
-      <div class="form-box">
+      <form class="form-box" @submit.prevent="onSubmit">
         <label for="">Your name</label>
-        <input class="form-box__input" type="text" placeholder="Abc" />
+        <input class="form-box__input" v-model="firstName" type="text" placeholder="Abc" />
 
         <label for="">Email address</label>
-        <input class="form-box__input" type="email" placeholder="Abc@def.com" />
+        <input class="form-box__input" v-model="email" type="email" placeholder="Abc@def.com" />
 
         <label for="">Subject</label>
-        <input class="form-box__input" type="text" placeholder="This is an optional" />
+        <input class="form-box__input" v-model="subject" type="text" placeholder="This is an optional" />
 
         <label for="">Message</label>
-        <textarea placeholder="Hi! i’d like to ask about"></textarea>
+        <textarea v-model="message" placeholder="Hi! i’d like to ask about"></textarea>
 
-        <base-button class="btn btn-contact">Submit</base-button>
-      </div>
+        <base-button class="btn btn-contact" type="submit">Submit</base-button>
+      </form>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      firstName: '',
+      email: '',
+      subject: '',
+      message: '',
+    }
+  },
+  methods: {
+    onSubmit() {
+      try {
+        this.$store.commit('form/onSubmitForm', { firstName: this.firstName, email: this.email, subject: this.subject, message: this.message })
+        this.firstName = '';
+        this.email = '';
+        this.subject = '';
+        this.message = ''
+      } catch {
+        console.log('ошибка ввода')
+      }
+    }
+  }
+}
+</script>
 
 <style scoped>
 .contact-wrapper {

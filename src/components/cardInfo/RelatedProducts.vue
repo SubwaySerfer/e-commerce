@@ -5,7 +5,7 @@
       <base-card v-for="card in this.relatedCards" :name="card.name" :img="card.img" :price="card.price"
         :description="card.description" :id="card.id"></base-card>
     </div>
-    <base-button :link="true" to="/shop" mode="white-btn" linkName="Show More"></base-button>
+    <base-button :link="true" to="/shop" mode="white-btn" modeLabel="white-btn" linkName="Show More"></base-button>
   </section>
 </template>
 
@@ -47,5 +47,25 @@ export default {
   font-weight: 500;
   line-height: normal;
   margin-bottom: 2.6rem;
+}
+
+@media(max-width: 1350px) {
+  .related-section {
+    height: auto;
+    padding: 5.5rem 2rem;
+  }
+
+  .related__title {
+    margin-bottom: 3.6rem;
+
+  }
+
+  .related__cards {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5.4rem;
+
+  }
 }
 </style>

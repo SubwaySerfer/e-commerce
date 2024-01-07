@@ -4,9 +4,7 @@ import getters from "./getters"
 export default {
   namespaced: true, state() {
     return {
-      furnitureList: [],
-      favoriteList: [],
-      cartList: [],
+      formData: {}
     }
   },
   mutations,

@@ -52,17 +52,20 @@ export default {
   color: #000;
   margin-left: 7.5rem;
 }
+
 .card-info__title {
   font-size: 4.2rem;
   font-weight: 400;
   line-height: normal;
 }
+
 .card-info__price {
   color: #9f9f9f;
   font-size: 2.4rem;
   font-weight: 500;
   line-height: normal;
 }
+
 .card-info__description {
   font-size: 1.3rem;
   font-weight: 400;
@@ -72,20 +75,24 @@ export default {
   text-align: start;
   margin-bottom: 2.2rem;
 }
+
 .card-info__parameter {
   color: #9f9f9f;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: normal;
 }
+
 .card-info__parameter_color {
   margin-top: 0.53rem;
 }
+
 .card-info__list {
   display: flex;
   gap: 1.6rem;
   margin: 1.2rem 0;
 }
+
 .list-sizes__size {
   width: 3rem;
   height: 3rem;
@@ -95,12 +102,14 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .list-colors__color {
   width: 3rem;
   height: 3rem;
   border-radius: 5rem;
   list-style-type: none;
 }
+
 .size__el {
   color: #000;
   font-family: Poppins;
@@ -109,11 +118,13 @@ export default {
   font-weight: 400;
   line-height: normal;
 }
+
 .line {
   width: 60.5013rem;
   height: 0.1rem;
   background: #d9d9d9;
 }
+
 .list-colors__color_purple {
   background: #816dfa;
 }
@@ -124,5 +135,29 @@ export default {
 
 .list-colors__color_yellow {
   background: #b88e2f;
+}
+
+@media(max-width: 1400px) {
+  .card-info {
+    margin-left: 0;
+  }
+
+  .line {
+    width: 100%;
+  }
+}
+
+@media(max-width: 1200px) {
+  .card-info {
+    align-items: center
+  }
+}
+
+@media(max-width: 540px) {
+
+  .card-info__description {
+    width: auto;
+    text-align: center;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="description">
+  <section class="card-description">
     <ul class="nav-list">
       <li>
         <h3 class="nav-list__title nav-list__title_active">Description</h3>
@@ -29,17 +29,17 @@
     </div>
     <div class="image-block">
       <div class="image-back">
-        <img src="/assets/image/cardInfo/cardSofa1.png" alt="" />
+        <img src="/assets/image/cardInfo/cardSofa1.png" alt="" class="image-back__img" />
       </div>
       <div class="image-back">
-        <img src="/assets/image/cardInfo/cardSofa2.png" alt="" />
+        <img src="/assets/image/cardInfo/cardSofa2.png" alt="" class="image-back__img" />
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.description {
+.card-description {
   height: 74.4rem;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -99,4 +99,62 @@
   height: 34.8rem;
   border-radius: 1rem;
   background: #f9f1e7;
-}</style>
+}
+
+@media(max-width: 1300px) {
+  .card-description {
+    height: auto;
+    padding: 4.8rem 3vw 6rem;
+  }
+
+  .image-back {
+    width: auto;
+    height: auto;
+  }
+
+  .image-back__img {
+    width: 100%;
+  }
+
+  .text-block {
+    width: auto;
+    text-align: center;
+  }
+}
+
+@media(max-width: 700px) {
+  .nav-list {
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media(max-width: 620px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .image-block {
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 400px) {
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .card-description {
+    padding: 2.8rem 2vw 3rem;
+  }
+
+  .image-block {
+    gap: 2rem;
+  }
+
+  .card-description {
+    gap: 2.5rem;
+  }
+}
+</style>

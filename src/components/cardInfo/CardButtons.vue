@@ -5,21 +5,13 @@
       class="card-buttons__btn card-buttons__btn_counter"
     ></base-button> -->
     <div class="card-buttons__btn_counter">
-      <button class="counter__item btn btn__minus">-</button
-      ><input type="numeric" class="counter__input" value="1" /><button
-        class="counter__item btn btn__plus"
-      >
+      <button class="counter__item btn btn__minus">-</button><input type="numeric" class="counter__input"
+        value="1" /><button class="counter__item btn btn__plus">
         +
       </button>
     </div>
-    <base-button
-      linkName="Add To Cart"
-      class="card-buttons__btn btn"
-    ></base-button>
-    <base-button
-      linkName="+ Compare"
-      class="card-buttons__btn btn"
-    ></base-button>
+    <base-button linkName="Add To Cart" class="card-buttons__btn btn"></base-button>
+    <base-button linkName="+ Compare" class="card-buttons__btn btn"></base-button>
   </div>
 </template>
 
@@ -30,6 +22,7 @@
   display: flex;
   flex-direction: row;
 }
+
 .card-buttons__btn {
   width: 21.5rem;
   height: 6.4rem;
@@ -39,6 +32,7 @@
 
   margin-right: 1rem;
 }
+
 .btn {
   color: #000;
   font-family: Poppins;
@@ -47,14 +41,17 @@
   font-weight: 400;
   line-height: normal;
 }
+
 .counter__item:hover {
   border: none;
 }
+
 .counter__item:active,
 .counter__item:focus {
   outline: none;
   border: none;
 }
+
 .card-buttons__btn_counter {
   width: 12.3rem;
   height: 6.4rem;
@@ -66,14 +63,17 @@
   padding: 2rem 1.5rem;
   position: relative;
 }
+
 .btn__minus {
   top: 1.6rem;
   left: 1.2rem;
 }
+
 .btn__plus {
   top: 1.6rem;
   right: 0.9rem;
 }
+
 .counter__item {
   background: transparent;
   padding: 0;
@@ -82,13 +82,49 @@
   align-items: center;
   position: absolute;
 }
+
 .counter__input {
   border: none;
   width: 100%;
   margin: 0 2rem;
   text-align: center;
 }
+
 .counter__input:focus {
   border: transparent;
+}
+
+@media(max-width: 1220px) {
+  .card-buttons {
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .card-buttons__btn,
+  .card-buttons__btn_counter {
+    margin-right: 0;
+  }
+
+  .card-buttons__btn_counter {
+    flex: 0 1 100%;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 501px) {
+  .card-buttons {
+    flex-direction: column;
+    width: 90vw;
+    gap: 2rem;
+  }
+
+  .card-buttons__btn_counter {
+    width: 50%;
+  }
+
+  .card-buttons__btn {
+    width: 100%;
+  }
 }
 </style>

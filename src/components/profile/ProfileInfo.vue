@@ -1,5 +1,5 @@
 <template>
-  <section class="profile">
+  <main class="profile">
     <img src="/assets/image/profile/profile-image.jpeg" alt="Profile avatar." width="250px" height="250px"
       class="profile__img" />
     <h2>Profile info</h2>
@@ -20,7 +20,7 @@
         <label for="" class="profile-info__el">Phone<input type="tel" /></label>
       </li>
     </ul>
-  </section>
+  </main>
 </template>
 <!-- Сделать проверку на авторитизацию и модалку авторитизации -->
 
@@ -30,6 +30,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  width: 100vw;
 }
 
 .profile__img {
@@ -37,7 +38,6 @@
   width: 250px;
   box-shadow: 0px 0px 4px black;
   border-radius: 5px;
-  /* border: 1px solid black; */
 }
 
 .profile-info {
