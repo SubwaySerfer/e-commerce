@@ -154,9 +154,6 @@ export default {
 }
 
 @media(max-width: 540px) {
-  .card-info {
-    padding: 0 2rem;
-  }
 
   .card-info__description {
     width: auto;
