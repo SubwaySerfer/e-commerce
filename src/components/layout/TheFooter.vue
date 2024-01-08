@@ -29,8 +29,9 @@
         <div class="input-box">
           <h6 class="input-box_label">Newsletter</h6>
           <div class="input-box__content">
-            <input type="text" placeholder="Enter Your Email Address" />
-            <button class="button-news">
+            <input type="email" id="subscribeInput" placeholder="Enter Your Email Address" @input="obviousInput"
+              v-model="email" />
+            <button class="button-news" @click="onSubmit(email)">
               <span class="button-news_text">SUBSCRIBE</span>
             </button>
           </div>
@@ -42,6 +43,33 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      email: '',
+    }
+  },
+  methods: {
+    obviousInput(event) {
+      let value = event.target.value
+      this.email = value.replace(/[^a-zA-Z@.]/g, '')
+    },
+    onSubmit(val) {
+      let testReg = new RegExp('([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-zA-Z0-9_-]{2,})$')
+      if (testReg.test(val)) {
+        console.log('submit', val)
+        this.email = ''
+      } else {
+        console.log('ошибка отправки')
+        //TODO
+      }
+    }
+  }
+}
+
+</script>
 
 <style scoped>
 .contact-info__label {

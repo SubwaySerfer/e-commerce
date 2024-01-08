@@ -76,7 +76,6 @@
   align-self: start;
   padding-top: 2.4rem;
   justify-self: center;
-  /* padding-right: 0rem; */
 }
 
 .img-9 {
@@ -95,7 +94,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  padding-right: 3.4rem;
 }
 
 .furniture-wrapper__title-label {
@@ -108,8 +106,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
-  padding-right: 3.4rem;
-  /* padding-bottom: -3rem; */
   transform: translateY(3px);
 }
 

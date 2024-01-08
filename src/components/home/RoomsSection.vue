@@ -36,7 +36,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding-right: 5.5rem;
 }
 
 .rooms-wrapper__description {
@@ -46,7 +45,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-left: 1.7rem;
   padding-bottom: 6rem;
 }
 
