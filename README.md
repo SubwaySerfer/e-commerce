@@ -8,7 +8,7 @@
 
 [Макет проекта](<https://www.figma.com/file/aB3ocscdgsZoxuXwpPgwKn/eCommerce-Website-%7C-Web-Page-Design-%7C-UI-KIT-(Community)?type=design&node-id=0%3A1&mode=dev>)
 
-[Ссылка на деплой](https://deploy--cool-biscotti-f5f9a6.netlify.app/home)
+[Ссылка на деплой](https://cool-biscotti-f5f9a6.netlify.app/home)
 
 ---
 
@@ -33,18 +33,18 @@ Vue3, Vuex, JS, CSS, Vite, Vue-router
 
 ## Пример кода:
 
-Код компонента BasePromo.
+Vuex mutation example:
 
 ```
-  <section>
-    <img :src="`${imgLink}`" alt="Company logo." v-if="imgLink" class="promo-logo" />
-    <slot name="pageTitle">
-      <h2>{{ title }}</h2>
-      <div class="pages-info">
-        <h4>{{ startPage }}</h4>
-        <img src="/assets/icons/shop/arrow.svg" alt="arrow." />
-        <h5>{{ currentPage }}</h5>
-      </div>
-    </slot>
-  </section>
+  toggleFavoriteList(state, payload) {
+    try {
+      if (state.favoriteList.length == 0 || !state.favoriteList.find(el => el.id === payload)) {
+        state.favoriteList.push(state.furnitureList.find(el => el.id === payload))
+      } else {
+        state.favoriteList.splice(state.favoriteList.findIndex(el => el.id === payload), 1)
+      }
+    } catch {
+      console.log('ошибка добавления.')
+    }
+  },
 ```

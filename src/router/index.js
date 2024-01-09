@@ -7,9 +7,10 @@ import BlogPage from '../pages/blog/BlogPage.vue';
 import CardInfoPage from '../pages/cardInfo/CardInfoPage.vue';
 import CartPage from '../pages/cart/CartPage.vue';
 import ProfilePage from '../pages/profile/ProfilePage.vue'
-import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
+// import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
 import CheckoutPage from '../pages/checkout/CheckoutPage.vue'
 import FavoritePage from '../pages/favorite/FavoritePage.vue'
+import NotFound from '../pages/notFound/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -29,8 +30,7 @@ const router = createRouter({
       component: ShopPage,
     },
     {
-      path: '/card-info',
-      name: 'cardInfo',
+      path: '/card-info/:id',
       component: CardInfoPage,
     },
     {
@@ -43,11 +43,11 @@ const router = createRouter({
       name: 'profile',
       component: ProfilePage
     },
-    {
-      path: '/comparison',
-      name: 'comparison',
-      component: ComparisonPage
-    },
+    // {
+    //   path: '/comparison',
+    //   name: 'comparison',
+    //   component: ComparisonPage
+    // },
     {
       path: '/checkout',
       name: 'checkout',
@@ -55,11 +55,16 @@ const router = createRouter({
     },
     { path: '/contact', name: 'contact', component: ContactPage },
     { path: '/blog', name: 'blog', component: BlogPage },
-    { path: '/wishlist', name: 'wishlist', component: FavoritePage }
+    { path: '/wishlist', name: 'wishlist', component: FavoritePage },
+    { path: '/page404', name: 'page404', component: NotFound },
+    { path: '/:pathMatch(.*)*', component: NotFound },
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 };
-  },
-});
-
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ top: 0, behavior: 'smooth' })
+      }, 500)
+    });
+  }
+})
 export default router;

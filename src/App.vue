@@ -69,11 +69,24 @@ h6,
 p {
   margin: 0;
 }
+
 ul {
   padding-left: 0;
 }
 
 .component {
   min-height: 50rem;
+}
+
+@media(max-width: 750px) {
+  .route-leave-to {
+    transform: translateY(20px);
+  }
+}
+
+@media(max-width: 450px) {
+  .route-leave-to {
+    transform: translateY(15px);
+  }
 }
 </style>

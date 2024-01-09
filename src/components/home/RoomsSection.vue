@@ -1,7 +1,8 @@
 <template>
   <section class="rooms-wrapper">
     <h2 class="rooms-wrapper__label">Browse The Range</h2>
-    <p class="rooms-wrapper__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="rooms-wrapper__description">Explore our curated range for your unique style.
+    </p>
     <div class="room-cards">
       <div class="room-card">
         <img src="/assets/image/home/room-dining.png" alt="dining room" class="room-card__img" />
@@ -35,7 +36,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding-right: 5.5rem;
 }
 
 .rooms-wrapper__description {
@@ -45,7 +45,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-left: 1.7rem;
   padding-bottom: 6rem;
 }
 
@@ -54,7 +53,7 @@
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .room-card__img {
@@ -71,14 +70,26 @@
   margin-top: 2.6rem;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
   .rooms-wrapper {
-    padding: 5.2rem 6.9vw;
-
+    padding: 5.2rem 3vw;
   }
 
-  .room-cards {
-    justify-content: space-around;
+}
+
+@media(max-width: 1300px) {
+  .room-card {
+    width: 100%;
+  }
+
+  .room-card__img {
+    width: 100%;
+  }
+}
+
+@media(max-width: 1000px) {
+  .room-cards__label {
+    margin-top: 1.5rem;
   }
 }
 
@@ -92,9 +103,30 @@
     padding: 0 0 3rem;
   }
 
-  .room-card__img {
-    max-width: 80vw;
+  .rooms-wrapper {
+    padding: 4rem 1.5vw;
   }
 
+  .room-cards {
+    gap: 1.2rem;
+  }
+
+  .room-cards__label {
+    margin-top: 1rem;
+  }
+}
+
+@media(max-width: 450px) {
+  .room-cards__label {
+    font-size: 1.8rem;
+  }
+
+  .rooms-wrapper__description {
+    font-size: 1.8rem;
+  }
+
+  .rooms-wrapper__label {
+    font-size: 2.8rem;
+  }
 }
 </style>

@@ -7,9 +7,8 @@
         New Collection
       </h1>
       <p class="promo-box__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-        luctus nec ullamcorper mattis.
-      </p>
+        Dive into our latest collection, where each piece is a blend of style and comfort, crafted with the finest
+        materials. Experience a new level of elegance and sophistication that enhances your unique style.</p>
       <base-button class="promo-box__btn" @click="this.$router.push('/shop')">
         <router-link to="/shop" class="btn-text">BUY Now</router-link>
       </base-button>
@@ -70,7 +69,7 @@
   font-weight: 500;
   line-height: 2.4rem;
   text-align: start;
-  padding-bottom: 5.1rem;
+  padding-bottom: 2.1rem;
 }
 
 .promo-box__label__info {
@@ -127,6 +126,7 @@
   .promo-section {
     justify-content: center;
     padding-top: 15vh;
+    padding-right: 0;
   }
 
   .promo-section__promo-box {
@@ -145,6 +145,7 @@
 
   .promo-section {
     padding-right: 0;
+    padding-top: 5rem;
   }
 
   .promo-box__btn {

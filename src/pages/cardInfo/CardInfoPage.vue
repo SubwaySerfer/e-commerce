@@ -1,8 +1,8 @@
 <template>
   <main>
-    <page-navigation mainPage="Home" currentPage="Shop" cardName="Asgaard sofa" mainPageName="/home"
-      currentPageName="/shop" cardPageName="/card-info"></page-navigation>
-    <card-section></card-section>
+    <page-navigation mainPage="Home" currentPage="Shop" :cardName="currentItem.name" mainPageName="/home"
+      currentPageName="/shop" cardPageName='/card-info'></page-navigation>
+    <card-section :currentItem="currentItem"></card-section>
     <card-description></card-description>
     <related-products></related-products>
   </main>
@@ -21,6 +21,25 @@ export default {
     CardDescription,
     RelatedProducts,
   },
+  data() {
+    return {
+      id: this.$route.params['id'],
+      // currentItem: {}
+    }
+  },
+  // mounted() {
+  //   console.log(this.furnitureList.find(el => el.id == this.id))
+  // },
+  watch: {
+    $route(toRoute) {
+      this.id = toRoute.params['id']
+    }
+  },
+  computed: {
+    currentItem() {
+      return this.$store.getters["home/furnitureList"].find(el => el.id == this.id)
+    },
+  }
 };
 </script>
 

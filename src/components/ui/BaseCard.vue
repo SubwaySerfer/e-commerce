@@ -1,5 +1,5 @@
 <template>
-  <div class="furniture-card" @mouseenter="hover = true">
+  <div class="furniture-card" @mouseenter="hover = true" :class='mode'>
     <!-- <slot>{{ (name, price, img) }} </slot> -->
     <!-- <slot name="img">
       <img src="" alt="" />
@@ -9,13 +9,12 @@
       <p></p
     ></slot>
     <slot><h4></h4></slot> -->
-    <img :src="img" alt="" />
+    <img :src="img" alt="" :class="mode" />
     <div class="furniture-card_texts">
-      <h3>{{ name }}</h3>
-      <p>{{ description }}</p>
-      <h4>Rp {{ price }}</h4>
+      <h3 class="texts__label">{{ name }}</h3>
+      <p class="texts__descr">{{ description }}</p>
+      <h4 class="texts__price">Rp {{ price }}</h4>
     </div>
-    <!-- @click="this.$router.push('/card-info')" -->
     <div class="furniture-card_popup" @mouseleave="hover = false" v-if="hover" :id='id' @click="routeToCart(id)">
       <base-button class="btn" @click.stop="addItemToCart(id)">Add to cart</base-button>
       <div class="popup-content">
@@ -23,10 +22,10 @@
           <img src="/assets/icons/furnitureCards/icon-share.svg" alt="share icon." class="popup-icon" />
           <h5>Share</h5>
         </div>
-        <div class="popup-content_box">
+        <!-- <div class="popup-content_box">
           <img src="/assets/icons/furnitureCards/icon-compare.svg" alt="compare icon." class="popup-icon" />
           <h5>Compare</h5>
-        </div>
+        </div> -->
         <div class="popup-content_box" @click.stop="toggleLikeItem(id)">
           <img src="/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" />
           <h5>Like</h5>
@@ -40,7 +39,7 @@
 //TODO: сделать наведение на карточку
 //TODO: сделать проверку если есть наводка на одну карточку, то все остальные должны быть открыты.
 export default {
-  props: ['name', 'price', 'img', 'description', 'id'],
+  props: ['name', 'price', 'img', 'description', 'id', 'mode'],
   data() {
     return {
       hover: false,
@@ -58,7 +57,7 @@ export default {
       console.log('share', id)
     },
     routeToCart(id) {
-      this.$router.push('/card-info');
+      this.$router.push(`/card-info/${id}`);
     }
   },
 
@@ -118,8 +117,13 @@ export default {
 }
 
 img {
-  width: 28.5rem;
+  width: 100%;
 }
+
+/* .add-width {
+  width: 100%;
+  max-width: 28.5rem;
+} */
 
 .furniture-card_texts {
   padding: 1.6rem 1.6rem 3rem;
@@ -131,7 +135,7 @@ img {
   justify-content: space-between;
 }
 
-h3 {
+.texts__label {
   color: #3a3a3a;
   font-size: 2.4rem;
   font-style: normal;
@@ -139,7 +143,7 @@ h3 {
   line-height: 120%;
 }
 
-p {
+.texts__descr {
   color: #898989;
   font-size: 1.6rem;
   font-style: normal;
@@ -147,7 +151,7 @@ p {
   line-height: 150%;
 }
 
-h4 {
+.texts__price {
   color: #3a3a3a;
   font-size: 2rem;
   font-style: normal;
@@ -186,5 +190,101 @@ h5 {
   align-items: center;
   gap: 0.2rem;
   transition: transform ease-in 0.2s;
+}
+
+@media(max-width: 1220px) {
+  .furniture-card {
+    width: 23%;
+    max-width: 28.5rem;
+    height: auto;
+  }
+
+  .furniture-card_texts {
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .btn {
+    max-width: 80%;
+  }
+}
+
+@media(max-width: 1000px) {
+  .furniture-card_texts {
+    padding: 1.5rem 1rem;
+    gap: .8rem;
+  }
+}
+
+@media(max-width: 900px) {
+
+  .furniture-card {
+    width: 23.5%;
+    max-width: 28.5rem;
+  }
+
+  .texts__label {
+    font-size: 2rem;
+  }
+
+  .texts__descr {
+    font-size: 1.4rem;
+  }
+
+  .texts__price {
+    font-size: 1.6rem;
+  }
+}
+
+@media(max-width: 720px) {
+  .furniture-card {
+    width: 45%;
+  }
+
+  .texts__label {
+    font-size: 2.2rem;
+  }
+
+  .texts__descr {
+    font-size: 1.6rem;
+  }
+
+  .texts__price {
+    font-size: 1.7rem;
+  }
+
+  .furniture-card_texts {
+    align-items: center
+  }
+}
+
+@media(max-width: 620px) {
+
+  .furniture-card_texts {
+    padding: 1rem .5rem 1.2rem;
+    gap: .8rem;
+  }
+
+  .btn {
+    max-width: 90%;
+  }
+}
+
+@media(max-width: 450px) {
+  .furniture-card {
+    width: 80%;
+  }
+
+  .texts__label {
+    font-size: 2.4rem;
+  }
+
+  .texts__descr {
+    font-size: 1.7rem;
+  }
+
+  .texts__price {
+    font-size: 1.8rem;
+  }
 }
 </style>

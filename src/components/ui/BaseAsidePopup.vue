@@ -62,8 +62,8 @@
         @click="checkCartPageRoute"></base-button>
       <base-button :link="true" modeLabel="transparent-btn__label" to="/checkout" linkName="Checkout"
         mode="transparent-btn"></base-button>
-      <base-button :link="true" modeLabel="transparent-btn__label" to="/comparison" linkName="Comparison"
-        mode="transparent-btn"></base-button>
+      <!-- <base-button :link="true" modeLabel="transparent-btn__label" to="/comparison" linkName="Comparison"
+        mode="transparent-btn"></base-button> -->
     </div>
   </div>
 </template>

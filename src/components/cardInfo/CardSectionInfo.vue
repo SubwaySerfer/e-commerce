@@ -22,7 +22,7 @@
       <li class="list-colors__color list-colors__color_black"></li>
       <li class="list-colors__color list-colors__color_yellow"></li>
     </ul>
-    <card-buttons></card-buttons>
+    <card-buttons :counter=counter :id=id></card-buttons>
     <span class="line"></span>
     <card-media></card-media>
   </div>
@@ -33,7 +33,7 @@ import CardButtons from "./CardButtons.vue";
 import CardReview from "./CardReview.vue";
 
 export default {
-  props: ["name", "price", "description"],
+  props: ["name", "price", "description", "counter", 'id'],
   components: {
     CardMedia,
     CardButtons,

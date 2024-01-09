@@ -3,7 +3,7 @@
     <h2 class="products__label">Our Products</h2>
     <div class="furnitures-list">
       <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description" :id="furniture.id">
+        :price="furniture.price" :description="furniture.description" :id="furniture.id" mode='add-width'>
       </base-card>
     </div>
     <!-- <base-button class="btn"> -->
@@ -28,7 +28,7 @@ export default {
   padding: 0.4rem 10.2rem 6.9rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -78,29 +78,54 @@ export default {
 
 .btn:hover>.btn-text {
   color: white;
+  /* background-color: #b88e2f; */
 }
+
 
 .btn-text {
   text-decoration: none;
   color: #b88e2f;
   transition: ease-in 0.25s;
-  /* color: #ffffff; */
 }
 
-/* .btn-text:hover {
-  color: white;
-} */
 
 @media (max-width: 1450px) {
   .products {
-    padding: .4rem .69vw 6.9rem;
+    /* padding: .4rem .69vw 6.9rem; */
+    padding: .4rem .69vw 0;
+    width: 100%;
   }
 
   .furnitures-list {
     height: auto;
     justify-content: center;
     width: 100%;
-    padding: 0 1rem;
+  }
+}
+
+@media(max-width: 1300px) {
+  .furnitures-list {
+    gap: 1.5vw;
+  }
+}
+
+@media(max-width: 720px) {
+  .products {
+    gap: 2rem;
+  }
+
+  .furnitures-list {
+    gap: 4vw;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media(max-width: 450px) {
+  .furnitures-list {
+    gap: 3rem;
   }
 }
 </style>
