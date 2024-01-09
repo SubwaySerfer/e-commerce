@@ -101,4 +101,22 @@ export default {
     /* padding: 0 1rem; */
   }
 }
+
+@media(max-width: 1300px) {
+  .furnitures-list {
+    gap: 1.5vw;
+  }
+}
+
+@media(max-width: 720px) {
+  .products {
+    gap: 2rem;
+  }
+
+  .furnitures-list {
+    gap: 1vw;
+    justify-content: space-between;
+    row-gap: 1.2rem;
+  }
+}
 </style>
