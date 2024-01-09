@@ -18,9 +18,13 @@
     </div>
     <div class="filters-box-sec">
       <label for="">Show</label>
-      <input type="number" placeholder="16" class="show-input" />
-      <label for="" v-if="windowWidth > 620">Short by</label>
-      <input v-if="windowWidth > 620" type="text" placeholder="Default" class="short-input" />
+      <input type="number" readonly step="4" min='0' v-model="showInput" class="show-input" />
+      <div class="arrow-box">
+        <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow minus 4 step." class="arrow-box__plus">
+        <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow plus 4 step.">
+      </div>
+      <label for="" v-if="windowWidth > 640">Short by</label>
+      <input v-if="windowWidth > 640" type="text" placeholder="Default" class="short-input" />
     </div>
   </section>
 </template>
@@ -30,6 +34,7 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
+      showInput: 16
     }
   },
   mounted() {
@@ -131,7 +136,6 @@ input {
   background-color: #ffffff;
   display: block;
   text-align: center;
-  margin-right: 1.2rem;
 }
 
 .short-input {
@@ -140,16 +144,40 @@ input {
   padding-left: 3rem;
 }
 
+.arrow-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transform: translateX(-.3rem);
+  margin-right: 1.5rem;
+  align-items: center;
+}
+
+.arrow-box__plus {
+  transform: rotate(180deg);
+}
+
 @media(max-width: 1200px) {
   .filter-wrapper {
     padding: 3.5vw;
   }
 }
 
-@media(max-width: 620px) {
+@media(max-width: 770px) {
+  .arrow-box {
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 640px) {
   .filter-wrapper {
     justify-content: center;
     gap: 3rem;
+  }
+
+  .arrow-box {
+    transform: translateX(0);
+
   }
 }
 </style>
