@@ -7,19 +7,24 @@
       <h2 class="profile-form__label">Profile info</h2>
       <ul class="profile-info">
         <li class="profile-field">
-          <label for="" class="profile-field__el">Login<input type="text" class="profile-field__input" /></label>
+          <label for="" class="profile-field__el">Login</label>
+          <input type="text" class="profile-field__input" />
         </li>
         <li class="profile-field">
-          <label for="" class="profile-field__el">First Name<input type="text" class="profile-field__input" /></label>
+          <label for="" class="profile-field__el">First Name</label>
+          <input type="text" class="profile-field__input" />
         </li>
         <li class="profile-field">
-          <label for="" class="profile-field__el">Last Name<input type="text" class="profile-field__input" /></label>
+          <label for="" class="profile-field__el">Last Name</label>
+          <input type="text" class="profile-field__input" />
         </li>
         <li class="profile-field">
-          <label for="" class="profile-field__el">Email<input type="email" class="profile-field__input" /></label>
+          <label for="" class="profile-field__el">Email</label>
+          <input type="email" class="profile-field__input" />
         </li>
         <li class="profile-field">
-          <label for="" class="profile-field__el">Phone<input type="tel" class="profile-field__input" /></label>
+          <label for="" class="profile-field__el">Phone</label>
+          <input type="tel" class="profile-field__input" />
         </li>
       </ul>
       <base-button modeLabel="white-btn" mode="white-btn" type="submit">Save</base-button>
@@ -48,40 +53,37 @@
 .profile-info {
   gap: 2.5rem;
   display: flex;
+  margin: 0;
+  margin-bottom: 1.5rem;
   flex-direction: column;
   align-items: center;
   list-style-type: none;
   font-size: 1.6rem;
-  padding-left: 7.5rem;
 }
 
 .profile-field__el {
-  display: flex;
-  width: 50rem;
-  justify-content: space-between;
-  gap: 3rem;
-  text-wrap: nowrap;
-  align-items: center;
-  height: 100%;
+  text-align: start;
+  width: 100%;
+  font-weight: 500;
 }
 
 .profile-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .profile-form__label {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 700;
   color: #b88e2f;
 }
 
 .profile-field__input {
-  height: 100%;
   border-radius: .8rem;
-  width: 50%;
+  width: 35rem;
+  height: 4rem;
   padding: 0 .8rem;
   font-size: 1.6rem;
   border: solid 1px #b88e2f;
@@ -90,5 +92,26 @@
 
 .profile-field {
   height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  gap: .3rem;
+  align-items: center;
+  height: auto;
+}
+
+@media(max-width: 420px) {
+  .profile-field__input {
+    width: 90vw;
+    height: 4.5rem;
+  }
+
+  .profile-form {
+    gap: 2rem;
+  }
+
+  .profile-form__label {
+    font-size: 2.8rem;
+  }
 }
 </style>
