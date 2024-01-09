@@ -14,14 +14,14 @@
         </li>
       </ul>
       <span class="cross-line"></span>
-      <h6 v-if="windowWidth > 1020">Showing 1–16 of 32 results</h6>
+      <h6 v-if="windowWidth > 1020">Showing 1–{{ showInput }} of {{ maxShowInput }} results</h6>
     </div>
     <div class="filters-box-sec">
       <label for="">Show</label>
-      <input type="number" readonly step="4" min='0' v-model="showInput" class="show-input" />
+      <input type="" readonly v-model="showInput" class="show-input" />
       <div class="arrow-box">
-        <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow minus 4 step." class="arrow-box__plus">
-        <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow plus 4 step.">
+        <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow plus 4 step." class="arrow-box__plus" @click="editShow">
+        <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow minus 4 step." id="arrow-minus" @click="editShow">
       </div>
       <label for="" v-if="windowWidth > 640">Short by</label>
       <input v-if="windowWidth > 640" type="text" placeholder="Default" class="short-input" />
@@ -34,7 +34,8 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
-      showInput: 16
+      showInput: 16,
+      maxShowInput: 32,
     }
   },
   mounted() {
@@ -48,6 +49,14 @@ export default {
   methods: {
     onResize() {
       this.windowWidth = window.innerWidth;
+    },
+    editShow() {
+      if (event.target.id === 'arrow-minus') {
+        this.showInput <= 4 ? this.showInput = 4 : this.showInput = this.showInput - 4
+      } else {
+        this.showInput = this.showInput + 4;
+        this.showInput > this.maxShowInput ? this.showInput = this.showInput - 4 : []
+      }
     }
   }
 }
@@ -136,6 +145,9 @@ input {
   background-color: #ffffff;
   display: block;
   text-align: center;
+  cursor: default;
+  outline: none;
+  appearance: none
 }
 
 .short-input {
@@ -152,6 +164,12 @@ input {
   margin-right: 1.5rem;
   align-items: center;
 }
+
+.arrow-box>img {
+  cursor: pointer
+}
+
+/* TODO: сделать подсветку при клике */
 
 .arrow-box__plus {
   transform: rotate(180deg);
