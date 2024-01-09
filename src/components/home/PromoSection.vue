@@ -144,6 +144,7 @@
 
   .promo-section {
     padding-right: 0;
+    padding-top: 5rem;
   }
 
   .promo-box__btn {
