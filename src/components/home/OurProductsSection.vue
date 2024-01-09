@@ -78,7 +78,9 @@ export default {
 
 .btn:hover>.btn-text {
   color: white;
+  /* background-color: #b88e2f; */
 }
+
 
 .btn-text {
   text-decoration: none;
@@ -114,6 +116,10 @@ export default {
 
   .furnitures-list {
     gap: 4vw;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
   }
 }
 

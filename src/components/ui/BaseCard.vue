@@ -196,6 +196,12 @@ h5 {
   .furniture-card {
     width: 23%;
     max-width: 28.5rem;
+    height: auto;
+  }
+
+  .furniture-card_texts {
+    gap: 1rem;
+    padding: 2rem 1rem;
   }
 
   .btn {
@@ -203,21 +209,14 @@ h5 {
   }
 }
 
-@media(max-width: 1100px) {
-  .furniture-card {
-    height: auto;
-  }
-
-  .furniture-card_texts {
-    gap: 1.5rem;
-  }
-}
-
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
   .furniture-card_texts {
     padding: 1.5rem 1rem;
     gap: .8rem;
   }
+}
+
+@media(max-width: 900px) {
 
   .furniture-card {
     width: 23.5%;
@@ -262,7 +261,7 @@ h5 {
 @media(max-width: 620px) {
 
   .furniture-card_texts {
-    padding: 1rem .5rem;
+    padding: 1rem .5rem 1.2rem;
     gap: .8rem;
   }
 
@@ -274,6 +273,18 @@ h5 {
 @media(max-width: 450px) {
   .furniture-card {
     width: 80%;
+  }
+
+  .texts__label {
+    font-size: 2.4rem;
+  }
+
+  .texts__descr {
+    font-size: 1.7rem;
+  }
+
+  .texts__price {
+    font-size: 1.8rem;
   }
 }
 </style>

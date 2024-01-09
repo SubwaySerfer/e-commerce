@@ -49,10 +49,37 @@ export default {
   justify-content: space-around;
 }
 
-
-@media(max-width: 1250px) {
+@media(max-width: 1445px) {
   .cards-wrapper {
-    padding: 6.3rem 4rem 8.6rem 4rem;
+    padding: 6.3rem 2rem 8.6rem;
+  }
+
+  .cards-list {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 1300px) {
+  .cards-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cards-list {
+    column-gap: 1.5vw;
+    row-gap: 2rem
+  }
+}
+
+@media(max-width: 720px) {
+  .cards-list {
+    gap: 4vw;
+  }
+}
+
+@media(max-width: 450px) {
+  .cards-list {
+    gap: 3rem;
   }
 }
 </style>
