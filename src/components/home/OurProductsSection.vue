@@ -3,7 +3,7 @@
     <h2 class="products__label">Our Products</h2>
     <div class="furnitures-list">
       <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description" :id="furniture.id">
+        :price="furniture.price" :description="furniture.description" :id="furniture.id" mode='add-width'>
       </base-card>
     </div>
     <!-- <base-button class="btn"> -->
@@ -84,24 +84,21 @@ export default {
   text-decoration: none;
   color: #b88e2f;
   transition: ease-in 0.25s;
-  /* color: #ffffff; */
 }
 
-/* .btn-text:hover {
-  color: white;
-} */
 
 @media (max-width: 1450px) {
   .products {
     /* padding: .4rem .69vw 6.9rem; */
     padding: .4rem .69vw 0;
+    width: 100%;
   }
 
   .furnitures-list {
     height: auto;
     justify-content: center;
     width: 100%;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
   }
 }
 </style>

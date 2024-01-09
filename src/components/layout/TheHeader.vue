@@ -274,6 +274,7 @@ a {
 
   .header {
     padding: 3.35rem 3vw 3.45rem;
+    gap: .5rem;
   }
 
   .icons-box__icons-list {

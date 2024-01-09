@@ -1,5 +1,5 @@
 <template>
-  <div class="furniture-card" @mouseenter="hover = true">
+  <div class="furniture-card" @mouseenter="hover = true" :class='mode'>
     <!-- <slot>{{ (name, price, img) }} </slot> -->
     <!-- <slot name="img">
       <img src="" alt="" />
@@ -9,7 +9,7 @@
       <p></p
     ></slot>
     <slot><h4></h4></slot> -->
-    <img :src="img" alt="" />
+    <img :src="img" alt="" :class="mode" />
     <div class="furniture-card_texts">
       <h3>{{ name }}</h3>
       <p>{{ description }}</p>
@@ -40,7 +40,7 @@
 //TODO: сделать наведение на карточку
 //TODO: сделать проверку если есть наводка на одну карточку, то все остальные должны быть открыты.
 export default {
-  props: ['name', 'price', 'img', 'description', 'id'],
+  props: ['name', 'price', 'img', 'description', 'id', 'mode'],
   data() {
     return {
       hover: false,
@@ -118,8 +118,13 @@ export default {
 }
 
 img {
-  width: 28.5rem;
+  width: 100%;
 }
+
+/* .add-width {
+  width: 100%;
+  max-width: 28.5rem;
+} */
 
 .furniture-card_texts {
   padding: 1.6rem 1.6rem 3rem;

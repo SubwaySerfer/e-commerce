@@ -218,6 +218,17 @@ input {
   transform: translateY(-2px);
 }
 
+@media(max-width: 1400px) {
+  .footer__main-block {
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .footer-nav {
+    justify-content: end;
+  }
+}
+
 @media (max-width: 1300px) {
   .footer__main-block {
     gap: 1rem;
@@ -263,7 +274,9 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 90vw;
+    /* width: 90vw; */
+    width: 100%;
+    padding: 0 3vw;
     margin-bottom: 2rem;
   }
 
