@@ -60,8 +60,11 @@ const router = createRouter({
     { path: '/:pathMatch(.*)*', component: NotFound },
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 };
-  },
-});
-
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ top: 0, behavior: 'smooth' })
+      }, 500)
+    });
+  }
+})
 export default router;

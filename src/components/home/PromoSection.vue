@@ -126,6 +126,7 @@
   .promo-section {
     justify-content: center;
     padding-top: 15vh;
+    padding-right: 0;
   }
 
   .promo-section__promo-box {
