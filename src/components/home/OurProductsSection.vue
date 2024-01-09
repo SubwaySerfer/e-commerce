@@ -28,7 +28,7 @@ export default {
   padding: 0.4rem 10.2rem 6.9rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -93,7 +93,8 @@ export default {
 
 @media (max-width: 1450px) {
   .products {
-    padding: .4rem .69vw 6.9rem;
+    /* padding: .4rem .69vw 6.9rem; */
+    padding: .4rem .69vw 0;
   }
 
   .furnitures-list {

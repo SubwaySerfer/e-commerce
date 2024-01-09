@@ -10,7 +10,7 @@
       <button class="counter__item btn btn__plus" @click="appendToCounter()">+</button>
     </div>
     <base-button linkName="Add To Cart" class="card-buttons__btn btn" @click="appendToCart(id)"></base-button>
-    <base-button linkName="+ Compare" class="card-buttons__btn btn"></base-button>
+    <!-- <base-button linkName="+ Compare" class="card-buttons__btn btn"></base-button> -->
   </div>
 </template>
 

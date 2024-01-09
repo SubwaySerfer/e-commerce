@@ -7,7 +7,7 @@ import BlogPage from '../pages/blog/BlogPage.vue';
 import CardInfoPage from '../pages/cardInfo/CardInfoPage.vue';
 import CartPage from '../pages/cart/CartPage.vue';
 import ProfilePage from '../pages/profile/ProfilePage.vue'
-import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
+// import ComparisonPage from '../pages/comparison/ComparisonPage.vue'
 import CheckoutPage from '../pages/checkout/CheckoutPage.vue'
 import FavoritePage from '../pages/favorite/FavoritePage.vue'
 import NotFound from '../pages/notFound/NotFound.vue'
@@ -43,11 +43,11 @@ const router = createRouter({
       name: 'profile',
       component: ProfilePage
     },
-    {
-      path: '/comparison',
-      name: 'comparison',
-      component: ComparisonPage
-    },
+    // {
+    //   path: '/comparison',
+    //   name: 'comparison',
+    //   component: ComparisonPage
+    // },
     {
       path: '/checkout',
       name: 'checkout',

@@ -23,10 +23,10 @@
           <img src="/assets/icons/furnitureCards/icon-share.svg" alt="share icon." class="popup-icon" />
           <h5>Share</h5>
         </div>
-        <div class="popup-content_box">
+        <!-- <div class="popup-content_box">
           <img src="/assets/icons/furnitureCards/icon-compare.svg" alt="compare icon." class="popup-icon" />
           <h5>Compare</h5>
-        </div>
+        </div> -->
         <div class="popup-content_box" @click.stop="toggleLikeItem(id)">
           <img src="/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" />
           <h5>Like</h5>

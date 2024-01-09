@@ -19,9 +19,9 @@
         <li class="btn-root">
           <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
         </li>
-        <li class="btn-root">
+        <!-- <li class="btn-root">
           <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
-        </li>
+        </li> -->
         <li class="btn-root">
           <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" /></router-link>
         </li>
@@ -51,9 +51,9 @@
           <li class="btn-root">
             <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
           </li>
-          <li class="btn-root">
+          <!-- <li class="btn-root">
             <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
-          </li>
+          </li> -->
           <li class="btn-root">
             <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" /></router-link>
           </li>
@@ -126,7 +126,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 3.35rem 10rem 3.45rem 5.4rem;
+  /* padding: 3.35rem 10rem 3.45rem 5.4rem; */
+  padding: 3.35rem 6rem 3.45rem 5rem;
   align-items: center;
 }
 
@@ -183,10 +184,13 @@ a {
 }
 
 .icons-box__icons-list {
-  width: 24.7rem;
+  /* width: 24.7rem; */
+  width: min-content;
+
   gap: 4.5rem;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: end;
   align-items: center;
   padding: 7px 0 0 5px;
 }
