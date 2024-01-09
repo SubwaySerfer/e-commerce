@@ -98,7 +98,6 @@ export default {
     height: auto;
     justify-content: center;
     width: 100%;
-    /* padding: 0 1rem; */
   }
 }
 
@@ -114,9 +113,13 @@ export default {
   }
 
   .furnitures-list {
-    gap: 1vw;
-    justify-content: space-between;
-    row-gap: 1.2rem;
+    gap: 4vw;
+  }
+}
+
+@media(max-width: 450px) {
+  .furnitures-list {
+    gap: 3rem;
   }
 }
 </style>
