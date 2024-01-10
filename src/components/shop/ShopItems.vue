@@ -40,6 +40,10 @@ export default {
     showItems(newVal) {
       this.createCurrentList()
       this.ceeperButtonsField()
+    },
+    currentPage(newVal, oldVal) {
+      let start = (this.currentPage - 1) * this.showItems
+      this.createCurrentList(start, start + this.showItems)
     }
   },
   methods: {
@@ -50,7 +54,7 @@ export default {
       if (this.currentList.length < this.furnitureList.length) {
         this.buttonsCounter = Math.floor(this.furnitureList.length / this.showItems)
         if (this.furnitureList.length % this.currentList.length != 0) {
-          this.buttonsCounter = this.buttonsCounter + 1
+          this.buttonsCounter = +this.buttonsCounter + 1
         }
       } else {
         this.buttonsCounter = 1;
@@ -61,7 +65,7 @@ export default {
       if (btnContent == 'next' && this.currentPage < this.buttonsCounter) {
         this.currentPage = +this.currentPage + 1
       } else if (btnContent !== 'next') {
-        this.currentPage = btnContent
+        this.currentPage = +btnContent
       }
     }
   }
