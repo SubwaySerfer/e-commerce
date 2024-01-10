@@ -1,10 +1,7 @@
 <template>
   <section class="cards-wrapper">
     <div class="cards-list">
-      <base-card v-for="furniture, index in this.furnitureList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description" :id="furniture.id"
-        @click="test(furniture.id, index)"></base-card>
-      <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
+      <base-card v-for="furniture in this.currentList" :name="furniture.name" :img="furniture.img"
         :price="furniture.price" :description="furniture.description" :id="furniture.id"></base-card>
     </div>
     <buttons-field></buttons-field>
@@ -18,14 +15,30 @@ export default {
   components: {
     ButtonsField,
   },
+  data() {
+    return {
+      currentList: []
+    }
+  },
+  created() {
+    this.createCurrentList()
+  },
   computed: {
     furnitureList() {
       return this.$store.getters["home/furnitureList"];
     },
+    showItems() {
+      return this.$store.getters['home/getShowItems']
+    }
+  },
+  watch: {
+    showItems(newVal) {
+      this.createCurrentList()
+    }
   },
   methods: {
-    test(id, index) {
-      console.log(index, id, this.furnitureList[index])
+    createCurrentList(start = 0, end = this.showItems) {
+      this.currentList = this.furnitureList.slice(start, end)
     }
   }
 };

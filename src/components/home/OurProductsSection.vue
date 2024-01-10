@@ -2,7 +2,7 @@
   <section class="products">
     <h2 class="products__label">Our Products</h2>
     <div class="furnitures-list">
-      <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
+      <base-card v-for="furniture in this.currentFurnList" :name="furniture.name" :img="furniture.img"
         :price="furniture.price" :description="furniture.description" :id="furniture.id" mode='add-width'>
       </base-card>
     </div>
@@ -14,9 +14,17 @@
 
 <script>
 export default {
+  data() {
+    return {
+      currentFurnList: []
+    }
+  },
+  created() {
+    this.currentFurnList = this.furnitureList.slice(0, 8)
+  },
   computed: {
     furnitureList() {
-      return this.$store.getters["home/furnitureList"];
+      return this.$store.getters["home/furnitureList"]
     },
   },
 };
