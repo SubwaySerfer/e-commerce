@@ -4,7 +4,7 @@
       <base-card v-for="furniture in this.currentList" :name="furniture.name" :img="furniture.img"
         :price="furniture.price" :description="furniture.description" :id="furniture.id"></base-card>
     </div>
-    <buttons-field></buttons-field>
+    <buttons-field :buttonsCounter="buttonsCounter"></buttons-field>
   </section>
 </template>
 
@@ -17,11 +17,14 @@ export default {
   },
   data() {
     return {
-      currentList: []
+      currentList: [],
+      buttonsCounter: 1
     }
   },
   created() {
     this.createCurrentList()
+    this.ceeperButtonsField()
+
   },
   computed: {
     furnitureList() {
@@ -34,11 +37,22 @@ export default {
   watch: {
     showItems(newVal) {
       this.createCurrentList()
+      this.ceeperButtonsField()
     }
   },
   methods: {
     createCurrentList(start = 0, end = this.showItems) {
       this.currentList = this.furnitureList.slice(start, end)
+    },
+    ceeperButtonsField() {
+      if (this.currentList.length < this.furnitureList.length) {
+        this.buttonsCounter = Math.floor(this.furnitureList.length / this.showItems)
+        if (this.furnitureList.length % this.currentList.length != 0) {
+          this.buttonsCounter = this.buttonsCounter + 1
+        }
+      } else {
+        this.buttonsCounter = 1;
+      }
     }
   }
 };

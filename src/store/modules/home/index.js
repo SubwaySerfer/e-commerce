@@ -7,7 +7,7 @@ export default {
       furnitureList: [],
       favoriteList: [],
       cartList: [],
-      showItems: 16,
+      showItems: 4,
     }
   },
   mutations,
