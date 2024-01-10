@@ -1,46 +1,52 @@
 <template>
   <div class="slider">
-    <div class="slider-item slider-active">1</div>
-    <div class="slider-item">2</div>
-    <div class="slider-item">3</div>
-    <div class="next-item">Next</div>
+    <div class="slider-item" @click="$emit('changePage')">1</div>
+    <div class="slider-item" @click="$emit('changePage')">2</div>
+    <div class="slider-item" @click="$emit('changePage')">3</div>
+    <div class="next-item" @click="$emit('changePage')">Next</div>
   </div>
 </template>
 
 <!-- :class="{ 'disabled': buttonsCounter <= 1 }" -->
-
+<!-- @click="$emit('changePage', 'argument')" -->
 <script>
 export default {
-  props: ['buttonsCounter'],
-  data() {
-    return {
-      currentPage: 1
-    }
-  },
+  props: ['buttonsCounter', 'curPage'],
+  emits: ['changePage'],
   mounted() {
     this.buildButtons()
     this.nextButtonCeeper()
+    this.changeActivePage()
   },
   watch: {
     buttonsCounter(newVal) {
       this.buildButtons()
+      this.nextButtonCeeper()
+    },
+    curPage(newVal) {
+      this.changeActivePage()
       this.nextButtonCeeper()
     }
   },
   methods: {
     buildButtons() {
       let sliderItems = document.querySelectorAll('.slider-item')
-      if (this.currentPage <= this.buttonsCounter) {
+      if (this.curPage <= this.buttonsCounter) {
         sliderItems.forEach(el => {
           el.textContent <= this.buttonsCounter ? el.classList.remove('disabled') : el.classList.add('disabled')
         })
       } else {
-        this.currentPage = this.buildButtons
+        this.curPage = this.buildButtons
       }
     },
+    changeActivePage() {
+      let sliderItems = document.querySelectorAll('.slider-item')
+      sliderItems.forEach(el => { el.textContent == this.curPage ? el.classList.add('slider-active') : el.classList.remove('slider-active') })
+    },
+
     nextButtonCeeper() {
       let nextItem = document.querySelector('.next-item')
-      if (this.currentPage >= this.buttonsCounter) {
+      if (this.curPage >= this.buttonsCounter) {
         nextItem.classList.add('disabled')
       } else {
         nextItem.classList.remove('disabled')

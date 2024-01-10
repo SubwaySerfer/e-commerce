@@ -4,7 +4,8 @@
       <base-card v-for="furniture in this.currentList" :name="furniture.name" :img="furniture.img"
         :price="furniture.price" :description="furniture.description" :id="furniture.id"></base-card>
     </div>
-    <buttons-field :buttonsCounter="buttonsCounter"></buttons-field>
+    <buttons-field :buttonsCounter="buttonsCounter" :curPage="currentPage"
+      @change-page="changePageNumber"></buttons-field>
   </section>
 </template>
 
@@ -18,7 +19,8 @@ export default {
   data() {
     return {
       currentList: [],
-      buttonsCounter: 1
+      buttonsCounter: 1,
+      currentPage: 1,
     }
   },
   created() {
@@ -52,6 +54,14 @@ export default {
         }
       } else {
         this.buttonsCounter = 1;
+      }
+    },
+    changePageNumber() {
+      let btnContent = event.target.textContent.toLowerCase()
+      if (btnContent == 'next' && this.currentPage < this.buttonsCounter) {
+        this.currentPage = +this.currentPage + 1
+      } else if (btnContent !== 'next') {
+        this.currentPage = btnContent
       }
     }
   }
