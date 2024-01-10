@@ -1,14 +1,5 @@
 <template>
   <div class="furniture-card" @mouseenter="hover = true" :class='mode'>
-    <!-- <slot>{{ (name, price, img) }} </slot> -->
-    <!-- <slot name="img">
-      <img src="" alt="" />
-    </slot>
-    <slot name="title"
-      ><h3></h3>
-      <p></p
-    ></slot>
-    <slot><h4></h4></slot> -->
     <img :src="img" alt="" :class="mode" />
     <div class="furniture-card_texts">
       <h3 class="texts__label">{{ name }}</h3>
@@ -27,7 +18,12 @@
           <h5>Compare</h5>
         </div> -->
         <div class="popup-content_box" @click.stop="toggleLikeItem(id)">
-          <img src="/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" />
+          <!-- <img src="/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" /> -->
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.99973 14.0361C-5.33333 6.66669 3.99999 -1.33331 7.99973 3.72539C12 -1.33331 21.3333 6.66669 7.99973 14.0361Z"
+              stroke="white" stroke-width="1.8" />
+          </svg>
           <h5>Like</h5>
         </div>
       </div>
@@ -50,7 +46,7 @@ export default {
       this.$store.commit('home/editCartItems', { id: id, action: "add" })
     },
     toggleLikeItem(id) {
-      console.log('like', id)
+      // event.target.classList.add('red-svg')
       this.$store.commit('home/toggleFavoriteList', id)
     },
     shareItem(id) {
@@ -64,6 +60,10 @@ export default {
 };
 </script>
 <style scoped>
+/* .red-svg {
+  fill: red;
+} */
+
 .furniture-card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 28.5rem;

@@ -80,6 +80,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 10rem 0 9.8rem;
+  width: 100%;
 }
 
 .filters-box-first {

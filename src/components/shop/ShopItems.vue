@@ -59,6 +59,7 @@ export default {
   display: flex;
   flex-flow: row wrap;
   gap: 4.2rem 3.2rem;
+  width: 100%;
   justify-content: space-around;
 }
 
