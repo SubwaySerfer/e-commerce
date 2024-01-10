@@ -14,11 +14,11 @@
         </li>
       </ul>
       <span class="cross-line"></span>
-      <h6 v-if="windowWidth > 1020">Showing 1–{{ showInput }} of {{ maxShowInput }} results</h6>
+      <h6 v-if="windowWidth > 1020">Showing 1–{{ showItems }} of {{ furnListLength }} results</h6>
     </div>
     <div class="filters-box-sec">
       <label for="">Show</label>
-      <input type="" readonly v-model="showInput" class="show-input" />
+      <input type="" readonly :value="showItems" class="show-input" />
       <div class="arrow-box">
         <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow plus 4 step." class="arrow-box__plus" @click="editShow">
         <img src="/assets/icons/ui/arrow-icon.svg" alt="arrow minus 4 step." id="arrow-minus" @click="editShow">
@@ -34,8 +34,7 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
-      showInput: 16,
-      maxShowInput: 32,
+      // maxShowInput: furnListLength,
     }
   },
   mounted() {
@@ -52,11 +51,21 @@ export default {
     },
     editShow() {
       if (event.target.id === 'arrow-minus') {
-        this.showInput <= 4 ? this.showInput = 4 : this.showInput = this.showInput - 4
+        this.$store.commit('home/editShowItems', 'minus')
+        // this.showInput <= 4 ? this.showInput = 4 : this.showInput = this.showInput - 4
       } else {
-        this.showInput = this.showInput + 4;
-        this.showInput > this.maxShowInput ? this.showInput = this.showInput - 4 : []
+        this.$store.commit('home/editShowItems', 'plus')
+        // this.showInput = this.showInput + 4;
+        // this.showInput > this.maxShowInput ? this.showInput = this.showInput - 4 : []
       }
+    }
+  },
+  computed: {
+    showItems() {
+      return this.$store.getters['home/getShowItems']
+    },
+    furnListLength() {
+      return this.$store.getters['home/furnitureList'].length
     }
   }
 }
@@ -71,6 +80,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 10rem 0 9.8rem;
+  width: 100%;
 }
 
 .filters-box-first {

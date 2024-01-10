@@ -40,5 +40,16 @@ export default {
         currentItem.counter--
       }
     }
+  },
+  editShowItems(state, payload) {
+    switch (payload) {
+      case 'minus':
+        state.showItems <= 4 ? state.showItems = 4 : state.showItems = state.showItems - 4;
+        break
+      case 'plus':
+        state.showItems = state.showItems + 4;
+        state.showItems > state.furnitureList.length ? state.showItems = state.showItems - 4 : []
+        break
+    }
   }
 }

@@ -1,13 +1,11 @@
 <template>
   <section class="cards-wrapper">
     <div class="cards-list">
-      <base-card v-for="furniture, index in this.furnitureList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description" :id="furniture.id"
-        @click="test(furniture.id, index)"></base-card>
-      <base-card v-for="furniture in this.furnitureList" :name="furniture.name" :img="furniture.img"
+      <base-card v-for="furniture in this.currentList" :name="furniture.name" :img="furniture.img"
         :price="furniture.price" :description="furniture.description" :id="furniture.id"></base-card>
     </div>
-    <buttons-field></buttons-field>
+    <buttons-field :buttonsCounter="buttonsCounter" :curPage="currentPage"
+      @change-page="changePageNumber"></buttons-field>
   </section>
 </template>
 
@@ -18,14 +16,57 @@ export default {
   components: {
     ButtonsField,
   },
+  data() {
+    return {
+      currentList: [],
+      buttonsCounter: 1,
+      currentPage: 1,
+    }
+  },
+  created() {
+    this.createCurrentList()
+    this.ceeperButtonsField()
+
+  },
   computed: {
     furnitureList() {
       return this.$store.getters["home/furnitureList"];
     },
+    showItems() {
+      return this.$store.getters['home/getShowItems']
+    }
+  },
+  watch: {
+    showItems(newVal) {
+      this.createCurrentList()
+      this.ceeperButtonsField()
+    },
+    currentPage(newVal, oldVal) {
+      let start = (this.currentPage - 1) * this.showItems
+      this.createCurrentList(start, start + this.showItems)
+    }
   },
   methods: {
-    test(id, index) {
-      console.log(index, id, this.furnitureList[index])
+    createCurrentList(start = 0, end = this.showItems) {
+      this.currentList = this.furnitureList.slice(start, end)
+    },
+    ceeperButtonsField() {
+      if (this.currentList.length < this.furnitureList.length) {
+        this.buttonsCounter = Math.floor(this.furnitureList.length / this.showItems)
+        if (this.furnitureList.length % this.currentList.length != 0) {
+          this.buttonsCounter = +this.buttonsCounter + 1
+        }
+      } else {
+        this.buttonsCounter = 1;
+      }
+    },
+    changePageNumber() {
+      let btnContent = event.target.textContent.toLowerCase()
+      if (btnContent == 'next' && this.currentPage < this.buttonsCounter) {
+        this.currentPage = +this.currentPage + 1
+      } else if (btnContent !== 'next') {
+        this.currentPage = +btnContent
+      }
     }
   }
 };
@@ -46,6 +87,7 @@ export default {
   display: flex;
   flex-flow: row wrap;
   gap: 4.2rem 3.2rem;
+  width: 100%;
   justify-content: space-around;
 }
 
