@@ -83,12 +83,6 @@ export default {
     width: 100vw;
   }
 
-  .card-section__main-photo {
-    width: 80vw;
-
-  }
-
-
 }
 
 @media(max-width: 1270px) {
@@ -104,14 +98,15 @@ export default {
   }
 
   .card-section__main-photo {
-    width: 50vw;
-
+    width: 40vw;
+    object-fit: contain;
+    height: min-content;
   }
 }
 
 @media(max-width:960px) {
   .card-section__main-photo {
-    width: 70vw;
+    width: 50vw;
   }
 
   .main-photo {
@@ -121,12 +116,11 @@ export default {
 
 @media(max-width:630px) {
   .card-section {
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .card-section__main-photo {
-    flex: 1
+    width: 60vw
   }
 }
 

@@ -37,23 +37,32 @@ export default {
     }
   },
   watch: {
-    showItems(newVal) {
-      this.createCurrentList()
-      this.ceeperButtonsField()
+    showItems(newVal, oldVal) {
+      if (newVal > oldVal) {
+        this.ceeperButtonsField()
+        this.changePageNumber()
+        this.createCurrentList(this.startCurrentFunc(), this.startCurrentFunc() + this.showItems)
+      } else {
+        this.createCurrentList(this.startCurrentFunc(), this.startCurrentFunc() + this.showItems)
+        this.ceeperButtonsField()
+      }
     },
     currentPage(newVal, oldVal) {
-      let start = (this.currentPage - 1) * this.showItems
-      this.createCurrentList(start, start + this.showItems)
-    }
+      this.createCurrentList(this.startCurrentFunc(), this.startCurrentFunc() + this.showItems)
+    },
+
   },
   methods: {
+    startCurrentFunc() {
+      return (this.currentPage - 1) * this.showItems
+    },
     createCurrentList(start = 0, end = this.showItems) {
       this.currentList = this.furnitureList.slice(start, end)
     },
     ceeperButtonsField() {
       if (this.currentList.length < this.furnitureList.length) {
         this.buttonsCounter = Math.floor(this.furnitureList.length / this.showItems)
-        if (this.furnitureList.length % this.currentList.length != 0) {
+        if (this.furnitureList.length % this.showItems != 0) {
           this.buttonsCounter = +this.buttonsCounter + 1
         }
       } else {
@@ -62,14 +71,18 @@ export default {
     },
     changePageNumber() {
       let btnContent = event.target.textContent.toLowerCase()
-      if (btnContent == 'next' && this.currentPage < this.buttonsCounter) {
+
+      if (btnContent == '') {
+        this.currentPage = this.buttonsCounter
+      } else if (btnContent == 'next' && this.currentPage < this.buttonsCounter) {
         this.currentPage = +this.currentPage + 1
-      } else if (btnContent !== 'next') {
+      } else if (btnContent != 'next' && +btnContent < this.buttonsCounter) {
         this.currentPage = +btnContent
       }
     }
   }
-};
+}
+
 </script>
 
 <style scoped>
