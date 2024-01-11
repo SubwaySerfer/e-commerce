@@ -128,7 +128,7 @@ export default {
   .card-buttons {
     justify-content: space-between;
     gap: 1rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   .card-buttons__btn,
@@ -137,7 +137,7 @@ export default {
   }
 
   .card-buttons__btn_counter {
-    flex: 0 1 100%;
+    /* flex: 0 1 100%; */
     margin: 0 auto;
   }
 }
