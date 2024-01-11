@@ -37,6 +37,7 @@ export default {
         })
       } else {
         this.curPage = this.buildButtons
+        // мб актив пейдж поменять надо
       }
     },
     changeActivePage() {

@@ -34,7 +34,6 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
-      // maxShowInput: furnListLength,
     }
   },
   mounted() {
@@ -52,11 +51,8 @@ export default {
     editShow() {
       if (event.target.id === 'arrow-minus') {
         this.$store.commit('home/editShowItems', 'minus')
-        // this.showInput <= 4 ? this.showInput = 4 : this.showInput = this.showInput - 4
       } else {
         this.$store.commit('home/editShowItems', 'plus')
-        // this.showInput = this.showInput + 4;
-        // this.showInput > this.maxShowInput ? this.showInput = this.showInput - 4 : []
       }
     }
   },
