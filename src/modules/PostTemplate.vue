@@ -92,6 +92,7 @@ export default {
   padding: 0;
   padding-top: 2.9rem;
   transition: transform .25s ease-in-out;
+  outline: none;
 }
 
 .post__button:after {
@@ -171,6 +172,21 @@ export default {
 @media(max-width: 825px) {
   .post {
     width: 100%;
+  }
+}
+
+@media(max-width: 460px) {
+  .post_info-block {
+    gap: .4rem;
+    justify-content: space-between;
+  }
+
+  .elem__description {
+    font-size: 1.4rem;
+  }
+
+  .info-block__elem {
+    gap: .5rem;
   }
 }
 </style>

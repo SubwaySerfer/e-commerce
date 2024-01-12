@@ -2,7 +2,7 @@
   <section class="cards-wrapper">
     <div class="cards-list">
       <base-card v-for="furniture in this.currentList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description" :id="furniture.id"></base-card>
+        :price="priceToString(furniture.price)" :description="furniture.description" :id="furniture.id"></base-card>
     </div>
     <buttons-field :buttonsCounter="buttonsCounter" :curPage="currentPage"
       @change-page="changePageNumber"></buttons-field>
@@ -39,11 +39,8 @@ export default {
   watch: {
     showItems(newVal, oldVal) {
       if (newVal > oldVal) {
-        console.log(this.currentPage)
         this.ceeperButtonsField()
-        console.log(this.currentPage)
         this.changePageNumber()
-        console.log(this.currentPage)
         this.createCurrentList(this.startCurrentFunc(), this.startCurrentFunc() + this.showItems)
       } else {
         this.createCurrentList(this.startCurrentFunc(), this.startCurrentFunc() + this.showItems)
@@ -56,6 +53,9 @@ export default {
 
   },
   methods: {
+    priceToString(num) {
+      return num.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+    },
     startCurrentFunc() {
       return (this.currentPage - 1) * this.showItems
     },
