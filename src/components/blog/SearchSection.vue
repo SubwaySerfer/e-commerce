@@ -152,12 +152,15 @@ export default {
 
   .category-block__title {
     text-align: center;
-    width: 25.2rem;
+    width: 27rem;
     cursor: pointer;
+    text-indent: 0;
   }
 
   .content-popup {
     margin-bottom: 3rem;
   }
+
+  /* TODO: проверить на айфоне, заголовки блоков, странное поведение */
 }
 </style>

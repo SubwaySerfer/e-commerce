@@ -16,6 +16,9 @@ export default {
       console.log('ошибка добавления.')
     }
   },
+  createCartWithStorage(state, payload) {
+    state.cartList = Object.values(payload.cartList)
+  },
   editCartItems(state, payload) {
     let newItem = state.furnitureList.find(el => el.id === payload.id)
     let currentItem = state.cartList.find(el => el.id === payload.id)
@@ -40,6 +43,7 @@ export default {
         currentItem.counter--
       }
     }
+    localStorage.setItem('e-commerce', JSON.stringify({ 'cartList': state.cartList }))
   },
   editShowItems(state, payload) {
     switch (payload) {
