@@ -39,8 +39,11 @@ export default {
   watch: {
     showItems(newVal, oldVal) {
       if (newVal > oldVal) {
+        console.log(this.currentPage)
         this.ceeperButtonsField()
+        console.log(this.currentPage)
         this.changePageNumber()
+        console.log(this.currentPage)
         this.createCurrentList(this.startCurrentFunc(), this.startCurrentFunc() + this.showItems)
       } else {
         this.createCurrentList(this.startCurrentFunc(), this.startCurrentFunc() + this.showItems)
@@ -73,11 +76,16 @@ export default {
       let btnContent = event.target.textContent.toLowerCase()
 
       if (btnContent == '') {
-        this.currentPage = this.buttonsCounter
+        console.log(this.currentPage, this.buttonsCounter)
+        if (this.currentPage > this.buttonsCounter) {
+          this.currentPage = this.buttonsCounter
+        }
       } else if (btnContent == 'next' && this.currentPage < this.buttonsCounter) {
         this.currentPage = +this.currentPage + 1
-      } else if (btnContent != 'next' && +btnContent < this.buttonsCounter) {
+      } else if (btnContent != 'next' && +btnContent <= this.buttonsCounter) {
         this.currentPage = +btnContent
+      } else {
+        console.log('else!!')
       }
     }
   }
