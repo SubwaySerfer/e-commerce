@@ -33,7 +33,15 @@ export default {
     return {
       currentPage: 1
     }
-  }
+  },
+  created() {
+    this.$store.commit('blog/createBlogPostsList')
+  },
+  // computed: {
+  //   postsList() {
+  //     return this.$store.getters['blog/getBlogPosts']
+  //   }
+  // }
 };
 </script>
 

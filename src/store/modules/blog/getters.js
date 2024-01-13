@@ -1,8 +1,11 @@
-export default{
-  recentPosts(state){
+export default {
+  recentPosts(state) {
     return state.recentPosts
   },
-  getCategories(state){
+  getCategories(state) {
     return state.categories
+  },
+  getBlogPosts(state) {
+    return state.blogPosts
   }
 }
