@@ -1,5 +1,5 @@
 <template>
-  <div class="post" :id=id @click="openPost()">
+  <div class="post" :id=id @click="openPost(id)">
     <img :src="`${postImage}`" :alt="postImageAlt" class="post__image" />
     <ul class="post_info-block">
       <li class="info-block__elem">
@@ -59,10 +59,15 @@ export default {
       required: true,
       default: "",
     },
+    id: {
+      type: Number,
+      required: false,
+      default: ''
+    }
   },
   methods: {
-    openPost() {
-      let id = event.target.parentNode.id
+    openPost(id) {
+      // let id = event.target.parentNode.id
       // TODO: сделать действие если кликнули на материал\автора!
       this.$router.push(`/blog/${id}`);
     }
