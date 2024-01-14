@@ -44,7 +44,9 @@ export default {
     },
   },
   created() {
-    this.$store.commit('blog/createCategories')
+    if (Object.keys(this.getCategories).length == 0) {
+      this.$store.commit('blog/createCategories')
+    }
     console.log(this.getCategories)
   },
   mounted() {

@@ -11,7 +11,7 @@ import ProfilePage from '../pages/profile/ProfilePage.vue'
 import CheckoutPage from '../pages/checkout/CheckoutPage.vue'
 import FavoritePage from '../pages/favorite/FavoritePage.vue'
 import NotFound from '../pages/notFound/NotFound.vue'
-import BlogPostPage from '../pages/blog/[id]/BlogPostPage.vue'
+import BlogPostPage from '../pages/blog/[tag]/BlogPostPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -56,8 +56,12 @@ const router = createRouter({
     },
     { path: '/contact', name: 'contact', component: ContactPage },
     { path: '/blog', name: 'blog', component: BlogPage },
+    // {
+    //   path: '/blog/:id',
+    //   component: BlogPostPage,
+    // },
     {
-      path: '/blog/:id',
+      path: '/blog/:tag',
       component: BlogPostPage,
     },
     { path: '/wishlist', name: 'wishlist', component: FavoritePage },
