@@ -4,7 +4,7 @@
     <ul class="post-info">
       <li>{{ author }}</li>
       <li>{{ date }}</li>
-      <li>{{ material }}</li>
+      <li>{{ tag }}</li>
     </ul>
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ['img', 'imgAlt', 'description', 'title', 'author', 'date', 'material']
+  props: ['img', 'imgAlt', 'description', 'title', 'author', 'date', 'tag']
 }
 </script>
 

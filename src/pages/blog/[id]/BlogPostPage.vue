@@ -2,8 +2,9 @@
   <main class="blog-post">
     <base-promo imgLink="/assets/icons/mainLogo.png" title="Blog" startPage="Home" currentPage="Blog"></base-promo>
     <post-section :author="currentItem.author" :title="currentItem.title" :img="currentItem.img"
-      :imgAlt="currentItem.imgAlt" :description="currentItem.description" :material="currentItem.material"
+      :imgAlt="currentItem.imgAlt" :description="currentItem.description" :tag="currentItem.tag"
       :date="currentItem.date"></post-section>
+    <our-advantages></our-advantages>
   </main>
 </template>
 
@@ -42,7 +43,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem 4rem;
   gap: 4rem;
 }
 </style>

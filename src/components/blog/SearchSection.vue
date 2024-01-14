@@ -4,21 +4,21 @@
     <div class="search-wrapper__category-block">
       <h3 class="category-block__title" @click="toggleIsModal">Categories</h3>
       <ul class="category-block__content" v-if="windowWidth > 550">
-        <li v-for="category in getCategories" class="content__topic">
+        <li v-for="(value, name, index) in getCategories" class="content__topic">
           <!-- <a :href="category.link" class="topic__label">{{ category.name }}</a> -->
-          <router-link :to="category.link" class="topic__label">{{
-            category.name
+          <router-link to="" class="topic__label">{{
+            this.toCapitalLetter(name)
           }}</router-link>
-          <span class="topic_counter">{{ category.count }}</span>
+          <span class="topic_counter">{{ value.length || 0 }}</span>
         </li>
       </ul>
       <ul class="category-block__content content-popup" v-else-if="windowWidth < 550 && isModalOpen">
-        <li v-for="category in getCategories" class="content__topic">
+        <li v-for="(value, name) in getCategories" class="content__topic">
           <!-- <a :href="category.link" class="topic__label">{{ category.name }}</a> -->
-          <router-link :to="category.link" class="topic__label">{{
-            category.name
+          <router-link to="" class="topic__label">{{
+            name
           }}</router-link>
-          <span class="topic_counter">{{ category.count }}</span>
+          <span class="topic_counter">{{ value.length || 0 }}</span>
         </li>
       </ul>
     </div>
@@ -43,6 +43,10 @@ export default {
       return this.$store.getters["blog/getCategories"];
     },
   },
+  created() {
+    this.$store.commit('blog/createCategories')
+    console.log(this.getCategories)
+  },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize)
@@ -64,6 +68,9 @@ export default {
       } else {
         this.isModalOpen = false
       }
+    },
+    toCapitalLetter(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1)
     }
   },
 };
