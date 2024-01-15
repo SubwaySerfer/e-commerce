@@ -3,11 +3,10 @@
     <base-promo title="Wish List" startPage="Home" currentPage="Wish List"
       imgLink="/assets/icons/mainLogo.png"></base-promo>
     <h1 class="favorite-page__label">Wish list</h1>
-    <ul class="favorite-page__cards-list">
-      <li v-for="card in this.favoriteList"><base-card :name="card.name" :img="card.img" :price="card.price"
-          :description="card.description" :id="card.id">
-        </base-card>
-      </li>
+    <div class="favorite-page__cards-list">
+      <base-card v-for="card in this.favoriteList" :name="card.name" :img="card.img" :price="card.price"
+        :description="card.description" :id="card.id">
+      </base-card>
       <div v-if="this.favoriteList.length == 0" class="cards-list__empty-box">
         <h2 class="empty-box__label">Your wish list is empty</h2>
         <router-link to="/shop">
@@ -15,7 +14,7 @@
         </router-link>
       </div>
 
-    </ul>
+    </div>
     <our-advantages></our-advantages>
   </main>
 </template>
