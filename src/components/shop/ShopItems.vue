@@ -76,7 +76,6 @@ export default {
       let btnContent = event.target.textContent.toLowerCase()
 
       if (btnContent == '') {
-        console.log(this.currentPage, this.buttonsCounter)
         if (this.currentPage > this.buttonsCounter) {
           this.currentPage = this.buttonsCounter
         }

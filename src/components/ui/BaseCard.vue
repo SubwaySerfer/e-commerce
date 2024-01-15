@@ -242,15 +242,15 @@ h5 {
   }
 
   .texts__label {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .texts__descr {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
   }
 
   .texts__price {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .furniture-card_texts {
