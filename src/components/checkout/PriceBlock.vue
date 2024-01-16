@@ -148,4 +148,24 @@
   font-weight: 400;
   line-height: normal;
 }
+
+@media(max-width: 1100px) {
+  .price-block {
+    padding: 8.7rem 1.7rem;
+    /* width: min-content; */
+  }
+}
+
+@media(max-width: 830px) {
+  .price-block {
+    width: min-content;
+  }
+}
+
+@media(max-width: 700px) {
+  .price-block {
+    width: 100%;
+    padding: 8.7rem 4vw;
+  }
+}
 </style>

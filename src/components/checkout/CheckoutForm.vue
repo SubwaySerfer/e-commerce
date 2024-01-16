@@ -60,6 +60,10 @@
   height: 7.5rem;
   width: 100%;
   margin-top: 2.2rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .fullname__label {
@@ -95,17 +99,35 @@
 
 @media(max-width: 1100px) {
   .checkout-form {
-    width: 60.8rem;
+    /* width: 60.8rem; */
     padding: 3.8rem 2rem 4rem;
     gap: 2.6rem;
   }
 
-  .checkout-form__label {
+  .checkout-form__label,
+  .fullname__label {
     gap: 1.2rem
   }
 
-  .checkout-form__input {
+  .checkout-form__input,
+  .fullname__input {
     padding: 1.6rem .5rem 1.5rem 1.9rem;
+  }
+}
+
+@media(max-width: 630px) {
+  .checkout-form {
+    width: 100%;
+  }
+
+  .checkout-form__fullname {
+    gap: 1rem;
+  }
+}
+
+@media(max-width: 450px) {
+  .checkout-form {
+    padding: 3.8rem 2vw 4rem;
   }
 }
 </style>

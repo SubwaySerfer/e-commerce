@@ -25,4 +25,17 @@ export default {
   width: 100%;
   gap: 2.6rem;
 }
+
+@media(max-width: 1100px) {
+  .checkout-section {
+    gap: 0;
+  }
+}
+
+@media(max-width: 700px) {
+  .checkout-section {
+    flex-direction: column;
+    align-items: center
+  }
+}
 </style>
