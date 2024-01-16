@@ -23,5 +23,6 @@ export default {
   display: flex;
   flex-direction: row;
   width: 100%;
+  gap: 2.6rem;
 }
 </style>
