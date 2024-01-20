@@ -52,6 +52,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 0;
+  text-wrap: nowrap;
 }
 
 .btn:hover {
@@ -86,7 +87,6 @@ a {
   padding: 1.7rem 4.8rem;
   text-wrap: nowrap;
   border-radius: 0;
-
 }
 
 .transparent-btn {
@@ -175,5 +175,13 @@ button:active {
 .outline:hover,
 .outline:active {
   background-color: #b88e2f;
+}
+
+@media(max-width: 450px) {
+
+  .btn,
+  .yellow-btn {
+    width: 80vw;
+  }
 }
 </style>

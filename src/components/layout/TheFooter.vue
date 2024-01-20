@@ -211,6 +211,7 @@ input {
 .button-news_text {
   transition: all ease-in 0.25s;
   display: block;
+  color: #000
 }
 
 .button-news:hover>.button-news_text:hover {

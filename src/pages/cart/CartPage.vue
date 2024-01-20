@@ -110,6 +110,7 @@ li {
   font-size: 2rem;
   font-weight: 400;
   line-height: normal;
+  color: #000
 }
 
 .costs__title {
