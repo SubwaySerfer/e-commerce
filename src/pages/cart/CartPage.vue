@@ -5,9 +5,10 @@
       <div class="nav-box">
         <ul class="cart-list__nav">
           <li>Product</li>
-          <li>Price</li>
           <li>Quantity</li>
-          <li>Subtotal</li>
+          <!-- <li>Subtotal</li> -->
+          <li>Price</li>
+          <li class="empty"></li>
         </ul>
         <cart-list></cart-list>
       </div>
@@ -15,10 +16,10 @@
       <div class="cart-list__costs">
         <h2 class="costs__title">Cart Totals</h2>
         <ul class="costs__price-list">
-          <li class="price-list__block">
+          <!-- <li class="price-list__block">
             <h4 class="price-list__title">Subtotal</h4>
             <span class="price-list__total-sm">Rs. {{ getTotal }}</span>
-          </li>
+          </li> -->
           <li class="price-list__block">
             <h4 class="price-list__title">Total</h4>
             <span class="price-list__total-bg">Rs. {{ getTotal }}</span>
@@ -71,15 +72,18 @@ export default {
 .cart-list__nav {
   width: 81.7rem;
   height: 5.5rem;
-  padding-left: 19rem;
+  /* padding-left: 19rem; */
   align-items: center;
-  gap: 9.6rem;
+  /* gap: 9.6rem; */
+  gap: 17.4%;
   background: #f9f1e7;
   display: flex;
   flex-direction: row;
+  justify-content: end;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: normal;
+  padding: 0 2rem 0 0;
 }
 
 li {
@@ -92,8 +96,9 @@ li {
   background: #f9f1e7;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem 1rem;
   align-items: center;
-  padding-top: 1.5rem;
 }
 
 .costs__btn {
@@ -105,13 +110,14 @@ li {
   font-size: 2rem;
   font-weight: 400;
   line-height: normal;
+  color: #000
 }
 
 .costs__title {
   font-size: 3.2rem;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 6.1rem;
+  /* margin-bottom: 6.1rem; */
 }
 
 .costs__price-list {
@@ -119,7 +125,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 3.1rem;
-  margin-bottom: 4.2rem;
+  /* margin-bottom: 4.2rem; */
 }
 
 .price-list__title {
@@ -165,9 +171,14 @@ li {
 @media(max-width: 900px) {
   .cart-list__nav {
     width: 100%;
-    padding: 0 5rem 0 18.5rem;
+    /* padding: 0 5rem 0 18.5rem; */
     /* gap: 3rem; */
-    gap: 10.2vw;
+    justify-content: center;
+    gap: 14vw;
+  }
+
+  .empty {
+    display: none;
   }
 
   .nav-box {
@@ -176,22 +187,23 @@ li {
   }
 }
 
-@media(max-width: 825px) {
+/* @media(max-width: 825px) {
   .cart-list__nav {
     gap: 9vw;
     padding-left: 21.81vw;
   }
-}
+} */
 
 @media(max-width:770px) {
   .cart-list__nav {
-    padding-left: 18.5vw;
+    gap: 10vw;
+
   }
 }
 
 @media(max-width: 650px) {
   .cart-list__nav {
-    padding-left: 16vw;
+    /* padding-left: 16vw; */
     /* gap: 7vw; */
     font-size: 1.4rem;
   }
@@ -203,7 +215,7 @@ li {
 
 @media(max-width:500px) {
   .cart-list__nav {
-    padding-left: 16vw;
+    /* padding-left: 16vw; */
     /* gap: 5vw; */
     font-size: 1.2rem;
   }
@@ -219,8 +231,8 @@ li {
     padding: 0;
   }
 
-  .cart-list__nav {
+  /* .cart-list__nav {
     gap: 7vw;
-  }
+  } */
 }
 </style>

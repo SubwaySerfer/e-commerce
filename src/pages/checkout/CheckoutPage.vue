@@ -2,15 +2,40 @@
   <main>
     <base-promo title="Checkout" startPage="Home" currentPage="Checkout"
       imgLink="/assets/icons/mainLogo.png"></base-promo>
-    <section>
+    <section class="checkout-section">
       <checkout-form></checkout-form>
+      <price-block></price-block>
     </section>
   </main>
 </template>
 
 <script>
 import CheckoutForm from '../../components/checkout/CheckoutForm.vue'
+import PriceBlock from '../../components/checkout/PriceBlock.vue'
+
 export default {
-  components: { CheckoutForm }
+  components: { CheckoutForm, PriceBlock }
 }
 </script>
+
+<style scoped>
+.checkout-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2.6rem;
+}
+
+@media(max-width: 1100px) {
+  .checkout-section {
+    gap: 0;
+  }
+}
+
+@media(max-width: 700px) {
+  .checkout-section {
+    flex-direction: column;
+    align-items: center
+  }
+}
+</style>

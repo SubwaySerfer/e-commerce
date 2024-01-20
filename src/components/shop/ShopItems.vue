@@ -2,7 +2,7 @@
   <section class="cards-wrapper">
     <div class="cards-list">
       <base-card v-for="furniture in this.currentList" :name="furniture.name" :img="furniture.img"
-        :price="furniture.price" :description="furniture.description" :id="furniture.id"></base-card>
+        :price="priceToString(furniture.price)" :description="furniture.description" :id="furniture.id"></base-card>
     </div>
     <buttons-field :buttonsCounter="buttonsCounter" :curPage="currentPage"
       @change-page="changePageNumber"></buttons-field>
@@ -53,6 +53,9 @@ export default {
 
   },
   methods: {
+    priceToString(num) {
+      return num.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+    },
     startCurrentFunc() {
       return (this.currentPage - 1) * this.showItems
     },
@@ -73,11 +76,15 @@ export default {
       let btnContent = event.target.textContent.toLowerCase()
 
       if (btnContent == '') {
-        this.currentPage = this.buttonsCounter
+        if (this.currentPage > this.buttonsCounter) {
+          this.currentPage = this.buttonsCounter
+        }
       } else if (btnContent == 'next' && this.currentPage < this.buttonsCounter) {
         this.currentPage = +this.currentPage + 1
-      } else if (btnContent != 'next' && +btnContent < this.buttonsCounter) {
+      } else if (btnContent != 'next' && +btnContent <= this.buttonsCounter) {
         this.currentPage = +btnContent
+      } else {
+        console.log('else!!')
       }
     }
   }

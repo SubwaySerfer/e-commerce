@@ -8,7 +8,7 @@
         <img :src=cartItem.img :alt=cartItem.description class="img-box__img" />
       </figure>
       <h5 class="item__title">{{ cartItem.name }}</h5>
-      <h5 class="item__price">Rs. {{ priceToString(cartItem.price) }}</h5>
+      <!-- <h5 class="item__price">Rs. {{ priceToString(cartItem.price) }}</h5> -->
       <input type="numeric" :value=cartItem.counter class="item__counter" />
       <h5 class="item__subtotal">Rs. {{ priceToString(cartItem.price) }}</h5>
       <button class="item__trash-btn" @click="delCartItem(cartItem.id)">
@@ -54,7 +54,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
+  padding-right: 2rem;
 }
 
 .cart__item {

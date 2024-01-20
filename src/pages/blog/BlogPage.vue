@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <buttons-field></buttons-field>
+      <buttons-field :curPage="currentPage" :buttonsCounter="1"></buttons-field>
     </section>
     <our-advantages></our-advantages>
   </main>
@@ -29,6 +29,19 @@ export default {
     RecentPosts,
     SearchSection,
   },
+  data() {
+    return {
+      currentPage: 1
+    }
+  },
+  created() {
+    this.$store.commit('blog/createBlogPostsList')
+  },
+  // computed: {
+  //   postsList() {
+  //     return this.$store.getters['blog/getBlogPosts']
+  //   }
+  // }
 };
 </script>
 
@@ -79,6 +92,12 @@ export default {
   .blog-content__aside {
     flex-direction: column;
     align-items: center
+  }
+}
+
+@media(max-width: 420px) {
+  .blog-wrapper__blog-content {
+    padding: 10.6rem 4vw 2.2rem;
   }
 }
 </style>

@@ -10,8 +10,8 @@
       </div>
       <div class="footer-nav">
         <ul class="footer-nav-items footer-ul__first">
-          <li>
-            <h6 class="list__label">Links</h6>
+          <li class="list__label">
+            Links
           </li>
           <li class="btn-root_vertical"><a href="/">Home</a></li>
           <li class="btn-root_vertical"><a href="/shop">Shop</a></li>
@@ -19,15 +19,15 @@
           <li class="btn-root_vertical"><a href="/contact">Contact</a></li>
         </ul>
         <ul class="footer-nav-items footer-ul__sec">
-          <li>
-            <h6 class="list__label">Help</h6>
+          <li class="list__label">
+            Help
           </li>
           <li class="btn-root_vertical"><a href="">Payment Options</a></li>
           <li class="btn-root_vertical"><a href="">Returns</a></li>
           <li class="btn-root_vertical"><a href="">Privacy Policies</a></li>
         </ul>
         <div class="input-box">
-          <h6 class="input-box_label">Newsletter</h6>
+          <span class="input-box_label">Newsletter</span>
           <div class="input-box__content">
             <input type="email" id="subscribeInput" placeholder="Enter Your Email Address" @input="obviousInput"
               v-model="email" />
@@ -135,7 +135,6 @@ a {
   line-height: normal;
   text-align: start;
   margin: 0;
-  margin-bottom: 0.9rem;
 }
 
 .contact-info__adress {
@@ -212,6 +211,7 @@ input {
 .button-news_text {
   transition: all ease-in 0.25s;
   display: block;
+  color: #000
 }
 
 .button-news:hover>.button-news_text:hover {

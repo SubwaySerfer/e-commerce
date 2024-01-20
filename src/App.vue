@@ -17,9 +17,26 @@ export default {
     TheHeader,
     TheFooter,
   },
+  data() {
+    return {
+      localObj: null,
+    }
+  },
   created() {
     this.$store.commit('home/getFurnitureList');
+    if (localStorage.getItem('e-commerce')) {
+      this.localObj = JSON.parse(localStorage.getItem('e-commerce'))
+      if (this.localObj.cartList) {
+        this.$store.commit('home/createCartWithStorage', this.localObj)
+      }
+    }
   },
+  computed: {
+    cartList() {
+      return this.$store.getters['home/getCartList']
+    }
+  },
+
 };
 </script>
 <style scoped>

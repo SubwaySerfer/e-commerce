@@ -1,5 +1,5 @@
 <template>
-  <div class="post">
+  <div class="post" :id=id @click="openPost(id, postTag)">
     <img :src="`${postImage}`" :alt="postImageAlt" class="post__image" />
     <ul class="post_info-block">
       <li class="info-block__elem">
@@ -12,7 +12,7 @@
       </li>
       <li class="info-block__elem">
         <img src="/assets/icons/blog/icon-tag.svg" alt="icon mark." class="elem__img elem__img_tag" />
-        <h6 class="elem__description">{{ postMaterial }}</h6>
+        <h6 class="elem__description">{{ postTag }}</h6>
       </li>
     </ul>
     <h2 class="post__title">{{ postTitle }}</h2>
@@ -54,12 +54,23 @@ export default {
       required: true,
       default: "",
     },
-    postMaterial: {
+    postTag: {
       type: String,
       required: true,
       default: "",
     },
+    id: {
+      type: Number,
+      required: false,
+      default: ''
+    }
   },
+  methods: {
+    openPost(id, postTag) {
+      // TODO: сделать действие если кликнули на материал\автора!
+      this.$router.push(`/blog/${postTag}`);
+    }
+  }
 };
 </script>
 
@@ -92,6 +103,7 @@ export default {
   padding: 0;
   padding-top: 2.9rem;
   transition: transform .25s ease-in-out;
+  outline: none;
 }
 
 .post__button:after {
@@ -171,6 +183,21 @@ export default {
 @media(max-width: 825px) {
   .post {
     width: 100%;
+  }
+}
+
+@media(max-width: 460px) {
+  .post_info-block {
+    gap: .4rem;
+    justify-content: space-between;
+  }
+
+  .elem__description {
+    font-size: 1.4rem;
+  }
+
+  .info-block__elem {
+    gap: .5rem;
   }
 }
 </style>

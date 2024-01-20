@@ -2,9 +2,8 @@
   <form class="checkout-form">
     <h2 class="checkout-form__title">Billing details</h2>
     <div class="checkout-form__fullname">
-      <label for="firstName" class="checkout-form__label">First Name<input class="checkout-form__input"
-          type="text"></label>
-      <label for="lastName" class="checkout-form__label">Last Name<input class="checkout-form__input" type="text"></label>
+      <label for="firstName" class="fullname__label">First Name<input class="fullname__input" type="text"></label>
+      <label for="lastName" class="fullname__label">Last Name<input class="fullname__input" type="text"></label>
     </div>
     <label class="checkout-form__label" for="company">Company Name (Optional)<input class="checkout-form__input"
         type="text"></label>
@@ -48,7 +47,29 @@
   gap: 3.1rem;
   width: 100%;
   justify-content: space-between;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
+
+.fullname__input {
+  border-radius: 1rem;
+  border: 1px solid #9F9F9F;
+  background: #FFF;
+  height: 7.5rem;
+  width: 100%;
+  margin-top: 2.2rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.fullname__label {
+  text-align: start;
+}
+
 
 .checkout-form__label {
   display: flex;
@@ -68,11 +89,45 @@
   border-radius: 1rem;
   border: 1px solid #9F9F9F;
   background: #FFF;
-  padding: 2.6rem 0 2.5rem 2.9rem;
+  padding: 2.6rem .5rem 2.5rem 2.9rem;
   color: #9F9F9F;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media(max-width: 1100px) {
+  .checkout-form {
+    /* width: 60.8rem; */
+    padding: 3.8rem 2rem 4rem;
+    gap: 2.6rem;
+  }
+
+  .checkout-form__label,
+  .fullname__label {
+    gap: 1.2rem
+  }
+
+  .checkout-form__input,
+  .fullname__input {
+    padding: 1.6rem .5rem 1.5rem 1.9rem;
+  }
+}
+
+@media(max-width: 630px) {
+  .checkout-form {
+    width: 100%;
+  }
+
+  .checkout-form__fullname {
+    gap: 1rem;
+  }
+}
+
+@media(max-width: 450px) {
+  .checkout-form {
+    padding: 3.8rem 2vw 4rem;
+  }
 }
 </style>
