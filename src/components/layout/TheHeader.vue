@@ -17,16 +17,17 @@
     <div class="icons-box" v-if="windowWidth > 770">
       <ul class="icons-box__icons-list ul-list">
         <li class="btn-root">
-          <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
+          <router-link to="/profile"><img src="/assets/icons/account-icon.svg" alt="profile." /></router-link>
         </li>
         <!-- <li class="btn-root">
           <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
         </li> -->
         <li class="btn-root">
-          <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" /></router-link>
+          <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" alt="favorite list." /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to="" @click="toggleCartPopup"><img src="/assets/icons/basket-icon.svg" /></router-link>
+          <router-link to="" @click="toggleCartPopup"><img src="/assets/icons/basket-icon.svg"
+              alt="Items cart." /></router-link>
         </li>
       </ul>
     </div>
