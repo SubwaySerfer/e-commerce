@@ -6,6 +6,7 @@ export default {
     return {
       recentPosts: [],
       blogPosts: [],
+      currentCategories: [],
       // categories: [
       //   { name: "Crafts", count: 0, link: '' },
       //   { name: "Design", count: 0, link: '' },

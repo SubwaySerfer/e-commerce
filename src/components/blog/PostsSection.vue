@@ -1,23 +1,36 @@
 <template>
   <section class="posts-wrapper">
-    <post-template v-for="post in postsList" :postImage="post.img" :postImageAlt="post.alt"
-      :postDescription="post.description" :postTitle="post.title" :postTag="post.tag" :postOwner="post.author"
-      :postDate="post.date" :id="post.id"></post-template>
+    <post-template
+      v-for="post in postsList"
+      :postImage="post.img"
+      :postImageAlt="post.alt"
+      :postDescription="post.description"
+      :postTitle="post.title"
+      :postTag="post.tag"
+      :postOwner="post.author"
+      :postDate="post.date"
+      :id="post.id"
+    ></post-template>
   </section>
 </template>
 
 <script>
-import PostTemplate from "../../modules/PostTemplate.vue";
+import PostTemplate from '../../modules/PostTemplate.vue';
 
 export default {
   components: {
     PostTemplate,
   },
+  data() {
+    return {
+      currentArray: [],
+    };
+  },
   computed: {
     postsList() {
-      return this.$store.getters['blog/getBlogPosts']
-    }
-  }
+      return this.$store.getters['blog/getBlogPosts'];
+    },
+  },
 };
 </script>
 

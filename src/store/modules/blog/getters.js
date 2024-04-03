@@ -7,5 +7,8 @@ export default {
   },
   getBlogPosts(state) {
     return state.blogPosts
+  },
+  getCurrentCategories(state) {
+    return state.currentCategories
   }
 }

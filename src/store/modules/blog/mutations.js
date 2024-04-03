@@ -17,5 +17,13 @@ export default {
         state.categories[el.tag].push(el.id)
       }
     })
+  },
+  updateCurrentCategories(state, payload) {
+    let idx = state.currentCategories.indexOf(payload)
+    if (idx == -1) {
+      state.currentCategories.push(payload)
+    } else {
+      state.currentCategories.splice(idx, 1)
+    }
   }
 }

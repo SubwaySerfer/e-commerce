@@ -4,20 +4,28 @@
     <div class="search-wrapper__category-block">
       <h3 class="category-block__title" @click="toggleIsModal">Categories</h3>
       <ul class="category-block__content" v-if="windowWidth > 550">
-        <li v-for="(value, name, index) in getCategories" class="content__topic">
+        <li
+          v-for="(value, name, index) in getCategories"
+          class="content__topic"
+        >
           <!-- <a :href="category.link" class="topic__label">{{ category.name }}</a> -->
-          <router-link to="" class="topic__label">{{
+          <a @click="updateCategories(value[0])" to="" class="topic__label">{{
             this.toCapitalLetter(name)
-          }}</router-link>
-          <span class="topic_counter">{{ value.length || 0 }}</span>
+          }}</a>
+          <span
+            @click="updateCategories(value[0])"
+            class="topic_counter"
+            >{{ value.length || 0 }}</span
+          >
         </li>
       </ul>
-      <ul class="category-block__content content-popup" v-else-if="windowWidth < 550 && isModalOpen">
+      <ul
+        class="category-block__content content-popup"
+        v-else-if="windowWidth < 550 && isModalOpen"
+      >
         <li v-for="(value, name) in getCategories" class="content__topic">
           <!-- <a :href="category.link" class="topic__label">{{ category.name }}</a> -->
-          <router-link to="" class="topic__label">{{
-            name
-          }}</router-link>
+          <router-link to="" class="topic__label">{{ name }}</router-link>
           <span class="topic_counter">{{ value.length || 0 }}</span>
         </li>
       </ul>
@@ -26,7 +34,7 @@
 </template>
 
 <script>
-import BaseSearch from "../ui/BaseSearch.vue";
+import BaseSearch from '../ui/BaseSearch.vue';
 
 export default {
   components: {
@@ -35,24 +43,24 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
-      isModalOpen: false
-    }
+      isModalOpen: false,
+    };
   },
   computed: {
     getCategories() {
-      return this.$store.getters["blog/getCategories"];
+      return this.$store.getters['blog/getCategories'];
     },
   },
   created() {
     if (Object.keys(this.getCategories).length == 0) {
-      this.$store.commit('blog/createCategories')
+      this.$store.commit('blog/createCategories');
     }
-    console.log(this.getCategories)
+    console.log(this.getCategories);
   },
   mounted() {
     this.$nextTick(() => {
-      window.addEventListener('resize', this.onResize)
-    })
+      window.addEventListener('resize', this.onResize);
+    });
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize);
@@ -61,19 +69,22 @@ export default {
     onResize() {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth > 550) {
-        this.isModalOpen = false
+        this.isModalOpen = false;
       }
     },
     toggleIsModal() {
       if (this.windowWidth <= 550) {
-        this.isModalOpen = !this.isModalOpen
+        this.isModalOpen = !this.isModalOpen;
       } else {
-        this.isModalOpen = false
+        this.isModalOpen = false;
       }
     },
     toCapitalLetter(word) {
-      return word.charAt(0).toUpperCase() + word.slice(1)
-    }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    },
+    updateCategories(el) {
+      this.$store.commit('blog/updateCurrentCategories', el)
+    },
   },
 };
 </script>
@@ -130,13 +141,13 @@ export default {
   color: #9f9f9f;
 }
 
-@media(max-width:1200px) {
+@media (max-width: 1200px) {
   .search-wrapper {
     padding: 0 0 6.1rem;
   }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .content__topic {
     width: 100%;
   }
@@ -154,7 +165,7 @@ export default {
   }
 }
 
-@media(max-width:551px) {
+@media (max-width: 551px) {
   .search-wrapper {
     padding-bottom: 0;
   }
