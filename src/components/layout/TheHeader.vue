@@ -1,11 +1,16 @@
 <template>
   <header class="header">
     <div class="header__logo-box">
-      <img src="/assets/icons/mainLogo.png" alt="furniro logo" class="logo-box__main-logo" @click="this.routeHome" />
+      <img
+        src="/assets/icons/mainLogo.png"
+        alt="furniro logo"
+        class="logo-box__main-logo"
+        @click="this.routeHome"
+      />
       <h2 @click="this.routeHome" class="logo-box__label">Furniro</h2>
     </div>
     <nav class="header__nav" v-if="windowWidth > 770">
-      <ul class=" nav__nav-list ul-list">
+      <ul class="nav__nav-list ul-list">
         <li class="btn-root"><router-link to="/">Home</router-link></li>
         <li class="btn-root"><router-link to="/shop">Shop</router-link></li>
         <li class="btn-root"><router-link to="/blog">Blog</router-link></li>
@@ -17,17 +22,22 @@
     <div class="icons-box" v-if="windowWidth > 770">
       <ul class="icons-box__icons-list ul-list">
         <li class="btn-root">
-          <router-link to="/profile"><img src="/assets/icons/account-icon.svg" alt="profile." /></router-link>
+          <router-link to="/profile"
+            ><img src="/assets/icons/account-icon.svg" alt="profile."
+          /></router-link>
         </li>
         <!-- <li class="btn-root">
           <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
         </li> -->
         <li class="btn-root">
-          <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" alt="favorite list." /></router-link>
+          <router-link to="/wishlist"
+            ><img src="/assets/icons/heart-icon.svg" alt="favorite list."
+          /></router-link>
         </li>
         <li class="btn-root">
-          <router-link to="" @click="toggleCartPopup"><img src="/assets/icons/basket-icon.svg"
-              alt="Items cart." /></router-link>
+          <router-link to="" @click="toggleCartPopup"
+            ><img src="/assets/icons/basket-icon.svg" alt="Items cart."
+          /></router-link>
         </li>
       </ul>
     </div>
@@ -38,11 +48,15 @@
       <span class="burger__line"></span>
       <nav class="burger-wrapper" v-if="isBurgerOpen && windowWidth < 770">
         <ul class="burger-page__list">
-          <li class="btn-root "><router-link to="/">Home</router-link></li>
+          <li class="btn-root"><router-link to="/">Home</router-link></li>
           <span class="burger-icons__line"></span>
-          <li class="btn-root burger-list__btn"><router-link to="/shop">Shop</router-link></li>
+          <li class="btn-root burger-list__btn">
+            <router-link to="/shop">Shop</router-link>
+          </li>
           <span class="burger-icons__line"></span>
-          <li class="btn-root burger-list__btn"><router-link to="/blog">Blog</router-link></li>
+          <li class="btn-root burger-list__btn">
+            <router-link to="/blog">Blog</router-link>
+          </li>
           <span class="burger-icons__line"></span>
           <li class="btn-root burger-list__btn">
             <router-link to="/contact">Contact</router-link>
@@ -50,16 +64,22 @@
         </ul>
         <ul class="burger-icons__list">
           <li class="btn-root">
-            <router-link to="/profile"><img src="/assets/icons/account-icon.svg" /></router-link>
+            <router-link to="/profile"
+              ><img src="/assets/icons/account-icon.svg"
+            /></router-link>
           </li>
           <!-- <li class="btn-root">
             <router-link to="/comparison"><img src="/assets/icons/search-icon.svg" /></router-link>
           </li> -->
           <li class="btn-root">
-            <router-link to="/wishlist"><img src="/assets/icons/heart-icon.svg" /></router-link>
+            <router-link to="/wishlist"
+              ><img src="/assets/icons/heart-icon.svg"
+            /></router-link>
           </li>
           <li class="btn-root">
-            <router-link to="/cart"><img src="/assets/icons/basket-icon.svg" /></router-link>
+            <router-link to="/cart"
+              ><img src="/assets/icons/basket-icon.svg"
+            /></router-link>
           </li>
         </ul>
       </nav>
@@ -79,38 +99,42 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
-      isBurgerOpen: false
-    }
+      isBurgerOpen: false,
+    };
   },
   mounted() {
     this.$nextTick(() => {
-      window.addEventListener('resize', this.onResize)
-    })
+      window.addEventListener('resize', this.onResize);
+    });
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize);
   },
   methods: {
     routeHome() {
-      this.$router.push('/home');
+      if (this.$route.path === '/home') {
+        this.$router.go(0);
+      } else {
+        this.$router.push('/home');
+      }
     },
     toggleCartPopup() {
-      this.$store.commit('header/toggleCartPopup')
+      this.$store.commit('header/toggleCartPopup');
     },
     onResize() {
       this.windowWidth = window.innerWidth;
     },
     toggleBurger() {
-      this.isBurgerOpen = !this.isBurgerOpen
+      this.isBurgerOpen = !this.isBurgerOpen;
     },
     closeCartPopup() {
-      this.$store.commit('header/closeCartPopup')
-    }
+      this.$store.commit('header/closeCartPopup');
+    },
   },
   watch: {
     windowWidth(val) {
-      if (val < 770) this.closeCartPopup()
-    }
+      if (val < 770) this.closeCartPopup();
+    },
   },
 
   computed: {
@@ -171,9 +195,7 @@ export default {
   gap: 7.5rem;
   margin: 0;
   list-style-type: none;
-
 }
-
 
 a {
   text-decoration: none;
@@ -206,7 +228,7 @@ a {
 
 .burger__line {
   width: 3.5rem;
-  height: .4rem;
+  height: 0.4rem;
   background-color: #cfc7bc;
   z-index: 5;
 }
@@ -241,7 +263,7 @@ a {
 .burger-icons__line {
   height: 2px;
   width: 100%;
-  background-color: #cfc7bc
+  background-color: #cfc7bc;
 }
 
 .burger-icons__list {
@@ -251,10 +273,8 @@ a {
 }
 
 @media (max-width: 1420px) {
-
-
   .header__logo-box {
-    padding-right: 0
+    padding-right: 0;
   }
 
   .icons-box {
@@ -275,7 +295,7 @@ a {
 
   .header {
     padding: 3.35rem 3vw 3.45rem;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .icons-box__icons-list {
@@ -285,14 +305,14 @@ a {
 
 @media (max-width: 770px) {
   .header {
-    padding: 5rem 5vw
+    padding: 5rem 5vw;
   }
 }
 
 @media (max-width: 450px) {
   .burger-wrapper {
     width: 100vw;
-    border-radius: 0
+    border-radius: 0;
   }
 }
 </style>
