@@ -1,16 +1,28 @@
 <template>
-  <div class="furniture-card" @mouseenter="hover = true" :class='mode'>
+  <div class="furniture-card" @mouseenter="hover = true" :class="mode">
     <img :src="img" alt="" :class="mode" />
     <div class="furniture-card_texts">
       <h3 class="texts__label">{{ name }}</h3>
       <p class="texts__descr">{{ description }}</p>
       <h4 class="texts__price">Rp {{ price }}</h4>
     </div>
-    <div class="furniture-card_popup" @mouseleave="hover = false" v-if="hover" :id='id' @click="routeToCart(id)">
-      <base-button class="btn" @click.stop="addItemToCart(id)">Add to cart</base-button>
+    <div
+      class="furniture-card_popup"
+      @mouseleave="hover = false"
+      v-if="hover"
+      :id="id"
+      @click="routeToCart(id)"
+    >
+      <base-button class="btn" @click.stop="addItemToCart(id)"
+        >Add to cart</base-button
+      >
       <div class="popup-content">
         <div class="popup-content_box" @click.stop="shareItem(id)">
-          <img src="/assets/icons/furnitureCards/icon-share.svg" alt="share icon." class="popup-icon" />
+          <img
+            src="/assets/icons/furnitureCards/icon-share.svg"
+            alt="share icon."
+            class="popup-icon"
+          />
           <h5>Share</h5>
         </div>
         <!-- <div class="popup-content_box">
@@ -19,10 +31,23 @@
         </div> -->
         <div class="popup-content_box" @click.stop="toggleLikeItem(id)">
           <!-- <img src="/assets/icons/furnitureCards/icon-like.svg" alt="like icon." class="popup-icon" /> -->
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            ref="iconRef"
+            data-icon="like-icon"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M7.99973 14.0361C-5.33333 6.66669 3.99999 -1.33331 7.99973 3.72539C12 -1.33331 21.3333 6.66669 7.99973 14.0361Z"
-              stroke="white" stroke-width="1.8" />
+              stroke="white"
+              stroke-width="1.8"
+              :fill="
+                favoriteList.some((item) => item.id === id) ? 'red' : 'none'
+              "
+            />
           </svg>
           <h5>Like</h5>
         </div>
@@ -41,29 +66,28 @@ export default {
       hover: false,
     };
   },
+  computed: {
+    favoriteList() {
+      return this.$store.getters['home/getFavoriteList'];
+    },
+  },
   methods: {
     addItemToCart(id) {
-      this.$store.commit('home/editCartItems', { id: id, action: "add" })
+      this.$store.commit('home/editCartItems', { id: id, action: 'add' });
     },
     toggleLikeItem(id) {
-      // event.target.classList.add('red-svg')
-      this.$store.commit('home/toggleFavoriteList', id)
+      this.$store.commit('home/toggleFavoriteList', id);
     },
     shareItem(id) {
-      console.log('share', id)
+      console.log('share', id);
     },
     routeToCart(id) {
       this.$router.push(`/card-info/${id}`);
-    }
+    },
   },
-
 };
 </script>
 <style scoped>
-/* .red-svg {
-  fill: red;
-} */
-
 .furniture-card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 28.5rem;
@@ -192,7 +216,7 @@ h5 {
   transition: transform ease-in 0.2s;
 }
 
-@media(max-width: 1220px) {
+@media (max-width: 1220px) {
   .furniture-card {
     width: 23%;
     max-width: 28.5rem;
@@ -209,15 +233,14 @@ h5 {
   }
 }
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
   .furniture-card_texts {
     padding: 1.5rem 1rem;
-    gap: .8rem;
+    gap: 0.8rem;
   }
 }
 
-@media(max-width: 900px) {
-
+@media (max-width: 900px) {
   .furniture-card {
     width: 23.5%;
     max-width: 28.5rem;
@@ -236,7 +259,7 @@ h5 {
   }
 }
 
-@media(max-width: 720px) {
+@media (max-width: 720px) {
   .furniture-card {
     width: 45%;
   }
@@ -254,15 +277,14 @@ h5 {
   }
 
   .furniture-card_texts {
-    align-items: center
+    align-items: center;
   }
 }
 
-@media(max-width: 620px) {
-
+@media (max-width: 620px) {
   .furniture-card_texts {
-    padding: 1rem .5rem 1.2rem;
-    gap: .8rem;
+    padding: 1rem 0.5rem 1.2rem;
+    gap: 0.8rem;
   }
 
   .btn {
@@ -270,7 +292,7 @@ h5 {
   }
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
   .furniture-card {
     width: 80%;
   }

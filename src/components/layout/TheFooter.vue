@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="footer__rights-block">
-      <p class="rights-info">2023 furino. All rights reverved</p>
+      <p class="rights-info">2025 furino. All rights reserved</p>
     </div>
   </footer>
 </template>
