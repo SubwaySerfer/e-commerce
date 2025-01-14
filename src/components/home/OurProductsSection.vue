@@ -22,6 +22,19 @@ export default {
   created() {
     this.currentFurnList = this.furnitureList.slice(0, 8)
   },
+  methods: {
+    async fetchData() {
+      try {
+        const data = await this.$api.get('hello').text();
+        console.log(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    },
+  },
+  mounted() {
+    this.fetchData();
+  },
   computed: {
     furnitureList() {
       return this.$store.getters["home/furnitureList"]

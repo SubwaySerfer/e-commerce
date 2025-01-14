@@ -3,6 +3,7 @@ import BaseButton from './components/ui/BaseButton.vue'
 import BaseCard from './components/ui/BaseCard.vue'
 import BasePromo from './components/ui/BasePromo.vue'
 import OurAdvantages from './components/layout/OurAdvantages.vue'
+import api from './api'
 
 // const app = createApp(App)
 
@@ -18,6 +19,8 @@ import store from './store/index';
 
 
 const app = createApp(App);
+
+app.config.globalProperties.$api = api;
 
 app.use(router);
 app.use(store);
